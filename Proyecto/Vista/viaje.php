@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <h1>Aquí se visualiza un viaje con su descripción y se hace la reserva un viaje</h1>
+    <h1>Descripción y reserva de viaje seleccionado</h1>
 </body>
 
 </html>
