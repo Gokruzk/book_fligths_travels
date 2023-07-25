@@ -14,6 +14,8 @@ if ($value == 1) {
     include("../Vista/agregar_viaje.html");
 } else if ($value == 7) {
     include("../Vista/editar_viaje.php");
+} else if ($value == 8) {
+    include("../Vista/agregar_bus.html");
 } else if ($value == 0) {
     require("../../index.html");
 }
