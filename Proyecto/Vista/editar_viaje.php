@@ -16,6 +16,7 @@
 
 <body>
     <a href="../../index.html">Inicio</a>
+    <a href="../Controlador/handler.php?value=1">Regresar</a>
     <h1>Editar viaje</h1>
 
     <form action="">
