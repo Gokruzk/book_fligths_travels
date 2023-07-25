@@ -6,15 +6,20 @@
     <title>Transportes Chimborazo</title>
   </head>
   <body>
-    <form action="">
+    <div id="formxd">
+      <label for="user">Correo</label>
+      <input id="user" type="email" />
+      <label for="psw">Contraseña</label>
+      <input id="psw" type="password" />
+      <button id="botonOcultar">Hide</button>
+    </div>
+    <form id="formxdd" action="">
       <ul>
         <li>
           <a href="./Proyecto/Controlador/handler.php?value=1">Admin page</a>
         </li>
         <li>
-          <a href="./Proyecto/Controlador/handler.php?value=2"
-            >User page</a
-          >
+          <a href="./Proyecto/Controlador/handler.php?value=2">User page</a>
         </li>
         <li>
           <a href="./Proyecto/Controlador/handler.php?value=3"
@@ -23,5 +28,18 @@
         </li>
       </ul>
     </form>
+    <script src="./JS/jquery-3.7.0.min.js"></script>
+    <script>
+      // Esperamos a que el documento esté completamente cargado
+      $(document).ready(function () {
+        $("#formxdd").hide();
+        // Vinculamos el evento clic del botón para ocultar el elemento
+
+        $("#botonOcultar").click(function () {
+          $("#formxd").hide();
+          $("#formxdd").show();
+        });
+      });
+    </script>
   </body>
 </html>
