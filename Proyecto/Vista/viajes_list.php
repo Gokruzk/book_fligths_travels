@@ -11,6 +11,7 @@
 </head>
 
 <body>
+<a href="../../index.html">Inicio</a>
     <h1>Aquí van la lista de viajes</h1>
     <div class="card" style="width: 18rem;">
         <img src="..." class="card-img-top" alt="Imagen de destino">

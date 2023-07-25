@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <a href="../../index.html">Inicio</a>
     <h1>Descripción y reserva de viaje seleccionado</h1>
 </body>
 
