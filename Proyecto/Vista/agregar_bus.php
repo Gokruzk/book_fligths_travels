@@ -5,6 +5,14 @@
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     </meta>
 
+    <?php
+    if (isset($_GET['success']) && $_GET['success'] === 'true') {
+        echo "<script>alert('Se agregó el bus correctamente');</script>";
+    } elseif (isset($_GET['success']) && $_GET['success'] === 'false') {
+        echo "<script>alert('No se pudo añadir el nuevo bus, intente de nuevo');</script>";
+    }
+    ?>
+
     <title>Agregar un nuevo bus</title>
 </head>
 
@@ -30,13 +38,7 @@
         <button type="submit">Agregar</button>
     </form>
 
-    <?php
-    if (isset($_GET['success']) && $_GET['success'] === 'true') {
-        echo "<script>alert('Se agregó el bus correctamente');</script>";
-    } elseif (isset($_GET['success']) && $_GET['success'] === 'false') {
-        echo "<script>alert('No se pudo añadir el nuevo bus, intente de nuevo');</script>";
-    }
-    ?>
+    
 </body>
 
 </html>
