@@ -24,6 +24,9 @@
 </head>
 
 <body>
+<a href="../../index.html">Inicio</a>
+
+<a href="../Controlador/handler.php?value=1">Regresar</a>
 
     <center>
         <h1>Datos de viajes</h1>

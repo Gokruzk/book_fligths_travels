@@ -16,6 +16,9 @@ $sql = "SELECT *
 </head>
 
 <body>
+    <a href="../../index.html">Inicio</a>
+
+    <a href="../Controlador/handler.php?value=1">Regresar</a>
     <form action="../Modelo/actualizar_viaje.php" method="POST">
         <?php include("../Vista/tabla_viaje.php"); ?>
     </form>
