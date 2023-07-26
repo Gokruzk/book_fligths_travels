@@ -1,52 +1,45 @@
 <!DOCTYPE html>
-<html lang="en" style="background-color: rgb(50, 42, 80);">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    </meta>
-
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </meta>
 
-    <title>Editar Viaje</title>
+    <?php
+    if (isset($_GET['edit']) && $_GET['edit'] === 'true') {
+        echo "<script>alert('Se editó el viaje correctamente');</script>";
+    } else if (isset($_GET['edit'])) {
+        echo "<script>alert('No se pudo realizar la actualización del viaje, intente de nuevo);</script>";
+    }
+
+    if (isset($_GET['del']) && $_GET['del'] === 'true') {
+        echo "<script>alert('Se eliminó correctamante el viaje');</script>";
+    } else if (isset($_GET['del']))  {
+        echo "<script>alert('No se pudo eliminar el viaje, intente de nuevo');</script>";
+    }
+    ?>
+
+    <title>Datos de los usuarios</title>
 </head>
 
-<!-- - Agregar viaje (salida, destino, fecha, asientos disponibles, precio)
-    - Editar viaje -->
-
 <body>
-    <a href="../../index.html">Inicio</a>
-    <a href="../Controlador/handler.php?value=1">Regresar</a>
-    <h1>Editar viaje</h1>
 
-    <form action="">
-        <label for="">Lugar de salida</label>
-
-        <input type="text" placeholder="salida" name="lugar-salida"></input>
-
-        <label for="">Lugar de destino</label>
-
-        <input type="text" placeholder="destino" name="lugar-destino"></input>
-
-        <label for="">Fecha de salida</label>
-
-        <input type="datetime-local" name="fecha-salida"></input>
-
-        <label for="">Fecha de regreso</label>
-
-        <input type="datetime-local" name="fecha-regreso"></input>
-
-        <label for="">Asientos disponibles</label>
-
-        <input type="number" min="0" max="40" placeholder="asientos" name="numero-asientos"></input>
-
-        <label for="">Precio</label>
-
-        <input type="text" pattern="^([$]{1})[1-9]{1,}|^([$]{1})[0-9]{1,}[.][0-9]{1,2}" placeholder="$0.00"
-            onfocus="if(this.value=='') this.value='$';" name="precio-viaje"></input>
-
-        <button type="submit">Agregar</button>
-    </form>
+    <center>
+        <h1>Datos de viajes</h1>
+    </center>
+    <center>
+        <table border="1">
+    </center>
+    <td>ID</td>
+    <td>Origen</td>
+    <td>Destino</td>
+    <td>Fecha</td>
+    <td>Hora Salida</td>
+    <td>Precio</td>
+    <td>Conductor</td>
+    <?php include("../Modelo/mostrar_eliminar-editar_viaje.php"); ?>
+    </table>
 </body>
 
 </html>
