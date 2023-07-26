@@ -2,10 +2,10 @@
 include("../Config/conexion.php");
 
 $nombre = $_POST['conductor'];
-$asientos = $_POST['numero-asientos'];
+$placa = $_POST['placa'];
 
 
-$sql = "INSERT into bus(nombre_responsable,capacidad) values('$nombre', '$asientos')";
+$sql = "INSERT into bus(nombre_responsable,placa) values('$nombre', '$placa')";
 $estado = mysqli_query($conexion, $sql);
 
 if ($estado) {

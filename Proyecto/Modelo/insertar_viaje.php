@@ -6,10 +6,10 @@ $destino = $_POST['lugar_destino'];
 $fecha = $_POST['fecha_viaje'];
 $hora = $_POST['hora_salida'];
 $bus = $_POST['codigo_bus'];
-$precio = str_replace('$', '', $_POST['precio_viaje']);
+$precio = $_POST['precio_viaje'];
 
 
-$sql = "INSERT INTO viaje(origen,destino,fecha, hora, precio, id_bus) VALUES('$origen', '$destino', '$fecha', '$hora', '$precio', '$bus')";
+$sql = "INSERT INTO viaje(lugar_origen, lugar_destino,fecha, hora, precio, id_bus) VALUES('$origen', '$destino', '$fecha', '$hora', '$precio', '$bus')";
 $estado =  mysqli_query($conexion, $sql);
 
 if ($estado) {

@@ -31,14 +31,14 @@
 
         <input type="text" placeholder="Nombre" name="conductor"></input>
 
-        <label for="">Número de asientos</label>
+        <label for="">Placa del bus</label>
 
-        <input type="number" min="0" max="50" placeholder="asientos" name="numero-asientos"></input>
+        <input type="text" pattern="^([A-Z]{3})-[0-9]{4}$" placeholder="AAA-0000" name="placa"></input>
 
         <button type="submit">Agregar</button>
     </form>
 
-    
+
 </body>
 
 </html>

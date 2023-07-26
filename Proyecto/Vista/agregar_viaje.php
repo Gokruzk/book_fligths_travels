@@ -48,10 +48,8 @@
     <label for="">Código bus asignado</label>
     <input type="text" placeholder="bus" name="codigo_bus"></input>
 
-    <label for="">Precio</label>
-
-    <input type="text" pattern="^([$]{1})[1-9]{1}[0,9]{0,}|^([$]{1})[1-9]{1}[0,9]{0,}[.][0-9]{1,2}" placeholder="$0.00"
-      onfocus="if(this.value=='') this.value='$';" name="precio_viaje"></input>
+    <label for="">Precio $</label>
+    <input type="number" min="1" step="0.01" name="precio_viaje"/>
 
     <button type="submit">Agregar</button>
   </form>
