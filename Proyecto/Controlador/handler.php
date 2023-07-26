@@ -11,7 +11,7 @@ if ($value == 1) {
 } else if ($value == 5) {
     include("../Vista/viaje.php");
 } else if ($value == 6) {
-    include("../Vista/agregar_viaje.html");
+    include("../Vista/agregar_viaje.php");
 } else if ($value == 7) {
     include("../Vista/editar_viaje.php");
 } else if ($value == 8) {

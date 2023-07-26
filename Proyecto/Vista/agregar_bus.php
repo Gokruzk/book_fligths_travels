@@ -13,7 +13,7 @@
     }
     ?>
 
-    <title>Agregar un nuevo bus</title>
+    <title>Agregar</title>
 </head>
 
 <!-- - Agregar viaje (salida, destino, fecha, asientos disponibles, precio)
@@ -24,7 +24,7 @@
 
     <a href="../Controlador/handler.php?value=1">Regresar</a>
 
-    <h1>Agregar nuevo viaje</h1>
+    <h1>Agregar un nuevo bus</h1>
 
     <form action="../Modelo/insertar_bus.php" method="post">
         <label for="">Nombre del conductor</label>
