@@ -20,7 +20,7 @@
     <tr>Destino</tr>
     <tr>Fecha</tr>
     <tr>Hora</tr>
-    <tr>Precio</tr>
+    <tr>Precio $</tr>
     <tr>Nombre Responsable</tr>
     </table>
 </body>

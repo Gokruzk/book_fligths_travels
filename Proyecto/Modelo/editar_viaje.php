@@ -31,13 +31,12 @@ while ($mostrar = mysqli_fetch_array($resultado)) {
     ?>
     <tr>
         <td> <input type="hidden" value=<?php echo $mostrar['id_viaje'] ?> name="id_viaje"> </td>
-        <td><input type="text" value=<?php echo $mostrar['origen'] ?> name="lugar_origen"> </td>
-        <td><input type="text" value=<?php echo $mostrar['destino'] ?> name="lugar_destino"> </td>
+        <td><input type="text" value=<?php echo $mostrar['lugar_origen'] ?> name="lugar_origen"> </td>
+        <td><input type="text" value=<?php echo $mostrar['lugar_destino'] ?> name="lugar_destino"> </td>
         <td><input type="date" value=<?php echo $mostrar['fecha'] ?> name="fecha_viaje"> </td>
         <td><input type="time" value=<?php echo $mostrar['hora'] ?> name="hora_salida"> </td>
-        <td><input type="text" pattern="^([$]{1})[1-9]{1}[0,9]{0,}|^([$]{1})[1-9]{1}[0,9]{0,}[.][0-9]{1,2}"
-                placeholder="$0.00" onfocus="if(this.value=='') this.value='$';" value=<?php echo "$", $mostrar['precio'] ?>
-                name="precio_viaje"> </td>
+        <td><input type="number" min="1" step="0.01" name="precio_viaje" value=<?php echo $mostrar['precio'] ?> /></td>
+
         <td><input type="text" value=<?php echo $mostrar['id_bus'] ?> name="codigo_bus"> </td>
         <td> <input type="submit" value="Editar"></td>
     </tr>

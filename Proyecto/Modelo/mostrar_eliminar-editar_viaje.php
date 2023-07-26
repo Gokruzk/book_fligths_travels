@@ -1,6 +1,6 @@
 <?php
 include("../Config/conexion.php");
-$sql = "SELECT v.id_viaje, v.origen, v.destino, v.fecha, v.hora, v.precio, b.nombre_responsable 
+$sql = "SELECT v.id_viaje, v.lugar_origen, v.lugar_destino, v.fecha, v.hora, v.precio, b.nombre_responsable 
 FROM viaje V
 inner join bus B
 on V.id_bus = B.id_bus ";
@@ -14,10 +14,10 @@ while ($mostrar = mysqli_fetch_array($resultado)) {
             <?php echo $mostrar['id_viaje'] ?>
         </td>
         <td>
-            <?php echo $mostrar['origen'] ?>
+            <?php echo $mostrar['lugar_origen'] ?>
         </td>
         <td>
-            <?php echo $mostrar['destino'] ?>
+            <?php echo $mostrar['lugar_destino'] ?>
         </td>
         <td>
             <?php echo $mostrar['fecha'] ?>
