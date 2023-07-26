@@ -10,7 +10,7 @@
 
 <body>
     <center>
-        <h1>Datos de los viajes</h1>
+        <h1>Eidtar datos del viaje</h1>
     </center>
     <center>
         <table border="1">
