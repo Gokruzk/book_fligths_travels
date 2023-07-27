@@ -9,8 +9,8 @@ $hora = $_POST['hora_salida'];
 $bus = $_POST['codigo_bus'];
 $precio = $_POST['precio_viaje'];
 
-$sql = "UPDATE viaje SET origen='$origen', 
-destino='$destino', 
+$sql = "UPDATE viaje SET lugar_origen='$origen', 
+lugar_destino='$destino', 
 fecha='$fecha', 
 hora='$hora', 
 precio='$precio', 
