@@ -2,7 +2,7 @@
 include("../Config/conexion.php");
 $id = $_REQUEST['id_viaje'];
 $sql = "SELECT *
- FROM viaje 
+ FROM Viaje
  where id_viaje = $id";
 ?>
 <!DOCTYPE html>

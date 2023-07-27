@@ -1,7 +1,7 @@
 <?php
 include("../Config/conexion.php");
 $sql = "SELECT *
-FROM bus ";
+FROM Bus ";
 
 $resultado = mysqli_query($conexion, $sql);
 

@@ -1,7 +1,7 @@
 <?php
  include("../Config/conexion.php");
  $id=$_REQUEST['id_bus'];
- $sql = "DELETE from bus where id_bus=$id";
+ $sql = "DELETE from Bus where id_bus=$id";
  $estado=mysqli_query($conexion,$sql);
 
 if ($estado) {

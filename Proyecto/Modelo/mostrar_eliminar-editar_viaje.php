@@ -1,8 +1,8 @@
 <?php
 include("../Config/conexion.php");
 $sql = "SELECT v.id_viaje, v.lugar_origen, v.lugar_destino, v.fecha, v.hora, v.precio, b.nombre_responsable 
-FROM viaje V
-inner join bus B
+FROM Viaje V
+inner join Bus B
 on V.id_bus = B.id_bus ";
 
 $resultado = mysqli_query($conexion, $sql);

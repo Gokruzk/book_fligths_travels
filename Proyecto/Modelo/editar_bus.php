@@ -2,7 +2,7 @@
 include("../Config/conexion.php");
 $id = $_REQUEST['id_bus'];
 $sql = "SELECT *
- FROM bus 
+ FROM Bus 
  where id_bus = $id";
 ?>
 <!DOCTYPE html>

@@ -4,8 +4,8 @@ include("../Config/conexion.php");
 $id_viaje = $_GET['id_viaje'] ?? '';
 
 $sql = "SELECT v.id_viaje, v.lugar_origen, v.lugar_destino, v.fecha, v.hora, v.precio, b.nombre_responsable 
-        FROM viaje V
-        inner join bus B
+        FROM Viaje V
+        inner join Bus B
         on V.id_bus = B.id_bus
         where v.id_viaje = $id_viaje";
         

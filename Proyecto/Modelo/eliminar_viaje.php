@@ -1,7 +1,7 @@
 <?php
  include("../Config/conexion.php");
  $id=$_REQUEST['id_viaje'];
- $sql = "DELETE from viaje where id_viaje=$id";
+ $sql = "DELETE from Viaje where id_viaje=$id";
  $estado=mysqli_query($conexion,$sql);
 
 if ($estado) {
