@@ -9,7 +9,7 @@ $bus = $_POST['codigo_bus'];
 $precio = $_POST['precio_viaje'];
 
 
-$sql = "INSERT INTO viaje(lugar_origen, lugar_destino,fecha, hora, precio, id_bus) VALUES('$origen', '$destino', '$fecha', '$hora', '$precio', '$bus')";
+$sql = "INSERT INTO Viaje(lugar_origen, lugar_destino,fecha, hora, precio, id_bus) VALUES('$origen', '$destino', '$fecha', '$hora', '$precio', '$bus')";
 $estado =  mysqli_query($conexion, $sql);
 
 if ($estado) {

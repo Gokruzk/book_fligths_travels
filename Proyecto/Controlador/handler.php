@@ -9,7 +9,7 @@ if ($value == 1) {
 } else if ($value == 4) {
     include("../Vista/reportes.php");
 } else if ($value == 5) {
-    include("../Vista/viaje.php");
+    echo 404;
 } else if ($value == 6) {
     include("../Vista/agregar_viaje.php");
 } else if ($value == 7) {
