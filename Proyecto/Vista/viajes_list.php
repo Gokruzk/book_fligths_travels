@@ -11,17 +11,20 @@
 </head>
 
 <body>
-<a href="../../index.html">Inicio</a>
+    <a href="../../index.html">Inicio</a>
     <h1>Aquí van la lista de viajes</h1>
-    <div class="card" style="width: 18rem;">
+    <fieldset border="1">
+        <?php include("../Modelo/mostrar_reservar.php"); ?>
+    </fieldset>
+    <!-- <div class="card" style="width: 18rem;">
         <img src="..." class="card-img-top" alt="Imagen de destino">
         <div class="card-body">
             <h5 class="card-title">Viaje</h5>
             <p class="card-text">Breve descripción</p>
             <a href="../Controlador/handler.php?value=5" class="btn btn-primary">Reservar</a>
         </div>
-    </div>
-    <script src="../../JS/bootstrap.min.js"></script>
+    </div> -->
+    <script src="../../JS/bootstrap.min.js"></script>18rem
 </body>
 
 </html>
