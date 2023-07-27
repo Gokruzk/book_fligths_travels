@@ -1,10 +1,9 @@
 CREATE DATABASE Reserva_Viajes;
 USE Reserva_Viajes;
 
-CREATE TABLE Bus(
-    id_bus INT PRIMARY KEY AUTO_INCREMENT,
-    nombre_responsable VARCHAR(20),
-    placa VARCHAR(8)
+CREATE TABLE Transporte(
+    placa VARCHAR(8) PRIMARY KEY,
+    nombre_responsable VARCHAR(20)
 );
 
 CREATE TABLE Viaje(
@@ -14,8 +13,8 @@ CREATE TABLE Viaje(
     fecha DATE,
     hora TIME,
     precio FLOAT,
-    id_bus INT,
-    FOREIGN KEY (id_bus) REFERENCES Bus(id_bus) ON DELETE CASCADE
+    placa VARCHAR(8),
+    FOREIGN KEY (placa) REFERENCES Transporte(placa) ON DELETE CASCADE
 );
 
 CREATE TABLE Cliente(
