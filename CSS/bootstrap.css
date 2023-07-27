@@ -478,7 +478,12 @@ mark,
 
 .img-fluid {
   max-width: 100%;
-  height: auto;
+  height: 170px;
+}
+
+.img-fluidChimborazo {
+  max-width: 100%;
+  height:auto;
 }
 
 .img-thumbnail {
