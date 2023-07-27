@@ -23,9 +23,9 @@
         <div class="card" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title">
-                    <?php $viaj['lugar_destino'] ?>
+                    <?php echo $viaj['lugar_destino'] ?>
                 </h5>
-                <p class="card-text"><?php $viaj['id_viaje'] ?></p>
+                <p class="card-text"><?php echo $viaj['id_viaje'] ?></p>
                 <a href="../Modelo/mostrar_reservar.php?id_viaje=$viaj['id_viaje']" class="btn btn-primary">Reservar</a>
             </div>
         </div>
