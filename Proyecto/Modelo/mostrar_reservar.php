@@ -28,7 +28,7 @@ while ($mostrar = mysqli_fetch_array($resultado)) {
         <?php echo "Foto Hola" ?>
         <br>
         <div class="card-body">
-            <a href="../Controlador/handler.php?value=5" class="btn btn-primary">Reservar</a>
+            <a href="../Controlador/handler.php?value=5&id_viaje=<?php echo $mostrar['id_viaje']; ?>" class="btn btn-primary">Reservar</a>
         </div>
     </fieldset>
     <br> <br> <br>
