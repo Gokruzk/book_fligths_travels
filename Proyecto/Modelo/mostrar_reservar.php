@@ -25,7 +25,7 @@ while ($mostrar = mysqli_fetch_array($resultado)) {
         <br>
         <?php echo "Descripción" ?>
         <br>
-        <?php echo "Foto" ?>
+        <?php echo "Foto Hola" ?>
         <br>
         <div class="card-body">
             <a href="../Controlador/handler.php?value=5" class="btn btn-primary">Reservar</a>
