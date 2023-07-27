@@ -14,9 +14,9 @@
     }
 
     if (isset($_GET['del']) && $_GET['del'] === 'true') {
-        echo "<script>alert('Se eliminó correctamente el viaje');</script>";
+        echo "<script>alert('Se eliminó correctamente el bus');</script>";
     } else if (isset($_GET['del']))  {
-        echo "<script>alert('No se pudo eliminar el viaje, intente de nuevo');</script>";
+        echo "<script>alert('No se pudo eliminar el bus, intente de nuevo');</script>";
     }
     ?>
 
@@ -29,19 +29,15 @@
 <a href="../Controlador/handler.php?value=1">Regresar</a>
 
     <center>
-        <h1>Datos de viajes</h1>
+        <h1>Datos de buses</h1>
     </center>
     <center>
         <table border="1">
     </center>
     <td>ID</td>
-    <td>Origen</td>
-    <td>Destino</td>
-    <td>Fecha</td>
-    <td>Hora Salida</td>
-    <td>Precio</td>
     <td>Conductor</td>
-    <?php include("../Modelo/mostrar_eliminar-editar_viaje.php"); ?>
+    <td>Placa</td>
+    <?php include("../Modelo/mostrar_eliminar-editar_bus.php"); ?>
     </table>
 </body>
 

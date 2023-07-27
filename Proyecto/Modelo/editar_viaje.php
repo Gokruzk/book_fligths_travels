@@ -30,7 +30,7 @@ $resultado = mysqli_query($conexion, $sql);
 while ($mostrar = mysqli_fetch_array($resultado)) {
     ?>
     <tr>
-        <td> <input type="hidden" value=<?php echo $mostrar['id_viaje'] ?> name="id_viaje"> </td>
+        <td> <input style="border: 0;" value=<?php echo $mostrar['id_viaje'] ?> name="id_viaje"> </td>
         <td><input type="text" value=<?php echo $mostrar['lugar_origen'] ?> name="lugar_origen"> </td>
         <td><input type="text" value=<?php echo $mostrar['lugar_destino'] ?> name="lugar_destino"> </td>
         <td><input type="date" value=<?php echo $mostrar['fecha'] ?> name="fecha_viaje"> </td>
