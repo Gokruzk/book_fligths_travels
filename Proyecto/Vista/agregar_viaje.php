@@ -45,11 +45,11 @@
     <input type="time" name="hora_salida"></input>
 
 
-    <label for="">Código bus asignado</label>
-    <input type="text" placeholder="bus" name="codigo_bus"></input>
+    <label for="">Placa del bus asignado</label>
+    <input type="text" pattern="^([A-Z]{3})-[0-9]{4}$" placeholder="Placa" name="placa_bus"></input>
 
     <label for="">Precio $</label>
-    <input type="number" min="1" step="0.01" name="precio_viaje"/>
+    <input type="number" min="1" step="0.01" name="precio_viaje" />
 
     <button type="submit">Agregar</button>
   </form>
