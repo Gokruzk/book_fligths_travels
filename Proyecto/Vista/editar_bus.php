@@ -15,7 +15,7 @@
 
     if (isset($_GET['del']) && $_GET['del'] === 'true') {
         echo "<script>alert('Se eliminó correctamente el bus');</script>";
-    } else if (isset($_GET['del']))  {
+    } else if (isset($_GET['del'])) {
         echo "<script>alert('No se pudo eliminar el bus, intente de nuevo');</script>";
     }
     ?>
@@ -24,21 +24,20 @@
 </head>
 
 <body>
-<a href="../../index.html">Inicio</a>
+    <a href="../../index.html">Inicio</a>
 
-<a href="../Controlador/handler.php?value=1">Regresar</a>
+    <a href="../Controlador/handler.php?value=1">Regresar</a>
 
     <center>
         <h1>Datos de buses</h1>
-    </center>
-    <center>
+
         <table border="1">
+            <td>ID</td>
+            <td>Conductor</td>
+            <td>Placa</td>
+            <?php include("../Modelo/mostrar_eliminar-editar_bus.php"); ?>
+        </table>
     </center>
-    <td>ID</td>
-    <td>Conductor</td>
-    <td>Placa</td>
-    <?php include("../Modelo/mostrar_eliminar-editar_bus.php"); ?>
-    </table>
 </body>
 
 </html>

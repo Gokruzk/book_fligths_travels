@@ -11,14 +11,12 @@
 <body>
     <center>
         <h1>Eidtar datos del bus</h1>
-    </center>
-    <center>
+
         <table border="1">
-    </center>
-    <tr>Id bus</tr>
-    <tr>Conductor</tr>
-    <tr>Placa</tr>
-    </table>
+            <th>Id bus</th>
+            <th>Conductor</th>
+            <th>Placa</th>
+        </table>
 </body>
 
 </html>
