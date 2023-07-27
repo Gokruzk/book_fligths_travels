@@ -33,7 +33,8 @@
 
         <label for="">Placa del bus</label>
 
-        <input type="text" pattern="^([A-Z]{3})-[0-9]{4}$" placeholder="AAA-0000" name="placa"></input>
+        <!-- <input type="text" pattern="^([A-Z]{3})-[0-9]{4}$" placeholder="AAA-0000" name="placa"></input> -->
+        <input type="text" placeholder="AAA-0000" name="placa"></input>
 
         <button type="submit">Agregar</button>
     </form>
