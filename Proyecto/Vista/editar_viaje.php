@@ -10,12 +10,14 @@
     if (isset($_GET['edit']) && $_GET['edit'] === 'true') {
         echo "<script>alert('Se editó el bus correctamente');</script>";
     } else if (isset($_GET['edit'])) {
-        echo "<script>alert('No se pudo realizar la actualización del bus, intente de nuevo);</script>";
+
+        echo "<script>alert('No se pudo realizar la actualización del bus, intente de nuevo');</script>";
+
     }
 
     if (isset($_GET['del']) && $_GET['del'] === 'true') {
         echo "<script>alert('Se eliminó correctamente el viaje');</script>";
-    } else if (isset($_GET['del']))  {
+    } else if (isset($_GET['del'])) {
         echo "<script>alert('No se pudo eliminar el viaje, intente de nuevo');</script>";
     }
     ?>
@@ -24,9 +26,9 @@
 </head>
 
 <body>
-<a href="../../index.html">Inicio</a>
+    <a href="../../index.html">Inicio</a>
 
-<a href="../Controlador/handler.php?value=1">Regresar</a>
+    <a href="../Controlador/handler.php?value=1">Regresar</a>
 
     <center>
         <h1>Datos de viajes</h1>
