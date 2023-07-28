@@ -74,6 +74,7 @@
     <script src="../../JS/isotope.pkgd.min.js"></script> <!-- Isotope for filter -->
     <script src="../../JS/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
     <script src="../../JS/scripts.js"></script> <!-- Custom scripts -->
+    <script src="../../JS/funciones.js"></script>
 
 </body>
 
