@@ -1,7 +1,7 @@
 <?php
 $value = $_GET['value'];
 if ($value == 1) {
-    include("../Vista/admin.html");
+    include("../Vista/admin.php");
 } else if ($value == 2) {
     include("../Vista/user.html");
 } else if ($value == 3) {
