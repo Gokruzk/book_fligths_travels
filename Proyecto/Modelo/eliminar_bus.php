@@ -1,7 +1,8 @@
 <?php
  include("../Config/conexion.php");
- $id=$_REQUEST['id_bus'];
- $sql = "DELETE from Bus where id_bus=$id";
+ $placa=$_REQUEST['placa'];
+ $sql = "DELETE from Transporte where placa='$placa'";
+
  $estado=mysqli_query($conexion,$sql);
 
 if ($estado) {

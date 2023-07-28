@@ -30,14 +30,14 @@ $resultado = mysqli_query($conexion, $sql);
 while ($mostrar = mysqli_fetch_array($resultado)) {
     ?>
     <tr>
-        <td> <input style="border: 0;" value=<?php echo $mostrar['id_viaje'] ?> name="id_viaje"> </td>
+        <td> <input readonly style="border: 0;" value=<?php echo $mostrar['id_viaje'] ?> name="id_viaje"> </td>
         <td><input type="text" value=<?php echo $mostrar['lugar_origen'] ?> name="lugar_origen"> </td>
         <td><input type="text" value=<?php echo $mostrar['lugar_destino'] ?> name="lugar_destino"> </td>
         <td><input type="date" value=<?php echo $mostrar['fecha'] ?> name="fecha_viaje"> </td>
         <td><input type="time" value=<?php echo $mostrar['hora'] ?> name="hora_salida"> </td>
         <td><input type="number" min="1" step="0.01" name="precio_viaje" value=<?php echo $mostrar['precio'] ?> /></td>
 
-        <td><input type="text" value=<?php echo $mostrar['id_bus'] ?> name="codigo_bus"> </td>
+        <td><input type="text" value=<?php echo $mostrar['placa'] ?> name="placa_bus"> </td>
         <td> <input type="submit" value="Editar"></td>
     </tr>
     <?php

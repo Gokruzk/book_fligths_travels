@@ -1,9 +1,9 @@
 <?php
 include("../Config/conexion.php");
-$id = $_REQUEST['id_bus'];
+$placa = $_REQUEST['placa'];
 $sql = "SELECT *
- FROM Bus 
- where id_bus = $id";
+ FROM Transporte 
+ where placa = '$placa'";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -30,9 +30,8 @@ $resultado = mysqli_query($conexion, $sql);
 while ($mostrar = mysqli_fetch_array($resultado)) {
     ?>
     <tr>
-        <td> <input style="border: 0;" value=<?php echo $mostrar['id_bus'] ?> name="id_bus"> </td>
-        <td><input type="text" value=<?php echo $mostrar['nombre_responsable'] ?> name="nombre_responsable"> </td>
         <td><input type="text" value=<?php echo $mostrar['placa'] ?> name="placa"> </td>
+        <td><input type="text" value=<?php echo $mostrar['nombre_responsable'] ?> name="nombre_responsable"> </td>
 
         <td> <input type="submit" value="Editar"></td>
     </tr>

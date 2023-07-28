@@ -1,9 +1,9 @@
 <?php
 include("../Config/conexion.php");
-$sql = "SELECT v.id_viaje, v.lugar_origen, v.lugar_destino, v.fecha, v.hora, v.precio, b.nombre_responsable 
+$sql = "SELECT *
 FROM Viaje v
-inner join Bus b
-on v.id_bus = b.id_bus ";
+inner join Transporte T
+on V.placa = T.placa ";
 
 $resultado = mysqli_query($conexion, $sql);
 
@@ -30,6 +30,9 @@ while ($mostrar = mysqli_fetch_array($resultado)) {
         </td>
         <td>
             <?php echo $mostrar['nombre_responsable'] ?>
+        </td>
+        <td>
+            <?php echo $mostrar['placa'] ?>
         </td>
 
         <td> <a href="../Modelo/eliminar_viaje.php?id_viaje=<?php echo $mostrar['id_viaje'] ?>">Eliminar</a> </td>

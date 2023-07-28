@@ -13,9 +13,9 @@
         <h1>Eidtar datos del bus</h1>
 
         <table border="1">
-            <th>Id bus</th>
-            <th>Conductor</th>
             <th>Placa</th>
+            <th>Conductor</th>
+
         </table>
 </body>
 

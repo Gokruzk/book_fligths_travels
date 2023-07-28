@@ -5,7 +5,7 @@ $nombre = $_POST['conductor'];
 $placa = $_POST['placa'];
 
 
-$sql = "INSERT into Bus(nombre_responsable,placa) values('$nombre', '$placa')";
+$sql = "INSERT into Transporte(nombre_responsable,placa) values('$nombre', '$placa')";
 $estado = mysqli_query($conexion, $sql);
 
 if ($estado) {

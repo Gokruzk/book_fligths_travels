@@ -6,15 +6,15 @@ $origen = $_POST['lugar_origen'];
 $destino = $_POST['lugar_destino'];
 $fecha = $_POST['fecha_viaje'];
 $hora = $_POST['hora_salida'];
-$bus = $_POST['codigo_bus'];
+$placa = $_POST['placa_bus'];
 $precio = $_POST['precio_viaje'];
 
-$sql = "UPDATE viaje SET lugar_origen='$origen', 
+$sql = "UPDATE Viaje SET lugar_origen='$origen', 
 lugar_destino='$destino', 
 fecha='$fecha', 
 hora='$hora', 
 precio='$precio', 
-id_bus='$bus'  
+placa='$placa'  
 where id_viaje='$id'";
 
 $estado = mysqli_query($conexion, $sql);
