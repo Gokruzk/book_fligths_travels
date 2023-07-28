@@ -1745,15 +1745,10 @@ screen and (-ms-high-contrast: none) {
 /*     18. Copyright     */
 /*************************/
 .copyright {
-  padding-top: 1rem;
-  padding-bottom: 0.5rem;
-  background-color: #113448;
-  text-align: center;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  color: white;
-  
+padding-top: 1rem;
+	padding-bottom: 0.5rem;
+	background-color: #113448;
+	text-align: center;
 }
 
 .copyright p,
@@ -2470,8 +2465,7 @@ a:hover.back-to-top {
   align-items: center;
   justify-content: center;
   color: #fff;
-  height: 100vh;
-  background-color: #000000;
+  height: 80vh;
 }
 
 .title {
@@ -2834,7 +2828,6 @@ a:hover.back-to-top {
   text-decoration: none;
   cursor: pointer;
 }
-
 
 
 

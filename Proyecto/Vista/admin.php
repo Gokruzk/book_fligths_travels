@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </meta>
 
-    <title>Transportes chimborazo</title>
+    <title>Transportes Chimborazo</title>
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap&subset=latin-ext"
         rel="stylesheet">
@@ -37,7 +37,7 @@
     <br>
     <div class="container">
         <div class="row">
-            <div class="col-4" id="ParaSecciones">
+        <div class="col-3 card" id="ParaSecciones">
                 <center>
                     <h3>Agregar</h3>
                     <br>
@@ -52,7 +52,7 @@
                 </center>
             </div>
 
-            <div class="col-4" id="ParaSecciones">
+            <div class="col-3 card" id="ParaSecciones">
                 <center>
                     <h3>Modificar - Eliminar</h3>
                     <br>
@@ -67,7 +67,22 @@
                 </center>
             </div>
 
-            <div class="col-4" id="ParaSecciones">
+            <div class="col-3 card" id="ParaSecciones">
+                <center>
+                    <h3>Buscar</h3>
+                    <br>
+                    <a href="https://gifdb.com/images/high/penguin-random-dance-move-f7xqmg1qnjr42tu7.gif">
+                        <button class="btnAdmin">Buses</button>
+                    </a>
+                    <br> <br>
+                    <a href="https://gifdb.com/images/high/penguin-random-dance-move-f7xqmg1qnjr42tu7.gif">
+                        <button class="btnAdmin">Viajes</button>
+                    </a>
+                    <br> <br>
+                </center>
+            </div>
+
+            <div class="col-3 card" id="ParaSecciones">
                 <center>
                     <h3>Reportes</h3>
                     <br>
@@ -80,7 +95,7 @@
 
         </div>
     </div>
-
+    <br> <br>
     <?php
     include_once('footer.html');
     ?>
