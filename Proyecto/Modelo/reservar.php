@@ -24,5 +24,5 @@ $regresar = mysqli_query($conexion, $sql);
 if ($regresar)
     header("location:../index.html");
 else
-    echo "error al insertar";
+    echo "error al reservar";
 ?>

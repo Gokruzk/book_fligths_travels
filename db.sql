@@ -1,5 +1,5 @@
-CREATE DATABASE Reserva_Viajes;
-USE Reserva_Viajes;
+CREATE DATABASE Reservar_Viajes;
+USE Reservar_Viajes;
 
 CREATE TABLE Transporte(
     placa VARCHAR(8) PRIMARY KEY,

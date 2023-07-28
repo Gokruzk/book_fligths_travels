@@ -5,8 +5,8 @@ $id_viaje = $_GET['id_viaje'] ?? '';
 
 $sql = "SELECT v.id_viaje, v.lugar_origen, v.lugar_destino, v.fecha, v.hora, v.precio, b.nombre_responsable 
         FROM Viaje v
-        inner join Bus b
-        on v.id_bus = b.id_bus
+        inner join Transporte b
+        on v.placa = b.placa
         where v.id_viaje = $id_viaje";
         
 

@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <a href="../../index.html">Inicio</a>]
+    <a href="../../index.html">Inicio</a>
     <a href="../Controlador/handler.php?value=3">Regresar</a>
     <h1>Descripción y reserva de viaje seleccionado</h1>
 

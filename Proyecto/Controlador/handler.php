@@ -9,7 +9,7 @@ if ($value == 1) {
 } else if ($value == 4) {
     include("../Vista/reportes.php");
 } else if ($value == 5) {
-    echo 404;
+    include("../Vista/reservar_viaje.php");
 } else if ($value == 6) {
     include("../Vista/agregar_viaje.php");
 } else if ($value == 7) {
@@ -17,10 +17,10 @@ if ($value == 1) {
 } else if ($value == 8) {
     include("../Vista/agregar_bus.php");
 } else if ($value == 9) {
-    include("../Vista/reservar_viaje.php");
-}else if ($value == 10) {
+    include("../Vista/viajes_list.php");
+} else if ($value == 10) {
     include("../Vista/editar_bus.php");
-}  else if ($value == 0) {
+} else if ($value == 0) {
     require("../../index.html");
 }
 ?>
