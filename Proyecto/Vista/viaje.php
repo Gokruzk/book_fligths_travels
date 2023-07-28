@@ -15,20 +15,20 @@
     <h1>Descripción y reserva de viaje seleccionado</h1>
 
     <?php
-        // Capturar el ID del viaje desde el parámetro en la URL
-        $id_viaje = $_GET['id_viaje'] ?? '';
+    // Capturar el ID del viaje desde el parámetro en la URL
+    $id_viaje = $_GET['id_viaje'] ?? '';
 
-        // Verificar si se recibió el ID del viaje en la URL
-        if (empty($id_viaje)) {
-            echo "Error: No se proporcionó el ID del viaje.";
-            exit();
-        }
+    // Verificar si se recibió el ID del viaje en la URL
+    if (empty($id_viaje)) {
+        echo "Error: No se proporcionó el ID del viaje.";
+        exit();
+    }
 
     ?>
 
-    <form action="../Modelo/reservar.php" method="post">
+    <form action="../Modelo/reservar.php?id_viaje=<?php echo $id_viaje ?>" method="post">
 
-    <?php include("../Modelo/mostrar_viaje_reserva.php"); ?>
+        <?php include("../Modelo/mostrar_viaje_reserva.php"); ?>
 
         <label for="cedula">Número de cédula del cliente:</label>
         <input type="text" id="cedula" name="cedula" required>
