@@ -19,50 +19,71 @@
     <link href="../../CSS/swiper.css" rel="stylesheet">
     <link href="../../CSS/magnific-popup.css" rel="stylesheet">
     <link href="../../CSS/styles.css" rel="stylesheet">
+    <link href="../../CSS/Estilos.css" rel="stylesheet">
+
 
     <!-- Favicon  -->
     <link rel="icon" href="../../images/favicon.png">
 </head>
 
 <body>
-
     <?php
     include_once('menu.html');
     ?>
-    <a href="../../index.html">Inicio</a>
-
-
-
     <br>
+    <center>
+        <h2>MENÚ ADMINISTRADOR</h2>
+    </center>
     <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-4" id="ParaSecciones">
+                <center>
+                    <h3>Agregar</h3>
+                    <br>
+                    <a href="../Controlador/handler.php?value=8">
+                        <button class="btnAdmin">Buses</button>
+                    </a>
+                    <br> <br>
+                    <a href="../Controlador/handler.php?value=6">
+                        <button class="btnAdmin">Viajes</button>
+                    </a>
+                    <br> <br>
+                </center>
+            </div>
 
-    <a href="../Controlador/handler.php?value=6">Agregar un viaje</a>
+            <div class="col-4" id="ParaSecciones">
+                <center>
+                    <h3>Modificar - Eliminar</h3>
+                    <br>
+                    <a href="../Controlador/handler.php?value=10">
+                        <button class="btnAdmin">Buses</button>
+                    </a>
+                    <br> <br>
+                    <a href="../Controlador/handler.php?value=7">
+                        <button class="btnAdmin">Viajes</button>
+                    </a>
+                    <br> <br>
+                </center>
+            </div>
 
-    <br>
-    <br>
+            <div class="col-4" id="ParaSecciones">
+                <center>
+                    <h3>Reportes</h3>
+                    <br>
+                    <a href="../Controlador/handler.php?value=4">
+                        <button class="btnAdmin">Reportes</button>
+                    </a>
+                    <br> <br>
+                </center>
+            </div>
 
-    <a href="../Controlador/handler.php?value=7">
-        Mostrar/editar/eliminar viajes
-    </a>
+        </div>
+    </div>
 
-    <br>
-    <br>
-
-    <a href="../Controlador/handler.php?value=8">Agregar un bus</a>
-
-    <br>
-    <br>
-
-    <a href="../Controlador/handler.php?value=10">Mostrar/editar/eliminar un bus</a>
-
-    <br>
-    <br>
-
-    <a href="../Controlador/handler.php?value=4">Reportes</a>
-
-    <br>
-
-
+    <?php
+    include_once('footer.html');
+    ?>
 
     <script src="../../JS/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
     <script src="../../JS/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
