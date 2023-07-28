@@ -32,7 +32,7 @@
         <h1>Datos de viajes</h1>
     </center>
     <center>
-        <table border="1">
+        <table border="1" style="text-align: center;">
     </center>
     <td>ID</td>
     <td>Origen</td>
@@ -41,6 +41,7 @@
     <td>Hora Salida</td>
     <td>Precio</td>
     <td>Conductor</td>
+    <td>Placa del Bus</td>
     <?php include("../Modelo/mostrar_eliminar-editar_viaje.php"); ?>
     </table>
 </body>

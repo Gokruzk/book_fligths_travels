@@ -32,9 +32,8 @@
         <h1>Datos de buses</h1>
 
         <table border="1">
-            <td>ID</td>
-            <td>Conductor</td>
             <td>Placa</td>
+            <td>Conductor</td>
             <?php include("../Modelo/mostrar_eliminar-editar_bus.php"); ?>
         </table>
     </center>

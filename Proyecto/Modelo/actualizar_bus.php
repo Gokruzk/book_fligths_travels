@@ -1,13 +1,12 @@
 <?php
 include("../Config/conexion.php");
 
-$id = $_POST['id_bus'];
-$origen = $_POST['nombre_responsable'];
-$destino = $_POST['placa'];
+$nombre = $_POST['nombre_responsable'];
+$placa = $_POST['placa'];
 
-$sql = "UPDATE bus SET nombre_responsable='$origen', 
-placa='$destino'
-where id_bus='$id'";
+$sql = "UPDATE Transporte SET nombre_responsable='$nombre', 
+placa='$placa'
+where placa='$placa'";
 
 $estado = mysqli_query($conexion, $sql);
 

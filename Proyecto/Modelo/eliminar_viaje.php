@@ -1,8 +1,8 @@
 <?php
- include("../Config/conexion.php");
- $id=$_REQUEST['id_viaje'];
- $sql = "DELETE from Viaje where id_viaje=$id";
- $estado=mysqli_query($conexion,$sql);
+include("../Config/conexion.php");
+$id = $_REQUEST['id_viaje'];
+$sql = "DELETE from Viaje where id_viaje=$id";
+$estado = mysqli_query($conexion, $sql);
 
 if ($estado) {
     // Redirigir de vuelta a la página con el botón de enviar
