@@ -8,10 +8,10 @@
 
     <?php
     if (isset($_GET['edit']) && $_GET['edit'] === 'true') {
-        echo "<script>alert('Se editó el bus correctamente');</script>";
+        echo "<script>alert('Se editó el viaje correctamente');</script>";
     } else if (isset($_GET['edit'])) {
 
-        echo "<script>alert('No se pudo realizar la actualización del bus, intente de nuevo');</script>";
+        echo "<script>alert('No se pudo realizar la actualización del viaje, intente de nuevo');</script>";
 
     }
 
@@ -22,7 +22,9 @@
     }
     ?>
 
-    <title>Datos de los usuarios</title>
+    <link rel="stylesheet" href="../../CSS/estilos-admin.css">
+
+    <title>Datos de los viajes</title>
 </head>
 
 <body>
@@ -32,20 +34,20 @@
 
     <center>
         <h1>Datos de viajes</h1>
+
+        <table>
+
+            <th>ID</th>
+            <th>Origen</th>
+            <th>Destino</th>
+            <th>Fecha</th>
+            <th>Hora Salida</th>
+            <th>Precio</th>
+            <th>Conductor</th>
+            <th>Placa del Bus</th>
+            <?php include("../Modelo/mostrar_eliminar-editar_viaje.php"); ?>
+        </table>
     </center>
-    <center>
-        <table border="1" style="text-align: center;">
-    </center>
-    <td>ID</td>
-    <td>Origen</td>
-    <td>Destino</td>
-    <td>Fecha</td>
-    <td>Hora Salida</td>
-    <td>Precio</td>
-    <td>Conductor</td>
-    <td>Placa del Bus</td>
-    <?php include("../Modelo/mostrar_eliminar-editar_viaje.php"); ?>
-    </table>
 </body>
 
 </html>

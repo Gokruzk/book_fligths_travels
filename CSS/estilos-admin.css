@@ -49,12 +49,13 @@ h1 {
     outline: none;
 }
 
-.boton{
+.boton {
     display: flex;
     justify-content: center;
 }
 
 button {
+    border-radius: 5px;
     cursor: pointer;
     padding: 0.8em 1.8em;
     border: 2px solid #17C3B2;
@@ -68,9 +69,9 @@ button {
     z-index: 1;
     font-family: inherit;
     color: #17C3B2;
-   }
-   
-   button::before {
+}
+
+button::before {
     content: '';
     width: 0;
     height: 300%;
@@ -82,13 +83,31 @@ button {
     transition: .5s ease;
     display: block;
     z-index: -1;
-   }
-   
-   button:hover::before {
+}
+
+button:hover::before {
     width: 105%;
-   }
-   
-   button:hover {
+}
+
+button:hover {
     color: #111;
-   }
-   
+}
+
+
+table {
+    border-collapse: collapse;
+    border: 3px solid black;
+
+    font-size: larger;
+}
+
+th{
+    border: 2px solid black;
+    background-color: #999fcf;
+}
+
+td{
+    border: 2px solid black;
+    padding-left: 5px;
+    padding-right: 30px;
+}

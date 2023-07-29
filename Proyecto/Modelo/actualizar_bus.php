@@ -1,7 +1,7 @@
 <?php
 include("../Config/conexion.php");
 
-$nombre = $_POST['nombre_responsable'];
+$nombre = $_POST['conductor'];
 $placa = $_POST['placa'];
 
 $sql = "UPDATE Transporte SET nombre_responsable='$nombre', 

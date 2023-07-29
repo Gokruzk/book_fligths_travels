@@ -37,21 +37,21 @@ if (isset($_GET['success']) && $_GET['success'] === 'true') {
       <div class="contenedor-inputs">
         <div class="coolinput">
           <label for="input" class="text">Lugar de origen:</label>
-          <input type="text" placeholder="Origen" name="lugar_origen" class="input"></input>
+          <input required type="text" placeholder="Origen" name="lugar_origen" class="input"></input>
         </div>
 
         <div style="margin: 50px;"></div>
 
         <div class="coolinput">
           <label for="input" class="text">Lugar de destino</label>
-          <input type="text" placeholder="Destino" class="input" name="lugar_destino"></input>
+          <input required type="text" placeholder="Destino" class="input" name="lugar_destino"></input>
         </div>
 
         <div style="margin: 50px;"></div>
 
         <div class="coolinput">
           <label for="input" class="text">Placa del bus asignado</label>
-          <input type="text" title="Siga el patrón de placa, si tiene 3 dígitos anteponga el 0"
+          <input required type="text" title="Siga el patrón de placa, si tiene 3 dígitos anteponga el 0"
             pattern="^([A-Z]{3})-[0-9]{4}$" placeholder="Placa" name="placa_bus" class="input"></input>
         </div>
 
@@ -59,21 +59,21 @@ if (isset($_GET['success']) && $_GET['success'] === 'true') {
 
         <div class="coolinput">
           <label for="input" class="text">Fecha del viaje</label>
-          <input type="date" name="fecha_viaje" class="input"></input>
+          <input required type="date" name="fecha_viaje" class="input"></input>
         </div>
 
         <div style="margin: 50px;"></div>
 
         <div class="coolinput">
           <label for="input" class="text">Hora de salida</label>
-          <input type="time" name="hora_salida" class="input"></input>
+          <input required type="time" name="hora_salida" class="input"></input>
         </div>
 
         <div style="margin: 50px;"></div>
 
         <div class="coolinput">
           <label for="input" class="text">Precio $</label>
-          <input type="number" min="1" step="0.01" class="input" placeholder="0.00" name="precio_viaje" />
+          <input required type="number" min="1" step="0.01" class="input" placeholder="0.00" name="precio_viaje" />
         </div>
       </div>
 

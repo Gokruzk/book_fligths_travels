@@ -19,8 +19,10 @@
         echo "<script>alert('No se pudo eliminar el bus, intente de nuevo');</script>";
     }
     ?>
+    <link rel="stylesheet" href="../../CSS/estilos-admin.css">
 
-    <title>Datos de los usuarios</title>
+
+    <title>Datos de los buses</title>
 </head>
 
 <body>
@@ -31,9 +33,9 @@
     <center>
         <h1>Datos de buses</h1>
 
-        <table border="1">
-            <td>Placa</td>
-            <td>Conductor</td>
+        <table>
+            <th>Placa</th>
+            <th>Conductor</th>
             <?php include("../Modelo/mostrar_eliminar-editar_bus.php"); ?>
         </table>
     </center>

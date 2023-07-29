@@ -10,7 +10,7 @@
 
 <body>
     <center>
-        <h1>Eidtar datos del bus</h1>
+        <h1>Editar datos del bus</h1>
 
         <table border="1">
             <th>Placa</th>
