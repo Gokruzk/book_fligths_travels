@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" style="background-color: rgb(50, 42, 80)">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +12,8 @@
         echo "<script>alert('No se pudo añadir el nuevo bus, intente de nuevo');</script>";
     }
     ?>
+
+    <link rel="stylesheet" href="../../CSS/estilos-admin.css">
 
     <title>Agregar</title>
 </head>
@@ -27,18 +29,26 @@
     <h1>Agregar un nuevo bus</h1>
 
     <form action="../Modelo/insertar_bus.php" method="post">
-        <label for="">Nombre del conductor</label>
 
-        <input type="text" placeholder="Nombre" name="conductor"></input>
+        <div class="contenedor">
 
-        <label for="">Placa del bus</label>
+            <div class="contenedor-inputs">
+                <div class="coolinput">
+                    <label for="input" class="text">Conductor:</label>
+                    <input required type="text" placeholder="Nombre" name="conductor" class="input">
+                </div>
+                <div style="margin: 50px;"></div>
+                <div class="coolinput">
+                    <label for="input" class="text">Placa del bus</label>
+                    <input required type="text" title="Siga el patrón de placa, si tiene 3 dígitos anteponga el 0" pattern="^([A-Z]{3})-[0-9]{4}$" placeholder="AAA-0000" name="placa"
+                        class="input">
+                </div>
+            </div>
 
-        <input type="text" pattern="^([A-Z]{3})-[0-9]{4}$" placeholder="AAA-0000" name="placa"></input>
+            <div class="boton"><button type="submit">Agregar</button></div>
 
-        <button type="submit">Agregar</button>
+        </div>
     </form>
-
-
 </body>
 
 </html>
