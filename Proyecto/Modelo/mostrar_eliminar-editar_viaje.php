@@ -10,33 +10,35 @@ $resultado = mysqli_query($conexion, $sql);
 while ($mostrar = mysqli_fetch_array($resultado)) {
     ?>
     <tr>
-        <td>
+        <td class="datos">
             <?php echo $mostrar['id_viaje'] ?>
         </td>
-        <td>
+        <td class="datos">
             <?php echo $mostrar['lugar_origen'] ?>
         </td>
-        <td>
+        <td class="datos">
             <?php echo $mostrar['lugar_destino'] ?>
         </td>
-        <td>
+        <td class="datos">
             <?php echo $mostrar['fecha'] ?>
         </td>
-        <td>
+        <td class="datos">
             <?php echo $mostrar['hora'] ?>
         </td>
-        <td>
+        <td class="datos">
             <?php echo $mostrar['precio'] ?>
         </td>
-        <td>
+        <td class="datos">
             <?php echo $mostrar['nombre_responsable'] ?>
         </td>
-        <td>
+        <td class="datos">
             <?php echo $mostrar['placa'] ?>
         </td>
 
-        <td> <a href="../Modelo/eliminar_viaje.php?id_viaje=<?php echo $mostrar['id_viaje'] ?>">Eliminar</a> </td>
-        <td> <a href="../Modelo/editar_viaje.php?id_viaje=<?php echo $mostrar['id_viaje'] ?>">Editar</a> </td>
+        <td class="icono"> <a href="../Modelo/editar_viaje.php?id_viaje=<?php echo $mostrar['id_viaje'] ?>"><img title="Editar bus"
+                    src="../../images/editar.png" alt=""></a> </td>
+        <td class="icono"> <a href="../Modelo/eliminar_viaje.php?id_viaje=<?php echo $mostrar['id_viaje'] ?>"><img title="Eliminar bus"
+                    src="../../images/eliminar.png" alt=""></a> </td>
 
     </tr>
     <?php

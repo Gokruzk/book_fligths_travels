@@ -106,8 +106,22 @@ th{
     background-color: #999fcf;
 }
 
-td{
+tr{
+    height: 40px;
+}
+
+.datos{
     border: 2px solid black;
     padding-left: 5px;
     padding-right: 30px;
+}
+
+.icono{
+    text-align: center;
+    border: 2px solid black;
+    width: 30px;
+}
+
+img{
+    width: 20px;
 }
