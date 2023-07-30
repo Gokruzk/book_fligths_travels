@@ -22,6 +22,8 @@ if ($value == 1) {
     include("../Vista/editar_bus.php");
 } else if ($value == 11) {
     require("../Vista/buscar_bus.php");
+} else if ($value == 12) {
+    require("../Vista/buscar_viaje.php");
 } else if ($value == 0) {
     require("../../index.html");
 }
