@@ -54,7 +54,7 @@ h1 {
     justify-content: center;
 }
 
-button {
+.boton-b {
     border-radius: 5px;
     cursor: pointer;
     padding: 0.8em 1.8em;
@@ -63,7 +63,6 @@ button {
     overflow: hidden;
     background-color: transparent;
     text-align: center;
-    text-transform: uppercase;
     font-size: 16px;
     transition: .3s;
     z-index: 1;
@@ -71,7 +70,7 @@ button {
     color: #17C3B2;
 }
 
-button::before {
+.boton-b::before {
     content: '';
     width: 0;
     height: 300%;
@@ -79,17 +78,17 @@ button::before {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(45deg);
-    background: #17C3B2;
+    background: #56b441;
     transition: .5s ease;
     display: block;
     z-index: -1;
 }
 
-button:hover::before {
+.boton-b:hover::before {
     width: 105%;
 }
 
-button:hover {
+.boton-b:hover {
     color: #111;
 }
 
@@ -101,27 +100,27 @@ table {
     font-size: larger;
 }
 
-th{
+th {
     border: 2px solid black;
     background-color: #999fcf;
 }
 
-tr{
+tr {
     height: 40px;
 }
 
-.datos{
+.datos {
     border: 2px solid black;
     padding-left: 5px;
     padding-right: 30px;
 }
 
-.icono{
+.icono {
     text-align: center;
     border: 2px solid black;
     width: 30px;
 }
 
-img{
+img {
     width: 20px;
 }

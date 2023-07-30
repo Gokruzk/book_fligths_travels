@@ -77,7 +77,7 @@ if (isset($_GET['success']) && $_GET['success'] === 'true') {
         </div>
       </div>
 
-      <div class="boton"><button type="submit">Agregar</button></div>
+      <div class="boton"><button class="boton-b" type="submit">Agregar</button></div>
 
     </div>
 

@@ -49,7 +49,7 @@ while ($mostrar = mysqli_fetch_array($resultado)) {
             </div>
         </div>
 
-        <div class="boton"><button type="submit">Editar</button></div>
+        <div class="boton"><button class="boton-b" type="submit">Editar</button></div>
 
     </div>
     </form>

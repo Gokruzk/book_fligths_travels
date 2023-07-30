@@ -37,7 +37,7 @@
     <br>
     <div class="container">
         <div class="row">
-        <div class="col-3 card" id="ParaSecciones">
+            <div class="col-3 card" id="ParaSecciones">
                 <center>
                     <h3>Agregar</h3>
                     <br>
@@ -71,7 +71,7 @@
                 <center>
                     <h3>Buscar</h3>
                     <br>
-                    <a href="https://gifdb.com/images/high/penguin-random-dance-move-f7xqmg1qnjr42tu7.gif">
+                    <a href="../Controlador/handler.php?value=11">
                         <button class="btnAdmin">Buses</button>
                     </a>
                     <br> <br>

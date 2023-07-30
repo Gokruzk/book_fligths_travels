@@ -20,6 +20,8 @@ if ($value == 1) {
     include("../Vista/viajes_list.php");
 } else if ($value == 10) {
     include("../Vista/editar_bus.php");
+} else if ($value == 11) {
+    require("../Vista/buscar_bus.php");
 } else if ($value == 0) {
     require("../../index.html");
 }
