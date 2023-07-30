@@ -75,7 +75,7 @@
                         <button class="btnAdmin">Buses</button>
                     </a>
                     <br> <br>
-                    <a href="https://gifdb.com/images/high/penguin-random-dance-move-f7xqmg1qnjr42tu7.gif">
+                    <a href="../Controlador/handler.php?value=12">
                         <button class="btnAdmin">Viajes</button>
                     </a>
                     <br> <br>
