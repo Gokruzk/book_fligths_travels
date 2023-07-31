@@ -39,7 +39,7 @@
         <div class="row">
             <div class="col-3 card" id="ParaSecciones">
                 <center>
-                    
+
                     <br>
                     <a href="../Controlador/handler.php?value=13">
                         <button class="btnAdmin">Reporte 1</button>
@@ -54,7 +54,7 @@
 
             <div class="col-3 card" id="ParaSecciones">
                 <center>
-                    
+
                     <br>
                     <a href="../Controlador/handler.php?value=10">
                         <button class="btnAdmin">Reporte 3</button>
@@ -69,18 +69,18 @@
 
             <div class="col-3 card" id="ParaSecciones">
                 <center>
-                    
+
                     <br>
                     <a href="../Controlador/handler.php?value=11">
                         <button class="btnAdmin">Reporte 5</button>
                     </a>
                     <br> <br>
-                   
+
                     <br> <br>
                 </center>
             </div>
 
-            
+
 
         </div>
     </div>

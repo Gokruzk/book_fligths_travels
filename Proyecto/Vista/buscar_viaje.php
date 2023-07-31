@@ -32,6 +32,7 @@
                         <option value="4">Hora de salida</option>
                         <option value="5">Precio</option>
                         <option value="6">Placa del bus</option>
+                        <option value="7">Nombre del conductor</option>
                     </select>
 
                 </div>
@@ -45,6 +46,12 @@
                     <div id="origen-id" class="coolinput" style="display: none;">
                         <label for="input" class="text">Lugar de origen:</label>
                         <input id="valor-origen" type="text" placeholder="Origen" name="lugar_origen"
+                            class="input"></input>
+                    </div>
+
+                    <div id="conductor-id" class="coolinput" style="display: none;">
+                        <label for="input" class="text">Nombre del conductor:</label>
+                        <input id="valor-conductor" type="text" placeholder="Conductor" name="conductor"
                             class="input"></input>
                     </div>
 
@@ -78,7 +85,6 @@
                     </div>
                 </div>
             </div>
-            </div>
 
             <div style="margin-top: 40px; margin-bottom: 40px;" class="boton"><button class="boton-b"
                     type="submit">Buscar</button></div>
@@ -96,6 +102,7 @@
                 $fecha = $_POST['fecha_viaje'];
                 $hora = $_POST['hora_salida'];
                 $precio = $_POST['precio_viaje'];
+                $conductor = $_POST['conductor'];
 
                 if (strlen($id) > 0) {
                     $sql = "SELECT * FROM Viaje WHERE id_viaje='$id'";
@@ -111,6 +118,11 @@
                     $sql = "SELECT * FROM Viaje WHERE hora='$hora'";
                 } else if (strlen($precio) > 0) {
                     $sql = "SELECT * FROM Viaje WHERE precio='$precio'";
+                } else if (strlen($conductor) > 0) {
+                    $sql = "SELECT * FROM Viaje V
+                    INNER JOIN Transporte T
+                    on V.placa = T.placa
+                     WHERE T.nombre_responsable='$conductor'";
                 }
 
                 $resultado = mysqli_query($conexion, $sql);
@@ -123,6 +135,7 @@
                 <th>Hora Salida</th>
                 <th>Precio</th>
                 <th>Placa del Bus</th>
+                <th>Conductor</th>
 
                 <?php
 
@@ -151,12 +164,20 @@
                         <td class="datos">
                             <?php echo $mostrar['placa'] ?>
                         </td>
+                        <td class="datos">
+                            <?php echo $mostrar['nombre_responsable'] ?>
+                        </td>
 
-                        <td class="icono"> <a href="../Modelo/editar_viaje.php?id_viaje=<?php echo $mostrar['id_viaje'] ?>"><img
-                                    title="Editar bus" src="../../images/editar.png" alt=""></a> </td>
-                        <td class="icono"> <a
-                                href="../Modelo/eliminar_viaje.php?id_viaje=<?php echo $mostrar['id_viaje'] ?>"><img
-                                    title="Eliminar bus" src="../../images/eliminar.png" alt=""></a> </td>
+                        <td class="icono">
+                            <a href="../Modelo/editar_viaje.php?id_viaje=<?php echo $mostrar['id_viaje'] ?>"><img
+                                    title="Editar bus" src="../../images/editar.png" alt="">
+                            </a>
+                        </td>
+                        <td class="icono">
+                            <a href="../Modelo/eliminar_viaje.php?id_viaje=<?php echo $mostrar['id_viaje'] ?>"><img
+                                    title="Eliminar bus" src="../../images/eliminar.png" alt="">
+                            </a>
+                        </td>
 
                     </tr>
                     <?php
