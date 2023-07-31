@@ -1,12 +1,12 @@
 <?php
-require("../REPORT/fpdf.php");
+require("../../REPORT/fpdf.php");
 class PDF extends FPDF
 {
 // Cabecera de página
 function Header()
 {
     // Logo
-    $this->Image('../img/WordB.png',10,8,33);
+    $this->Image("../../images/favicon.png",10,8,20);
     // Arial bold 15
     $this->SetFont('Arial','B',15);
     // Movernos a la derecha
@@ -14,7 +14,7 @@ function Header()
     // Título
     $this->Cell(50,10,'ESCUELA SUPERIOR POLITECNICA DE CHIMBORAZO',2,0,'C');
     $this->Ln(10);
-    $this->Cell(200,10,'FACULTAD DE INFROMATICA Y ELECTRONICA',2,0,'C');
+    $this->Cell(200,10,'TRANS CHIMBORAZO',2,0,'C');
     // Salto de línea
     $this->Ln(20);
 }
