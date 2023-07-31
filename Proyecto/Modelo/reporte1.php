@@ -3,7 +3,7 @@
 include("../Vista/plantilla1.php");
 
 include("../Config/conexion.php");
-$sql= "SELECT *FROM Cliente";
+$sql= "SELECT * FROM usuario";
 
 $resultado=mysqli_query($conexion, $sql);
 
