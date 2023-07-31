@@ -220,16 +220,16 @@ strong {
 
 /* IE10+ hack to solve lower label text position compared to the rest of the browsers */
 @media screen and (-ms-high-contrast: active),
-screen and (-ms-high-contrast: none) {
+  screen and (-ms-high-contrast: none) {
   .label-control {
     top: 0.9375rem;
   }
 }
 
-.form-control-input:focus+.label-control,
-.form-control-input.notEmpty+.label-control,
-.form-control-textarea:focus+.label-control,
-.form-control-textarea.notEmpty+.label-control {
+.form-control-input:focus + .label-control,
+.form-control-input.notEmpty + .label-control,
+.form-control-textarea:focus + .label-control,
+.form-control-textarea.notEmpty + .label-control {
   top: 0.125rem;
   opacity: 1;
   font-size: 0.75rem;
@@ -262,7 +262,7 @@ screen and (-ms-high-contrast: none) {
 
 /* IE10+ hack to solve lower label text position compared to the rest of the browsers */
 @media screen and (-ms-high-contrast: active),
-screen and (-ms-high-contrast: none) {
+  screen and (-ms-high-contrast: none) {
   .form-control-input {
     padding-top: 1.25rem;
     padding-bottom: 0.75rem;
@@ -336,7 +336,7 @@ input[type="checkbox"] {
 
 /* IE10+ hack to raise checkbox field position compared to the rest of the browsers */
 @media screen and (-ms-high-contrast: active),
-screen and (-ms-high-contrast: none) {
+  screen and (-ms-high-contrast: none) {
   input[type="checkbox"] {
     vertical-align: -9%;
   }
@@ -600,7 +600,7 @@ screen and (-ms-high-contrast: none) {
   text-align: center;
 }
 
-.spinner>div {
+.spinner > div {
   display: inline-block;
   width: 1rem;
   height: 1rem;
@@ -621,7 +621,6 @@ screen and (-ms-high-contrast: none) {
 }
 
 @-webkit-keyframes sk-bouncedelay {
-
   0%,
   80%,
   100% {
@@ -634,7 +633,6 @@ screen and (-ms-high-contrast: none) {
 }
 
 @keyframes sk-bouncedelay {
-
   0%,
   80%,
   100% {
@@ -698,7 +696,7 @@ screen and (-ms-high-contrast: none) {
 }
 
 /* Dropdown Menu */
-.navbar-custom .dropdown:hover>.dropdown-menu {
+.navbar-custom .dropdown:hover > .dropdown-menu {
   display: block;
   /* this makes the dropdown menu stay open while hovering it */
   min-width: auto;
@@ -766,19 +764,27 @@ screen and (-ms-high-contrast: none) {
   font-size: 2rem;
 }
 
-.navbar-custom button[aria-expanded="false"] .navbar-toggler-awesome.fas.fa-times {
+.navbar-custom
+  button[aria-expanded="false"]
+  .navbar-toggler-awesome.fas.fa-times {
   display: none;
 }
 
-.navbar-custom button[aria-expanded="false"] .navbar-toggler-awesome.fas.fa-bars {
+.navbar-custom
+  button[aria-expanded="false"]
+  .navbar-toggler-awesome.fas.fa-bars {
   display: inline-block;
 }
 
-.navbar-custom button[aria-expanded="true"] .navbar-toggler-awesome.fas.fa-bars {
+.navbar-custom
+  button[aria-expanded="true"]
+  .navbar-toggler-awesome.fas.fa-bars {
   display: none;
 }
 
-.navbar-custom button[aria-expanded="true"] .navbar-toggler-awesome.fas.fa-times {
+.navbar-custom
+  button[aria-expanded="true"]
+  .navbar-toggler-awesome.fas.fa-times {
   display: inline-block;
   margin-right: 0.125rem;
 }
@@ -1745,10 +1751,10 @@ screen and (-ms-high-contrast: none) {
 /*     18. Copyright     */
 /*************************/
 .copyright {
-padding-top: 1rem;
-	padding-bottom: 0.5rem;
-	background-color: #113448;
-	text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+  background-color: #113448;
+  text-align: center;
 }
 
 .copyright p,
@@ -1847,7 +1853,6 @@ a:hover.back-to-top {
 /*****************************/
 /* Min-width width 768px */
 @media (min-width: 768px) {
-
   /* General Styles */
   .p-heading {
     width: 85%;
@@ -1856,7 +1861,6 @@ a:hover.back-to-top {
   }
 
   /* end of general styles */
-
 
   /* Navigation */
   .navbar-custom {
@@ -1997,7 +2001,8 @@ a:hover.back-to-top {
     text-align: left;
   }
 
-  .counter #counter .cell {}
+  .counter #counter .cell {
+  }
 
   /* end of about */
 
@@ -2030,7 +2035,6 @@ a:hover.back-to-top {
 
 /* Min-width width 992px */
 @media (min-width: 992px) {
-
   /* General Styles */
   .p-heading {
     width: 65%;
@@ -2262,7 +2266,6 @@ a:hover.back-to-top {
 
 /* Min-width width 1200px */
 @media (min-width: 1200px) {
-
   /* General Styles */
   .p-heading {
     width: 55%;
@@ -2438,7 +2441,6 @@ a:hover.back-to-top {
 
 /* Min-width width 1600px */
 @media (min-width: 1600px) {
-
   /* Navigation */
   .navbar-custom {
     padding-right: 12rem;
@@ -2479,7 +2481,6 @@ a:hover.back-to-top {
 .card:hover {
   scale: 0.9;
 }
-
 
 /* Navigation */
 .navbar-customMenu {
@@ -2590,7 +2591,7 @@ a:hover.back-to-top {
 }
 
 /* Dropdown Menu */
-.navbar-customMenu .dropdown:hover>.dropdown-menu {
+.navbar-customMenu .dropdown:hover > .dropdown-menu {
   display: block;
   /* this makes the dropdown menu stay open while hovering it */
   min-width: auto;
@@ -2658,19 +2659,27 @@ a:hover.back-to-top {
   font-size: 2rem;
 }
 
-.navbar-customMenu button[aria-expanded="false"] .navbar-toggler-awesome.fas.fa-times {
+.navbar-customMenu
+  button[aria-expanded="false"]
+  .navbar-toggler-awesome.fas.fa-times {
   display: none;
 }
 
-.navbar-customMenu button[aria-expanded="false"] .navbar-toggler-awesome.fas.fa-bars {
+.navbar-customMenu
+  button[aria-expanded="false"]
+  .navbar-toggler-awesome.fas.fa-bars {
   display: inline-block;
 }
 
-.navbar-customMenu button[aria-expanded="true"] .navbar-toggler-awesome.fas.fa-bars {
+.navbar-customMenu
+  button[aria-expanded="true"]
+  .navbar-toggler-awesome.fas.fa-bars {
   display: none;
 }
 
-.navbar-customMenu button[aria-expanded="true"] .navbar-toggler-awesome.fas.fa-times {
+.navbar-customMenu
+  button[aria-expanded="true"]
+  .navbar-toggler-awesome.fas.fa-times {
   display: inline-block;
   margin-right: 0.125rem;
 }
@@ -2693,7 +2702,8 @@ a:hover.back-to-top {
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
   max-width: 400px;
   width: 100%;
 }
@@ -2704,7 +2714,8 @@ a:hover.back-to-top {
   padding: 1rem;
   max-width: 350px;
   border-radius: 0.5rem;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
   transform: scale(0.8);
   transition: transform 0.3s ease;
 }
@@ -2717,7 +2728,6 @@ a:hover.back-to-top {
 #miModal.mostrar .form {
   transform: scale(1);
 }
-
 
 .form-title {
   font-size: 1.25rem;
@@ -2761,7 +2771,7 @@ a:hover.back-to-top {
 }
 
 .input-container span svg {
-  color: #9CA3AF;
+  color: #9ca3af;
   width: 1rem;
   height: 1rem;
 }
@@ -2772,7 +2782,7 @@ a:hover.back-to-top {
   padding-bottom: 0.75rem;
   padding-left: 1.25rem;
   padding-right: 1.25rem;
-  background-color: #4F46E5;
+  background-color: #4f46e5;
   color: #ffffff;
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -2783,7 +2793,7 @@ a:hover.back-to-top {
 }
 
 .signup-link {
-  color: #6B7280;
+  color: #6b7280;
   font-size: 0.875rem;
   line-height: 1.25rem;
   text-align: center;
@@ -2829,6 +2839,84 @@ a:hover.back-to-top {
   cursor: pointer;
 }
 
+.modCont {
+  text-align: center;
+}
 
+.form-container {
+  text-align: center;
+  width: 320px;
+  border-radius: 0.75rem;
+  background-color: white;
+  padding: 2rem;
+  color: black;
+}
 
-/* end of navigation */
+.titleL {
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+
+.form {
+  margin-top: 1.5rem;
+}
+
+.input-group {
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.input-group label {
+  display: block;
+  color: rgba(156, 163, 175, 1);
+  margin-bottom: 4px;
+}
+
+.input-group input {
+  width: 100%;
+  border-radius: 0.375rem;
+  border: 1px solid rgba(55, 65, 81, 1);
+  outline: 0;
+  background-color: white;
+  padding: 0.75rem 1rem;
+  color: rgb(0, 0, 0);
+}
+
+.input-group input:focus {
+  border-color: rgba(167, 139, 250);
+}
+
+.signup a {
+  color: black;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.forgot a:hover, .signup a:hover {
+  text-decoration: underline rgba(167, 139, 250, 1);
+}
+
+.sign {
+  display: block;
+  width: 100%;
+  background-color: rgba(167, 139, 250, 1);
+  margin-top: 0.75rem;
+  padding: 0.75rem;
+  text-align: center;
+  color: rgba(17, 24, 39, 1);
+  border: none;
+  border-radius: 0.375rem;
+  font-weight: 600;
+}
+
+.signup {
+  padding-top: 10px;
+  text-align: center;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  color: rgba(156, 163, 175, 1);
+}
+

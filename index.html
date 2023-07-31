@@ -1,317 +1,514 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transportes Chimborazo</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Transportes Chimborazo</title>
+    <!-- Styles -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap&subset=latin-ext"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600&display=swap&subset=latin-ext"
+      rel="stylesheet"
+    />
+    <link href="./CSS/bootstrap.css" rel="stylesheet" />
+    <link href="./CSS/fontawesome-all.css" rel="stylesheet" />
+    <link href="./CSS/swiper.css" rel="stylesheet" />
+    <link href="./CSS/magnific-popup.css" rel="stylesheet" />
+    <link href="./CSS/styles.css" rel="stylesheet" />
+    <link href="./CSS/Estilos.css" rel="stylesheet" />
 
-  <!-- Styles -->
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap&subset=latin-ext"
-    rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600&display=swap&subset=latin-ext"
-    rel="stylesheet">
-  <link href="./CSS/bootstrap.css" rel="stylesheet">
-  <link href="./CSS/fontawesome-all.css" rel="stylesheet">
-  <link href="./CSS/swiper.css" rel="stylesheet">
-  <link href="./CSS/magnific-popup.css" rel="stylesheet">
-  <link href="./CSS/styles.css" rel="stylesheet">
-  <link href="./CSS/Estilos.css" rel="stylesheet">
+    <!-- Favicon  -->
+    <link rel="icon" href="./images/favicon.png" />
+  </head>
 
-  <!-- Favicon  -->
-  <link rel="icon" href="./images/favicon.png">
-</head>
-
-<body data-spy="scroll" data-target=".fixed-top">
-
-  <!-- Preloader -->
-  <div class="spinner-wrapper">
-    <div class="spinner">
-      <div class="bounce1"></div>
-      <div class="bounce2"></div>
-      <div class="bounce3"></div>
+  <body data-spy="scroll" data-target=".fixed-top">
+    <!-- Preloader -->
+    <div class="spinner-wrapper">
+      <div class="spinner">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+      </div>
     </div>
-  </div>
-  <!-- end of preloader -->
+    <!-- end of preloader -->
 
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top">
+      <!-- Text Logo - Use this if you don't have a graphic logo -->
+      <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Aria</a> -->
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top">
-    <!-- Text Logo - Use this if you don't have a graphic logo -->
-    <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Aria</a> -->
+      <!-- Image Logo -->
+      <img src="./images/favicon.png" height="60" />
 
-    <!-- Image Logo -->
-    <img src="./images/favicon.png" height="60">
+      <!-- Mobile Menu Toggle Button -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarsExampleDefault"
+        aria-controls="navbarsExampleDefault"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-awesome fas fa-bars"></span>
+        <span class="navbar-toggler-awesome fas fa-times"></span>
+      </button>
+      <!-- end of mobile menu toggle button -->
 
-    <!-- Mobile Menu Toggle Button -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
-      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-awesome fas fa-bars"></span>
-      <span class="navbar-toggler-awesome fas fa-times"></span>
-    </button>
-    <!-- end of mobile menu toggle button -->
-
-    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link page-scroll" href="#header">INICIO <span class="sr-only">(current)</span></a>
-        </li>
-        <!-- <li class="nav-item">
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link page-scroll" href="#header"
+              >INICIO <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <!-- <li class="nav-item">
           <a class="nav-link page-scroll" href="#intro">INTRO</a>
         </li> -->
-        <li class="nav-item">
-          <a class="nav-link page-scroll" href="#miModal" id="mostrarModal">INICIAR SESIÓN</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link page-scroll" href="#projects">DESTINOS</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link page-scroll" href=".basic-2">ACERCA DE</a>
-        </li>
+          <li class="nav-item">
+            <a class="nav-link page-scroll" href="#miModal" id="mostrarModal"
+              >INICIAR SESIÓN</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link page-scroll" href="#projects">DESTINOS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link page-scroll" href=".basic-2">ACERCA DE</a>
+          </li>
 
-        <li class="nav-item">
-          <a class="nav-link page-scroll" href="#contact">CONTÁCTANOS</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+          <li class="nav-item">
+            <a class="nav-link page-scroll" href="#contact">CONTÁCTANOS</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
-  <center>
-    <div class="modal" id="miModal">
-      <form class="form">
-        <p class="form-title">Sign in to your account</p>
-        <div class="input-container">
-          <div>
-            <div id="formxd">
-              <label for="user">Correo</label>
-              <input id="user" type="email" />
-              <label for="psw">Contraseña</label>
-              <input id="psw" type="password" />
-              <button id="botonOcultar">Hide</button>
+    <div class="modCont">
+      <div class="modal" id="miModal">
+        <div class="form-container">
+          <p class="titleL">Iniciar Sesión</p>
+          <form class="form" action="./Proyecto/Modelo/login.php" method="post">
+            <div class="input-group">
+              <label for="username">Correo</label>
+              <input type="email" name="user" id="username">
             </div>
-            <form id="formxdd" action="">
-              <ul>
-                <li>
-                  <a href="./Proyecto/Controlador/handler.php?value=1">Admin page</a>
-                </li>
-                <li>
-                  <a href="./Proyecto/Controlador/handler.php?value=2">User page</a>
-                </li>
-                <li>
-                  <a href="./Proyecto/Controlador/handler.php?value=3">Lista de viajes</a>
-                </li>
-              </ul>
-            </form>
-            <script src="./JS/jquery-3.7.0.min.js"></script>
-            <script>
-              // Esperamos a que el documento esté completamente cargado
-              $(document).ready(function () {
-                $("#formxdd").hide();
-                // Vinculamosn el evento clic del botón para ocultar el elemento
-
-                $("#botonOcultar").click(function () {
-                  $("#formxd").hide();
-                  $("#formxdd").show();
-                });
-              });
-            </script>
+            <div class="input-group">
+              <label for="password">Contraseña</label>
+              <input type="password" name="psw" id="password">
+            <button class="sign">Iniciar Sesión</button>
+          </form>
+          <p class="signup"><a rel="noopener noreferrer" href="#" class="">Registrarse</a>
+          </p>
+        </div>
+        <!-- <form class="form" action="./Proyecto/Modelo/login.php" method="post">
+          <p class="form-title">Iniciar Sesión</p>
+          <div class="input-container">
+            <div>
+              <div id="formxd">
+                <label for="user">Correo</label>
+                <input name="user" id="user" type="email" />
+                <label for="psw">Contraseña</label>
+                <input name="psw" id="psw" type="password" />
+                <button id="botonOcultar">Iniciar Sesión</button>
+              </div>
+              <script src="./JS/jquery-3.7.0.min.js"></script>
+            </div>
           </div>
-          <!-- <input placeholder="Enter email" type="email">
-          <span>
-            <svg stroke="currentColor" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
-                stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
-            </svg>
-          </span>
-        </div>
-        <div class="input-container">
-          <input placeholder="Enter password" type="password">
-
-          <span>
-            <svg stroke="currentColor" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-width="2" stroke-linejoin="round"
-                stroke-linecap="round">
-              </path>
-              <path
-                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
-                stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></path>
-            </svg>
-          </span>
-        </div>
-        <button class="submit" type="submit">
-          Sign in
-        </button>
-
-        <p class="signup-link">
-          No account?
-          <a href="">Sign up</a>
-        </p> -->
-      </form>
+        </form> -->
+      </div>
     </div>
-  </center>
 
-  <script src="js/scripts.js"></script>
+    <script src="js/scripts.js"></script>
 
+    <!-- Header -->
+    <header id="header" class="header">
+      <div class="header-content">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="text-container">
+                <h1><span id="js-rotating">TRANSCHIMBORAZO, ESPOCH</span></h1>
+                <p class="p-heading p-large">
+                  Cielo Morillo<br />Nigel Jama<br />Fernando Novillo<br />Kevin
+                  Tapia<br />Cristhian Chimbo
+                </p>
+                <a class="btn-solid-lg page-scroll" href="#intro">EMPEZAR</a>
+              </div>
+            </div>
+            <!-- end of col -->
+          </div>
+          <!-- end of row -->
+        </div>
+        <!-- end of container -->
+      </div>
+      <!-- end of header-content -->
+    </header>
+    <!-- end of header -->
+    <!-- end of header -->
 
+    <!-- Intro -->
+    <div id="intro" class="basic-1">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5">
+            <div class="text-container">
+              <div class="section-title">INTRO</div>
+              <h2>TRANSCHIMBORAZO</h2>
+              <p>
+                ¡Bienvenidos a nuestra empresa de administración de paseos en
+                Chimborazo! Ofrecemos paseos turístico y brindar experiencias
+                inolvidables.<br />
+                ¡Prepárate para descubrir los tesoros que la provincia de
+                Chimborazo tiene para ofrecer!
+                <br />
+                <br />
 
+                Un cordial saludo,
+              </p>
+              <div class="testimonial-author">Gerencia</div>
+            </div>
+            <!-- end of text-container -->
+          </div>
+          <!-- end of col -->
+          <div class="col-lg-7">
+            <div class="image-container">
+              <img
+                class="img-fluidChimborazo"
+                src="images/intro-office.jpg"
+                alt="alternative"
+              />
+            </div>
+            <!-- end of image-container -->
+          </div>
+          <!-- end of col -->
+        </div>
+        <!-- end of row -->
+      </div>
+      <!-- end of container -->
+    </div>
+    <!-- end of basic-1 -->
+    <!-- end of intro -->
 
-  <!-- Header -->
-  <header id="header" class="header">
-    <div class="header-content">
+    <!-- Projects -->
+    <div id="projects" class="filter">
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
-            <div class="text-container">
-              <h1><span id="js-rotating">TRANSCHIMBORAZO, ESPOCH</span></h1>
-              <p class="p-heading p-large">Cielo Morillo<br>Nigel Jama<br>Fernando Novillo<br>Kevin Tapia<br>Cristhian
-                Chimbo</p>
-              <a class="btn-solid-lg page-scroll" href="#intro">EMPEZAR</a>
-
-
-            </div>
-          </div> <!-- end of col -->
-        </div> <!-- end of row -->
-      </div> <!-- end of container -->
-    </div> <!-- end of header-content -->
-  </header> <!-- end of header -->
-  <!-- end of header -->
-
-
-  <!-- Intro -->
-  <div id="intro" class="basic-1">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-5">
-          <div class="text-container">
-            <div class="section-title">INTRO</div>
-            <h2>TRANSCHIMBORAZO</h2>
-            <p>¡Bienvenidos a nuestra empresa de administración de paseos en Chimborazo! Ofrecemos paseos turístico y
-              brindar experiencias inolvidables.<br>
-              ¡Prepárate para descubrir los tesoros que la
-              provincia de Chimborazo tiene para ofrecer!
-              <br> <br>
-
-              Un cordial saludo,
-            </p>
-            <div class="testimonial-author">Gerencia</div>
-          </div> <!-- end of text-container -->
-        </div> <!-- end of col -->
-        <div class="col-lg-7">
-          <div class="image-container">
-            <img class="img-fluidChimborazo" src="images/intro-office.jpg" alt="alternative">
-          </div> <!-- end of image-container -->
-        </div> <!-- end of col -->
-      </div> <!-- end of row -->
-    </div> <!-- end of container -->
-  </div> <!-- end of basic-1 -->
-  <!-- end of intro -->
-
-  <!-- Projects -->
-  <div id="projects" class="filter">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <h2>Destinos Turisticos</h2>
-          <center>
-            <a href="./Proyecto/Controlador/handler.php?value=3">
-              <button class="btnAdmin">VER TODOS LOS DESTINOS</button>
-            </a>
-          </center>
-          <br> 
-        </div> <!-- end of col -->
-      </div> <!-- end of row -->
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="grid">
-            <div class="element-item design development marketing">
-              <div class="element-item-overlay"><span>El Chimborazo</span></div><img src="images//chimborazo.jpg"
-                alt="alternative">
-            </div>
-            <div class="element-item design development marketing">
-              <div class="element-item-overlay"><span>Desierto de Palmira</span></div><img
-                src="./images/desierto_palmira.png" alt="alternative">
-            </div>
-            <div class="element-item design development marketing">
-              <div class="element-item-overlay"><span>Quebrada del Chalán</span></div><img
-                src="images/quebrada_chalan.jpg" alt="alternative">
-            </div>
-            <div class="element-item design development marketing">
-              <div class="element-item-overlay"><span>Laguna de Colta</span></div><img src="images/laguna_colta.jpg"
-                alt="alternative">
-            </div>
-            <div class="element-item design development marketing">
-              <div class="element-item-overlay"><span>Ojo del Fantasma</span></div><img src="images/ojo_fantasma.jpeg"
-                alt="alternative">
-            </div>
-            <div class="element-item design development marketing">
-              <div class="element-item-overlay"><span>Lagunas de Atillo</span></div><img src="images/laguna_atillo.jpg"
-                alt="alternative">
-            </div>
-            <div class="element-item design development marketing">
-              <div class="element-item-overlay"><span>Iglesia de Balbanera</span></div><img src="images/iglesiaBal.jpg"
-                alt="alternative">
-            </div>
-            <div class="element-item design development marketing">
-              <div class="element-item-overlay"><span>Carihuairazo</span></div><img src="images/carihuairazo.jpg"
-                alt="alternative">
-            </div>
-          </div> <!-- end of grid -->
-          <!-- end of filter -->
-
-        </div> <!-- end of col -->
-      </div> <!-- end of row -->
-    </div> <!-- end of container -->
-  </div> <!-- end of filter -->
-  <!-- end of projects -->
-
-
-  <!-- Project Lightboxes -->
-  <!-- Lightbox -->
-  <div id="project-1" class="lightbox-basic zoom-anim-dialog mfp-hide">
-    <div class="row">
-      <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
-      <div class="col-lg-4">
-        <h3>Online Banking</h3>
-        <hr class="line-heading">
-        <h6>Strategy Development</h6>
-        <p>Need a solid foundation for your business growth plans? Aria will help you manage sales and meet your current
-          needs</p>
-        <p>By offering the best professional services and quality products in the market. Don't hesitate and get in
-          touch with us.</p>
-        <div class="testimonial-container">
-          <p class="testimonial-text">Need a solid foundation for your business growth plans? Aria will help you manage
-            sales and meet your current requirements.</p>
-          <p class="testimonial-author">General Manager</p>
+            <h2>Destinos Turisticos</h2>
+            <center>
+              <a href="./Proyecto/Controlador/handler.php?value=3">
+                <button class="btnAdmin">VER TODOS LOS DESTINOS</button>
+              </a>
+            </center>
+            <br />
+          </div>
+          <!-- end of col -->
         </div>
-        <a class="btn-solid-reg" href="#your-link">DETAILS</a> <a class="btn-outline-reg mfp-close as-button"
-          href="#projects">BACK</a>
-      </div> <!-- end of col -->
-    </div> <!-- end of row -->
-  </div> <!-- end of lightbox-basic -->
-  <!-- end of lightbox -->
+        <!-- end of row -->
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="grid">
+              <div class="element-item design development marketing">
+                <div class="element-item-overlay">
+                  <span>El Chimborazo</span>
+                </div>
+                <img src="images//chimborazo.jpg" alt="alternative" />
+              </div>
+              <div class="element-item design development marketing">
+                <div class="element-item-overlay">
+                  <span>Desierto de Palmira</span>
+                </div>
+                <img src="./images/desierto_palmira.png" alt="alternative" />
+              </div>
+              <div class="element-item design development marketing">
+                <div class="element-item-overlay">
+                  <span>Quebrada del Chalán</span>
+                </div>
+                <img src="images/quebrada_chalan.jpg" alt="alternative" />
+              </div>
+              <div class="element-item design development marketing">
+                <div class="element-item-overlay">
+                  <span>Laguna de Colta</span>
+                </div>
+                <img src="images/laguna_colta.jpg" alt="alternative" />
+              </div>
+              <div class="element-item design development marketing">
+                <div class="element-item-overlay">
+                  <span>Ojo del Fantasma</span>
+                </div>
+                <img src="images/ojo_fantasma.jpeg" alt="alternative" />
+              </div>
+              <div class="element-item design development marketing">
+                <div class="element-item-overlay">
+                  <span>Lagunas de Atillo</span>
+                </div>
+                <img src="images/laguna_atillo.jpg" alt="alternative" />
+              </div>
+              <div class="element-item design development marketing">
+                <div class="element-item-overlay">
+                  <span>Iglesia de Balbanera</span>
+                </div>
+                <img src="images/iglesiaBal.jpg" alt="alternative" />
+              </div>
+              <div class="element-item design development marketing">
+                <div class="element-item-overlay">
+                  <span>Carihuairazo</span>
+                </div>
+                <img src="images/carihuairazo.jpg" alt="alternative" />
+              </div>
+            </div>
+            <!-- end of grid -->
+            <!-- end of filter -->
+          </div>
+          <!-- end of col -->
+        </div>
+        <!-- end of row -->
+      </div>
+      <!-- end of container -->
+    </div>
+    <!-- end of filter -->
+    <!-- end of projects -->
 
-  <!-- Team -->
-  <section id="basic-2" class="basic-2">
-    <div class="container">
+    <!-- Project Lightboxes -->
+    <!-- Lightbox -->
+    <div id="project-1" class="lightbox-basic zoom-anim-dialog mfp-hide">
       <div class="row">
-        <div class="col-lg-12">
-          <h2>Equipo de Desarrolladores</h2>
-          <!-- <p class="p-heading">We're only as strong and as knowledgeable as our team. So here are the men and women
+        <button title="Close (Esc)" type="button" class="mfp-close x-button">
+          ×
+        </button>
+        <div class="col-lg-4">
+          <h3>Online Banking</h3>
+          <hr class="line-heading" />
+          <h6>Strategy Development</h6>
+          <p>
+            Need a solid foundation for your business growth plans? Aria will
+            help you manage sales and meet your current needs
+          </p>
+          <p>
+            By offering the best professional services and quality products in
+            the market. Don't hesitate and get in touch with us.
+          </p>
+          <div class="testimonial-container">
+            <p class="testimonial-text">
+              Need a solid foundation for your business growth plans? Aria will
+              help you manage sales and meet your current requirements.
+            </p>
+            <p class="testimonial-author">General Manager</p>
+          </div>
+          <a class="btn-solid-reg" href="#your-link">DETAILS</a>
+          <a class="btn-outline-reg mfp-close as-button" href="#projects"
+            >BACK</a
+          >
+        </div>
+        <!-- end of col -->
+      </div>
+      <!-- end of row -->
+    </div>
+    <!-- end of lightbox-basic -->
+    <!-- end of lightbox -->
+
+    <!-- Team -->
+    <section id="basic-2" class="basic-2">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <h2>Equipo de Desarrolladores</h2>
+            <!-- <p class="p-heading">We're only as strong and as knowledgeable as our team. So here are the men and women
             which help customers meet goals and grow companies</p> -->
-        </div> <!-- end of col -->
-      </div> <!-- end of row -->
-      <div class="row">
-        <div class="col-lg-12">
+          </div>
+          <!-- end of col -->
+        </div>
+        <!-- end of row -->
+        <div class="row">
+          <div class="col-lg-12">
+            <!-- Team Member -->
+            <div class="team-member">
+              <div class="image-wrapper">
+                <img
+                  class="img-fluid"
+                  src="images/morillo.gif"
+                  alt="alternative"
+                />
+              </div>
+              <!-- end of image-wrapper -->
+              <p class="p-large">Cielo Morillo</p>
+              <p class="job-title">Desarrollador</p>
+              <span class="social-icons">
+                <span class="fa-stack">
+                  <a href="#your-link">
+                    <span class="hexagon"></span>
+                    <i class="fab fa-facebook-f fa-stack-1x"></i>
+                  </a>
+                </span>
+                <span class="fa-stack">
+                  <a href="#your-link">
+                    <span class="hexagon"></span>
+                    <i class="fab fa-twitter fa-stack-1x"></i>
+                  </a>
+                </span>
+              </span>
+            </div>
+            <!-- end of team-member -->
+            <!-- Team Member -->
+            <div class="team-member">
+              <div class="image-wrapper">
+                <img
+                  class="img-fluid"
+                  src="images/jama.jpg"
+                  alt="alternative"
+                />
+              </div>
+              <!-- end of image-wrapper -->
+              <p class="p-large">Nigell Jama</p>
+              <p class="job-title">Desarrollador</p>
+              <span class="social-icons">
+                <span class="fa-stack">
+                  <a href="#your-link">
+                    <span class="hexagon"></span>
+                    <i class="fab fa-facebook-f fa-stack-1x"></i>
+                  </a>
+                </span>
+                <span class="fa-stack">
+                  <a href="#your-link">
+                    <span class="hexagon"></span>
+                    <i class="fab fa-twitter fa-stack-1x"></i>
+                  </a>
+                </span>
+              </span>
+            </div>
+            <!-- end of team-member -->
+            <!-- Team Member -->
+            <div class="team-member">
+              <div class="image-wrapper">
+                <img
+                  class="img-fluid"
+                  src="images/novillo.jpg"
+                  alt="alternative"
+                />
+              </div>
+              <!-- end of image-wrapper -->
+              <p class="p-large">Fernando Novillo</p>
+              <p class="job-title">Desarrollador</p>
+              <span class="social-icons">
+                <span class="fa-stack">
+                  <a href="#your-link">
+                    <span class="hexagon"></span>
+                    <i class="fab fa-facebook-f fa-stack-1x"></i>
+                  </a>
+                </span>
+                <span class="fa-stack">
+                  <a href="#your-link">
+                    <span class="hexagon"></span>
+                    <i class="fab fa-twitter fa-stack-1x"></i>
+                  </a>
+                </span>
+              </span>
+            </div>
+            <!-- end of team-member -->
+            <!-- Team Member -->
+            <div class="team-member">
+              <div class="image-wrapper">
+                <img
+                  class="img-fluid"
+                  src="images/tapia.gif"
+                  alt="alternative"
+                />
+              </div>
+              <!-- end of image-wrapper -->
+              <p class="p-large">Kevin Tapia</p>
+              <p class="job-title">Desarrollador</p>
+              <span class="social-icons">
+                <span class="fa-stack">
+                  <a href="#your-link">
+                    <span class="hexagon"></span>
+                    <i class="fab fa-facebook-f fa-stack-1x"></i>
+                  </a>
+                </span>
+                <span class="fa-stack">
+                  <a href="#your-link">
+                    <span class="hexagon"></span>
+                    <i class="fab fa-twitter fa-stack-1x"></i>
+                  </a>
+                </span>
+              </span>
+            </div>
+            <!-- end of team-member -->
+            <!-- Team Member -->
+            <div class="team-member">
+              <div class="image-wrapper">
+                <img
+                  class="img-fluid"
+                  src="images/chimbo.gif"
+                  alt="alternative"
+                />
+              </div>
+              <!-- end of image-wrapper -->
+              <p class="p-large">Cristhian Chimbo</p>
+              <p class="job-title">Desarrollador</p>
+              <span class="social-icons">
+                <span class="fa-stack">
+                  <a href="#your-link">
+                    <span class="hexagon"></span>
+                    <i class="fab fa-facebook-f fa-stack-1x"></i>
+                  </a>
+                </span>
+                <span class="fa-stack">
+                  <a href="#your-link">
+                    <span class="hexagon"></span>
+                    <i class="fab fa-twitter fa-stack-1x"></i>
+                  </a>
+                </span>
+              </span>
+            </div>
+            <!-- end of team-member -->
+          </div>
+          <!-- end of col -->
+        </div>
+        <!-- end of row -->
+      </div>
+      <!-- end of container -->
+    </section>
+    <!-- end of basic-2 -->
+    <!-- end of team -->
 
-          <!-- Team Member -->
-          <div class="team-member">
-            <div class="image-wrapper">
-              <img class="img-fluid" src="images/morillo.gif" alt="alternative">
-            </div> <!-- end of image-wrapper -->
-            <p class="p-large">Cielo Morillo</p>
-            <p class="job-title">Desarrollador</p>
-            <span class="social-icons">
+    <!-- Contact -->
+    <section id="contact" class="form-2">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="text-container">
+              <div class="section-title">CONTÁCTANOS</div>
+              <h2>Utiliza nuestro formulario</h2>
+              <p>
+                Puedes venir a nuestra oficinas o enviar tu mensaje mediante el
+                formulario
+              </p>
+              <ul class="list-unstyled li-space-lg">
+                <li class="address">
+                  <i class="fas fa-map-marker-alt"></i>Riobamba, EC
+                </li>
+                <li>
+                  <i class="fas fa-phone"></i
+                  ><a href="tel:003024630820">+593 999 999 999</a>
+                </li>
+                <li>
+                  <i class="fas fa-phone"></i
+                  ><a href="tel:003024630820">+593 999 999 999</a>
+                </li>
+                <li>
+                  <i class="fas fa-envelope"></i
+                  ><a href="mailto:office@aria.com"
+                    >transportes@chimborazo.com</a
+                  >
+                </li>
+              </ul>
+              <h3>Síguenos</h3>
+
               <span class="fa-stack">
                 <a href="#your-link">
                   <span class="hexagon"></span>
@@ -324,200 +521,107 @@
                   <i class="fab fa-twitter fa-stack-1x"></i>
                 </a>
               </span>
-            </span>
-          </div> <!-- end of team-member -->
-          <!-- Team Member -->
-          <div class="team-member">
-            <div class="image-wrapper">
-              <img class="img-fluid" src="images/jama.jpg" alt="alternative">
-            </div> <!-- end of image-wrapper -->
-            <p class="p-large">Nigell Jama</p>
-            <p class="job-title">Desarrollador</p>
-            <span class="social-icons">
               <span class="fa-stack">
                 <a href="#your-link">
                   <span class="hexagon"></span>
-                  <i class="fab fa-facebook-f fa-stack-1x"></i>
+                  <i class="fab fa-instagram fa-stack-1x"></i>
                 </a>
               </span>
-              <span class="fa-stack">
-                <a href="#your-link">
-                  <span class="hexagon"></span>
-                  <i class="fab fa-twitter fa-stack-1x"></i>
-                </a>
-              </span>
-            </span>
-          </div> <!-- end of team-member -->
-          <!-- Team Member -->
-          <div class="team-member">
-            <div class="image-wrapper">
-              <img class="img-fluid" src="images/novillo.jpg" alt="alternative">
-            </div> <!-- end of image-wrapper -->
-            <p class="p-large">Fernando Novillo</p>
-            <p class="job-title">Desarrollador</p>
-            <span class="social-icons">
-              <span class="fa-stack">
-                <a href="#your-link">
-                  <span class="hexagon"></span>
-                  <i class="fab fa-facebook-f fa-stack-1x"></i>
-                </a>
-              </span>
-              <span class="fa-stack">
-                <a href="#your-link">
-                  <span class="hexagon"></span>
-                  <i class="fab fa-twitter fa-stack-1x"></i>
-                </a>
-              </span>
-            </span>
-          </div> <!-- end of team-member -->
-          <!-- Team Member -->
-          <div class="team-member">
-            <div class="image-wrapper">
-              <img class="img-fluid" src="images/tapia.gif" alt="alternative">
-            </div> <!-- end of image-wrapper -->
-            <p class="p-large">Kevin Tapia</p>
-            <p class="job-title">Desarrollador</p>
-            <span class="social-icons">
-              <span class="fa-stack">
-                <a href="#your-link">
-                  <span class="hexagon"></span>
-                  <i class="fab fa-facebook-f fa-stack-1x"></i>
-                </a>
-              </span>
-              <span class="fa-stack">
-                <a href="#your-link">
-                  <span class="hexagon"></span>
-                  <i class="fab fa-twitter fa-stack-1x"></i>
-                </a>
-              </span>
-            </span>
-          </div> <!-- end of team-member -->
-          <!-- Team Member -->
-          <div class="team-member">
-            <div class="image-wrapper">
-              <img class="img-fluid" src="images/chimbo.gif" alt="alternative">
-            </div> <!-- end of image-wrapper -->
-            <p class="p-large">Cristhian Chimbo</p>
-            <p class="job-title">Desarrollador</p>
-            <span class="social-icons">
-              <span class="fa-stack">
-                <a href="#your-link">
-                  <span class="hexagon"></span>
-                  <i class="fab fa-facebook-f fa-stack-1x"></i>
-                </a>
-              </span>
-              <span class="fa-stack">
-                <a href="#your-link">
-                  <span class="hexagon"></span>
-                  <i class="fab fa-twitter fa-stack-1x"></i>
-                </a>
-              </span>
-            </span>
-          </div> <!-- end of team-member -->
-
-        </div> <!-- end of col -->
-      </div> <!-- end of row -->
-    </div> <!-- end of container -->
-  </section> <!-- end of basic-2 -->
-  <!-- end of team -->
-
-  <!-- Contact -->
-  <section id="contact" class="form-2">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="text-container">
-            <div class="section-title">CONTÁCTANOS</div>
-            <h2>Utiliza nuestro formulario</h2>
-            <p>Puedes venir a nuestra oficinas o enviar tu mensaje mediante el formulario</p>
-            <ul class="list-unstyled li-space-lg">
-              <li class="address"><i class="fas fa-map-marker-alt"></i>Riobamba, EC</li>
-              <li><i class="fas fa-phone"></i><a href="tel:003024630820">+593 999 999 999</a></li>
-              <li><i class="fas fa-phone"></i><a href="tel:003024630820">+593 999 999 999</a></li>
-              <li><i class="fas fa-envelope"></i><a href="mailto:office@aria.com">transportes@chimborazo.com</a></li>
-            </ul>
-            <h3>Síguenos</h3>
-
-            <span class="fa-stack">
-              <a href="#your-link">
-                <span class="hexagon"></span>
-                <i class="fab fa-facebook-f fa-stack-1x"></i>
-              </a>
-            </span>
-            <span class="fa-stack">
-              <a href="#your-link">
-                <span class="hexagon"></span>
-                <i class="fab fa-twitter fa-stack-1x"></i>
-              </a>
-            </span>
-            <span class="fa-stack">
-              <a href="#your-link">
-                <span class="hexagon"></span>
-                <i class="fab fa-instagram fa-stack-1x"></i>
-              </a>
-            </span>
-          </div> <!-- end of text-container -->
-        </div> <!-- end of col -->
-        <div class="col-lg-6">
-
-          <!-- Contact Form -->
-          <form id="contactForm" data-toggle="validator" data-focus="false">
-            <div class="form-group">
-              <input type="text" class="form-control-input" id="cname" required>
-              <label class="label-control" for="cname">Nombre</label>
-              <div class="help-block with-errors"></div>
             </div>
-            <div class="form-group">
-              <input type="email" class="form-control-input" id="cemail" required>
-              <label class="label-control" for="cemail">Email</label>
-              <div class="help-block with-errors"></div>
-            </div>
-            <div class="form-group">
-              <textarea class="form-control-textarea" id="cmessage" required></textarea>
-              <label class="label-control" for="cmessage">Mensaje</label>
-              <div class="help-block with-errors"></div>
-            </div>
-            <div class="form-group">
-              <button type="submit" class="form-control-submit-button">Enviar Mensaje</button>
-            </div>
-            <div class="form-message">
-              <div id="cmsgSubmit" class="h3 text-center hidden"></div>
-            </div>
-          </form>
-          <!-- end of contact form -->
+            <!-- end of text-container -->
+          </div>
+          <!-- end of col -->
+          <div class="col-lg-6">
+            <!-- Contact Form -->
+            <form id="contactForm" data-toggle="validator" data-focus="false">
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control-input"
+                  id="cname"
+                  required
+                />
+                <label class="label-control" for="cname">Nombre</label>
+                <div class="help-block with-errors"></div>
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  class="form-control-input"
+                  id="cemail"
+                  required
+                />
+                <label class="label-control" for="cemail">Email</label>
+                <div class="help-block with-errors"></div>
+              </div>
+              <div class="form-group">
+                <textarea
+                  class="form-control-textarea"
+                  id="cmessage"
+                  required
+                ></textarea>
+                <label class="label-control" for="cmessage">Mensaje</label>
+                <div class="help-block with-errors"></div>
+              </div>
+              <div class="form-group">
+                <button type="submit" class="form-control-submit-button">
+                  Enviar Mensaje
+                </button>
+              </div>
+              <div class="form-message">
+                <div id="cmsgSubmit" class="h3 text-center hidden"></div>
+              </div>
+            </form>
+            <!-- end of contact form -->
+          </div>
+          <!-- end of col -->
+        </div>
+        <!-- end of row -->
+      </div>
+      <!-- end of container -->
+    </section>
+    <!-- end of form-2 -->
+    <!-- end of contact -->
 
-        </div> <!-- end of col -->
-      </div> <!-- end of row -->
-    </div> <!-- end of container -->
-  </section> <!-- end of form-2 -->
-  <!-- end of contact -->
+    <!-- Copyright -->
+    <div class="copyright">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <p class="p-small">
+              Copyright © 2023 <a href="">Transportes de Chimborazo</a>
+            </p>
+          </div>
+          <!-- end of col -->
+        </div>
+        <!-- enf of row -->
+      </div>
+      <!-- end of container -->
+    </div>
+    <!-- end of copyright -->
+    <!-- end of copyright -->
 
-  <!-- Copyright -->
-  <div class="copyright">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <p class="p-small">Copyright © 2023 <a href="">Transportes de Chimborazo</a></p>
-        </div> <!-- end of col -->
-      </div> <!-- enf of row -->
-    </div> <!-- end of container -->
-  </div> <!-- end of copyright -->
-  <!-- end of copyright -->
-
-
-  <!-- Scripts -->
-  <script src="js/funciones.js"></script>
-  <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
-  <script src="js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
-  <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
-  <script src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
-  <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
-  <script src="js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
-  <script src="js/morphext.min.js"></script> <!-- Morphtext rotating text in the header -->
-  <script src="js/isotope.pkgd.min.js"></script> <!-- Isotope for filter -->
-  <script src="js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
-  <script src="js/scripts.js"></script> <!-- Custom scripts -->
-</body>
-
-
+    <!-- Scripts -->
+    <script src="js/funciones.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="js/popper.min.js"></script>
+    <!-- Popper tooltip library for Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Bootstrap framework -->
+    <script src="js/jquery.easing.min.js"></script>
+    <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="js/swiper.min.js"></script>
+    <!-- Swiper for image and text sliders -->
+    <script src="js/jquery.magnific-popup.js"></script>
+    <!-- Magnific Popup for lightboxes -->
+    <script src="js/morphext.min.js"></script>
+    <!-- Morphtext rotating text in the header -->
+    <script src="js/isotope.pkgd.min.js"></script>
+    <!-- Isotope for filter -->
+    <script src="js/validator.min.js"></script>
+    <!-- Validator.js - Bootstrap plugin that validates forms -->
+    <script src="js/scripts.js"></script>
+    <!-- Custom scripts -->
+  </body>
 </html>
