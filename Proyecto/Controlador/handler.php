@@ -26,5 +26,7 @@ if ($value == 1) {
     require("../Vista/buscar_viaje.php");
 } else if ($value == 0) {
     require("../../index.html");
+}else if ($value == 13) {
+    require("../Modelo/reporte1.php");
 }
 ?>
