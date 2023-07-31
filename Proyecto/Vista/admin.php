@@ -30,72 +30,44 @@
     <?php
     include_once('menu.html');
     ?>
-    <br>
-    <center>
-        <h2>MENÚ ADMINISTRADOR</h2>
-    </center>
-    <br>
-    <div class="container">
-        <div class="row">
-            <div class="col-3 card" id="ParaSecciones">
-                <center>
-                    <h3>Agregar</h3>
-                    <br>
-                    <a href="../Controlador/handler.php?value=8">
-                        <button class="btnAdmin">Buses</button>
-                    </a>
-                    <br> <br>
-                    <a href="../Controlador/handler.php?value=6">
-                        <button class="btnAdmin">Viajes</button>
-                    </a>
-                    <br> <br>
-                </center>
-            </div>
-
-            <div class="col-3 card" id="ParaSecciones">
-                <center>
-                    <h3>Modificar - Eliminar</h3>
-                    <br>
-                    <a href="../Controlador/handler.php?value=10">
-                        <button class="btnAdmin">Buses</button>
-                    </a>
-                    <br> <br>
-                    <a href="../Controlador/handler.php?value=7">
-                        <button class="btnAdmin">Viajes</button>
-                    </a>
-                    <br> <br>
-                </center>
-            </div>
-
-            <div class="col-3 card" id="ParaSecciones">
-                <center>
-                    <h3>Buscar</h3>
-                    <br>
-                    <a href="../Controlador/handler.php?value=11">
-                        <button class="btnAdmin">Buses</button>
-                    </a>
-                    <br> <br>
-                    <a href="../Controlador/handler.php?value=12">
-                        <button class="btnAdmin">Viajes</button>
-                    </a>
-                    <br> <br>
-                </center>
-            </div>
-
-            <div class="col-3 card" id="ParaSecciones">
-                <center>
-                    <h3>Reportes</h3>
-                    <br>
-                    <a href="../Controlador/handler.php?value=4">
-                        <button class="btnAdmin">Reportes</button>
-                    </a>
-                    <br> <br>
-                </center>
-            </div>
-
+    <div class="content">
+        <div class="title">
+            <h2>MENÚ ADMINISTRADOR</h2>
+        </div>
+        <div class="col-3 card" id="ParaSecciones">
+            <h3>Agregar</h3>
+            <a href="../Controlador/handler.php?value=8">
+                <button class="btnAdmin">Buses</button>
+            </a>
+            <a href="../Controlador/handler.php?value=6">
+                <button class="btnAdmin">Viajes</button>
+            </a>
+        </div>
+        <div class="col-3 card" id="ParaSecciones">
+            <h3>Modificar - Eliminar</h3>
+            <a href="../Controlador/handler.php?value=10">
+                <button class="btnAdmin">Buses</button>
+            </a>
+            <a href="../Controlador/handler.php?value=7">
+                <button class="btnAdmin">Viajes</button>
+            </a>
+        </div>
+        <div class="col-3 card" id="ParaSecciones">
+            <h3>Buscar</h3>
+            <a href="../Controlador/handler.php?value=11">
+                <button class="btnAdmin">Buses</button>
+            </a>
+            <a href="../Controlador/handler.php?value=12">
+                <button class="btnAdmin">Viajes</button>
+            </a>
+        </div>
+        <div class="col-3 card" id="ParaSecciones">
+            <h3>Reportes</h3>
+            <a href="../Controlador/handler.php?value=4">
+                <button class="btnAdmin">Reportes</button>
+            </a>
         </div>
     </div>
-    <br> <br>
     <?php
     include_once('footer.html');
     ?>

@@ -18,67 +18,58 @@
       <li class="nav-item">
         <a class="nav-link page-scroll" href="../../index.html">INICIO <span class="sr-only">(current)</span></a>
       </li>
-      <!-- <li class="nav-item">
-          <a class="nav-link page-scroll" href="#intro">INTRO</a>
-        </li> -->
       <li class="nav-item">
-        <a class="nav-link page-scroll" href="#miModal" id="mostrarModal">INICIAR SESIÓN</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link page-scroll" href="#projects">DESTINOS</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link page-scroll" href=".basic-2">ACERCA DE</a>
+        <a class="nav-link page-scroll" href="../../index.html#basic-2">ACERCA DE</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link page-scroll" href="#contact">CONTÁCTANOS</a>
+        <a class="nav-link page-scroll" href="../../index.html#contact">CONTÁCTANOS</a>
       </li>
     </ul>
   </div>
 
-  
-<center>
-  <div class="modal" id="miModal">
-    <form class="form">
-      <p class="form-title">Sign in to your account</p>
-      <div class="input-container">
-        <div>
-          <div id="formxd">
-            <label for="user">Correo</label>
-            <input id="user" type="email" />
-            <label for="psw">Contraseña</label>
-            <input id="psw" type="password" />
-            <button id="botonOcultar">Hide</button>
-          </div>
-          <form id="formxdd" action="">
-            <ul>
-              <li>
-                <a href="./Proyecto/Controlador/handler.php?value=1">Admin page</a>
-              </li>
-              <li>
-                <a href="./Proyecto/Controlador/handler.php?value=2">User page</a>
-              </li>
-              <li>
-                <a href="./Proyecto/Controlador/handler.php?value=3">Lista de viajes</a>
-              </li>
-            </ul>
-          </form>
-          <script src="./JS/jquery-3.7.0.min.js"></script>
-          <script>
-            // Esperamos a que el documento esté completamente cargado
-            $(document).ready(function () {
-              $("#formxdd").hide();
-              // Vinculamosn el evento clic del botón para ocultar el elemento
 
-              $("#botonOcultar").click(function () {
-                $("#formxd").hide();
-                $("#formxdd").show();
+  <center>
+    <div class="modal" id="miModal">
+      <form class="form">
+        <p class="form-title">Sign in to your account</p>
+        <div class="input-container">
+          <div>
+            <div id="formxd">
+              <label for="user">Correo</label>
+              <input id="user" type="email" />
+              <label for="psw">Contraseña</label>
+              <input id="psw" type="password" />
+              <button id="botonOcultar">Hide</button>
+            </div>
+            <form id="formxdd" action="">
+              <ul>
+                <li>
+                  <a href="./Proyecto/Controlador/handler.php?value=1">Admin page</a>
+                </li>
+                <li>
+                  <a href="./Proyecto/Controlador/handler.php?value=2">User page</a>
+                </li>
+                <li>
+                  <a href="./Proyecto/Controlador/handler.php?value=3">Lista de viajes</a>
+                </li>
+              </ul>
+            </form>
+            <script src="./JS/jquery-3.7.0.min.js"></script>
+            <script>
+              // Esperamos a que el documento esté completamente cargado
+              $(document).ready(function () {
+                $("#formxdd").hide();
+                // Vinculamosn el evento clic del botón para ocultar el elemento
+
+                $("#botonOcultar").click(function () {
+                  $("#formxd").hide();
+                  $("#formxdd").show();
+                });
               });
-            });
-          </script>
-        </div>
-        <!-- <input placeholder="Enter email" type="email">
+            </script>
+          </div>
+          <!-- <input placeholder="Enter email" type="email">
         <span>
           <svg stroke="currentColor" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -109,9 +100,9 @@
         No account?
         <a href="">Sign up</a>
       </p> -->
-    </form>
-  </div>
-</center>
+      </form>
+    </div>
+  </center>
 
-<script src="../../JS/funciones.js"></script>
+  <script src="../../JS/funciones.js"></script>
 </nav>
