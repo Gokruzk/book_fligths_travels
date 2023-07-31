@@ -105,19 +105,40 @@
                 $conductor = $_POST['conductor'];
 
                 if (strlen($id) > 0) {
-                    $sql = "SELECT * FROM Viaje WHERE id_viaje='$id'";
+                    $sql = "SELECT * FROM Viaje V
+                    INNER JOIN Transporte T
+                    on V.placa = T.placa
+                     WHERE id_viaje='$id'";
                 } else if (strlen($origen) > 0) {
-                    $sql = "SELECT * FROM Viaje WHERE lugar_origen='$origen'";
+                    $sql = "SELECT * FROM Viaje V
+                    INNER JOIN Transporte T
+                    on V.placa = T.placa
+                     WHERE lugar_origen='$origen'";
                 } else if (strlen($destino) > 0) {
-                    $sql = "SELECT * FROM Viaje WHERE lugar_destino='$destino'";
+                    $sql = "SELECT * FROM Viaje V
+                    INNER JOIN Transporte T
+                    on V.placa = T.placa
+                     WHERE lugar_destino='$destino'";
                 } else if (strlen($placa) > 0) {
-                    $sql = "SELECT * FROM Viaje WHERE placa='$placa'";
+                    $sql = "SELECT * FROM Viaje V
+                    INNER JOIN Transporte T
+                    on V.placa = T.placa
+                     WHERE placa='$placa'";
                 } else if (strlen($fecha) > 0) {
-                    $sql = "SELECT * FROM Viaje WHERE fecha='$fecha'";
+                    $sql = "SELECT * FROM Viaje V
+                    INNER JOIN Transporte T
+                    on V.placa = T.placa
+                     WHERE fecha='$fecha'";
                 } else if (strlen($hora) > 0) {
-                    $sql = "SELECT * FROM Viaje WHERE hora='$hora'";
+                    $sql = "SELECT * FROM Viaje V
+                    INNER JOIN Transporte T
+                    on V.placa = T.placa
+                     WHERE hora='$hora'";
                 } else if (strlen($precio) > 0) {
-                    $sql = "SELECT * FROM Viaje WHERE precio='$precio'";
+                    $sql = "SELECT * FROM Viaje V
+                    INNER JOIN Transporte T
+                    on V.placa = T.placa
+                     WHERE precio='$precio'";
                 } else if (strlen($conductor) > 0) {
                     $sql = "SELECT * FROM Viaje V
                     INNER JOIN Transporte T
