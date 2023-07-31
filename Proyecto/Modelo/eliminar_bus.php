@@ -1,9 +1,10 @@
 <?php
- include("../Config/conexion.php");
- $placa=$_REQUEST['placa'];
- $sql = "DELETE from Transporte where placa='$placa'";
+include("../Config/conexion.php");
+$placa = $_REQUEST['placa'];
+$sql = "DELETE from Transporte where placa='$placa'";
+$estado = mysqli_query($conexion, $sql);
 
- $estado=mysqli_query($conexion,$sql);
+
 
 if ($estado) {
     // Redirigir de vuelta a la página con el botón de enviar

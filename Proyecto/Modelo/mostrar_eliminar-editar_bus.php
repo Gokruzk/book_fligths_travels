@@ -3,6 +3,9 @@ include("../Config/conexion.php");
 $sql = "SELECT * FROM Transporte ";
 
 $resultado = mysqli_query($conexion, $sql);
+?>
+
+<?php
 
 while ($mostrar = mysqli_fetch_array($resultado)) {
     ?>
@@ -21,8 +24,8 @@ while ($mostrar = mysqli_fetch_array($resultado)) {
             <a href="../Modelo/eliminar_bus.php?placa=<?php echo $mostrar['placa'] ?>">
                 <img title="Eliminar bus" src="../../images/eliminar.png" alt=""></a>
         </td>
-
     </tr>
     <?php
 }
+
 ?>
