@@ -6,6 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
 <?php
 if (isset($_GET['success']) && $_GET['success'] === 'true') {
   echo "<script>alert('Se agregó el nuevo viaje correctamente');</script>";
@@ -54,8 +55,8 @@ if (isset($_GET['success']) && $_GET['success'] === 'true') {
           <input required type="text" title="Siga el patrón de placa, si tiene 3 dígitos anteponga el 0"
             pattern="^([A-Z]{3})-[0-9]{4}$" placeholder="Placa" name="placa_bus" class="input"></input>
         </div>
-
-        <div style="margin: 50px;"></div>
+      </div>
+      <div class="contenedor-inputs">
 
         <div class="coolinput">
           <label for="input" class="text">Fecha del viaje</label>
