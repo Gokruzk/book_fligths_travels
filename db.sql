@@ -78,3 +78,7 @@ INSERT INTO viaje(`id_viaje`, `lugar_origen`, `lugar_destino`, `fecha`, `hora`, 
 (14, 'Riobamba', 'Nariz del Diablo', '2023-07-23', '01:20:00', 12.34, 'POR-4356'),
 (15, 'Riobamba', 'Desierto de Palmira', '2023-08-01', '01:20:00', 12.34, 'JKL-9034'),
 (16, 'Riobamba', 'Chimborazo', '2023-08-10', '01:20:00', 12.34, 'HBA-6745');
+
+INSERT INTO cargo(ID, Descripcion) VALUES
+    (1, 'Admin'),
+    (2, 'User')
