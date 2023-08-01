@@ -11,10 +11,10 @@ $(document).ready(function () {
       { el: $("#id-id"), val: $("#valor-id"), req: true },
       { el: $("#origen-id"), val: $("#valor-origen"), req: true },
       { el: $("#destino-id"), val: $("#valor-destino"), req: true },
-      { el: $("#placa-id"), val: $("#valor-placa"), req: true },
       { el: $("#fecha-id"), val: $("#valor-fecha"), req: true },
       { el: $("#hora-id"), val: $("#valor-hora"), req: true },
       { el: $("#precio-id"), val: $("#valor-precio"), req: true },
+      { el: $("#placa-id"), val: $("#valor-placa"), req: true },
       { el: $("#conductor-id"), val: $("#valor-conductor"), req: true },
     ];
 
