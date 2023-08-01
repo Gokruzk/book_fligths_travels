@@ -42,6 +42,7 @@
 
     <!-- Favicon  -->
     <link rel="icon" href="../../images/favicon.png">
+    
 </head>
 
 <body>
@@ -72,7 +73,7 @@
         <h1>Datos de buses</h1>
 
         <table>
-            <th>Placa</th>
+            <th>Placa</th> 
             <th>Conductor</th>
             <?php include("../Modelo/mostrar_eliminar-editar_bus.php"); ?>
         </table>
