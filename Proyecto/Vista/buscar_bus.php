@@ -21,6 +21,8 @@
     <link href="../../CSS/styles.css" rel="stylesheet">
     <link href="../../CSS/Estilos.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="../../CSS/estilos-admin.css">
+
 
     <!-- Favicon  -->
     <link rel="icon" href="../../images/favicon.png">
@@ -121,11 +123,11 @@
                         </td>
 
                         <td class="icono"> <a href="../Modelo/editar_bus.php?placa=<?php echo $mostrar['placa'] ?>">
-                                <img title="Editar bus" src="../../images/editar.png" alt=""></a> </td>
+                                <img class="EditarEliminar" title="Editar bus" src="../../images/editar.png" alt=""></a> </td>
 
                         <td class="icono">
                             <a href="../Modelo/eliminar_bus.php?placa=<?php echo $mostrar['placa'] ?>">
-                                <img title="Eliminar bus" src="../../images/eliminar.png" alt=""></a>
+                                <img class="EditarEliminar" title="Eliminar bus" src="../../images/eliminar.png" alt=""></a>
                         </td>
 
                     </tr>

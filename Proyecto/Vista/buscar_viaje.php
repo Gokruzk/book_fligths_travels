@@ -20,6 +20,7 @@
     <link href="../../CSS/magnific-popup.css" rel="stylesheet">
     <link href="../../CSS/styles.css" rel="stylesheet">
     <link href="../../CSS/Estilos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../CSS/estilos-admin.css">
 
 
     <!-- Favicon  -->
@@ -227,12 +228,12 @@
 
                         <td class="icono">
                             <a href="../Modelo/editar_viaje.php?id_viaje=<?php echo $mostrar['id_viaje'] ?>"><img
-                                    title="Editar bus" src="../../images/editar.png" alt="">
+                                    class="EditarEliminar" title="Editar bus" src="../../images/editar.png" alt="">
                             </a>
                         </td>
                         <td class="icono">
                             <a href="../Modelo/eliminar_viaje.php?id_viaje=<?php echo $mostrar['id_viaje'] ?>"><img
-                                    title="Eliminar bus" src="../../images/eliminar.png" alt="">
+                                    class="EditarEliminar" title="Eliminar bus" src="../../images/eliminar.png" alt="">
                             </a>
                         </td>
 
