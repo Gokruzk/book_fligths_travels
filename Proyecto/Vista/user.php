@@ -1,12 +1,10 @@
-<?php
-?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de viajes</title>
+    <title>Perfil de Usuario</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap&subset=latin-ext"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600&display=swap&subset=latin-ext"
@@ -17,7 +15,6 @@
     <link href="../../CSS/magnific-popup.css" rel="stylesheet">
     <link href="../../CSS/styles.css" rel="stylesheet">
     <link href="../../CSS/Estilos.css" rel="stylesheet">
-
 
     <!-- Favicon  -->
     <link rel="icon" href="../../images/favicon.png">
@@ -34,47 +31,25 @@
     </div>
     <?php
     include_once('menu.html');
+    include('../Config/conexion.php');
+    $user = $_GET['value'];
+    $sql = "SELECT * FROM Usuario WHERE correo = '$user'";
+    $res = mysqli_query($conexion, $sql);
+    $est = $res->fetch_assoc();
     ?>
 
     <div class="content">
         <div class="title">
-            <h2>Destinos</h2>
-        </div>
-        <?php
-        include('../Modelo/mostrar_viajes.php');
-        while ($viaj = $res->fetch_assoc()) {
-            ?>
-            <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        <?php echo $viaj['lugar_destino'] ?>
-                    </h5>
-                    <p class="card-text">
-                        <?php echo "Fecha de salida: ";
-                        echo $viaj['fecha'] ?>
-                    </p>
-                    <p class="card-text">
-                        <?php echo "Precio: $";
-                        echo $viaj['precio'] ?>
-                    </p>
-                    <a href="../Vista/viaje.php?id_viaje= <?php echo $viaj['id_viaje'] ?>"><button
-                            class="btnAdmin">Reservar</button></a>
-                </div>
-            </div>
-            <?php
-        }
-        ?>
-        <div style="width:100%">
-            <a href="../../index.html">
-                <button class="btnAdmin">Cerrar Sesión</button>
-            </a>
+            <h2>
+                <?php echo $est['nombre']; echo " "; echo $est['apellido']; ?>
+            </h2>
         </div>
     </div>
 
     <?php
     include_once('footer.html');
     ?>
-    <script src="../../JS/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="../../JS/jquery-3.7.0.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
     <script src="../../JS/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
     <script src="../../JS/bootstrap.min.js"></script> <!-- Bootstrap framework -->
     <script src="../../JS/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->

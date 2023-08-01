@@ -3,7 +3,7 @@ $value = $_GET['value'];
 if ($value == 1) {
     include("../Vista/admin.php");
 } else if ($value == 2) {
-    include("../Vista/user.html");
+    include("../Vista/user.php");
 } else if ($value == 3) {
     include("../Vista/viajes_list.php");
 } else if ($value == 4) {

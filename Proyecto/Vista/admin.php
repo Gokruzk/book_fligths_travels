@@ -67,6 +67,11 @@
                 <button class="btnAdmin">Reportes</button>
             </a>
         </div>
+        <div style="width:100%">
+            <a href="../../index.html">
+                <button class="btnAdmin">Cerrar Sesión</button>
+            </a>
+        </div>
     </div>
     <?php
     include_once('footer.html');

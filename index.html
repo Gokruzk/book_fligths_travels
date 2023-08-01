@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Transportes Chimborazo</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transportes Chimborazo</title>
 
   <!-- Styles -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap&subset=latin-ext"
@@ -58,7 +57,7 @@
           <a class="nav-link page-scroll" href="#intro">INTRO</a>
         </li> -->
         <li class="nav-item">
-          <a class="nav-link page-scroll" href="#miModal" id="mostrarModal">INICIAR SESIÓN</a>
+          <a class="nav-link page-scroll" href="#miModal">INICIAR SESIÓN</a>
         </li>
         <li class="nav-item">
           <a class="nav-link page-scroll" href="#projects">DESTINOS</a>
@@ -74,6 +73,8 @@
     </div>
   </nav>
 
+  <!-- ventana modal login-->
+
   <div class="modCont">
     <div class="modal" id="miModal">
       <div class="form-container">
@@ -81,35 +82,18 @@
         <form class="form" action="./Proyecto/Modelo/login.php" method="post">
           <div class="input-group">
             <label for="username">Correo</label>
-            <input type="email" name="user" id="username">
+            <input required type="email" name="user" id="username">
           </div>
           <div class="input-group">
             <label for="password">Contraseña</label>
-            <input type="password" name="psw" id="password">
+            <input required type="password" name="psw" id="password">
             <button class="sign">Iniciar Sesión</button>
         </form>
         <p class="signup"><a rel="noopener noreferrer" href="#" class="">Registrarse</a>
         </p>
       </div>
-      <!-- <form class="form" action="./Proyecto/Modelo/login.php" method="post">
-          <p class="form-title">Iniciar Sesión</p>
-          <div class="input-container">
-            <div>
-              <div id="formxd">
-                <label for="user">Correo</label>
-                <input name="user" id="user" type="email" />
-                <label for="psw">Contraseña</label>
-                <input name="psw" id="psw" type="password" />
-                <button id="botonOcultar">Iniciar Sesión</button>
-              </div>
-              <script src="./JS/jquery-3.7.0.min.js"></script>
-            </div>
-          </div>
-        </form> -->
     </div>
   </div>
-
-  <script src="js/scripts.js"></script>
 
   <!-- Header -->
   <header id="header" class="header">
@@ -120,7 +104,7 @@
             <div class="text-container">
               <h1><span id="js-rotating">TRANSCHIMBORAZO, ESPOCH</span></h1>
               <p class="p-heading p-large">
-                Cielo Morillo<br />Nigel Jama<br />Fernando Novillo<br />Kevin
+                Cielo Morillo<br />Nigell Jama<br />Fernando Novillo<br />Kevin
                 Tapia<br />Cristhian Chimbo
               </p>
               <a class="btn-solid-lg page-scroll" href="#intro">EMPEZAR</a>
@@ -174,24 +158,16 @@
     <!-- end of container -->
   </div>
   <!-- end of basic-1 -->
-  <!-- end of intro -->
 
   <!-- Projects -->
   <div id="projects" class="filter">
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <h2>Destinos Turisticos</h2>
-          <center>
-            <a href="./Proyecto/Controlador/handler.php?value=3">
-              <button class="btnAdmin">VER TODOS LOS DESTINOS</button>
-            </a>
-          </center>
-          <br />
+          <h2>Destinos Turísticos</h2>
+
         </div>
-        <!-- end of col -->
       </div>
-      <!-- end of row -->
       <div class="row">
         <div class="col-lg-12">
           <div class="grid">
@@ -254,9 +230,6 @@
     <!-- end of container -->
   </div>
   <!-- end of filter -->
-  <!-- end of projects -->
-
-  <!-- Project Lightboxes -->
   <!-- Lightbox -->
   <div id="project-1" class="lightbox-basic zoom-anim-dialog mfp-hide">
     <div class="row">
@@ -298,8 +271,6 @@
       <div class="row">
         <div class="col-lg-12">
           <h2>Equipo de Desarrolladores</h2>
-          <!-- <p class="p-heading">We're only as strong and as knowledgeable as our team. So here are the men and women
-            which help customers meet goals and grow companies</p> -->
         </div>
         <!-- end of col -->
       </div>
@@ -540,7 +511,6 @@
     <!-- end of container -->
   </div>
   <!-- end of copyright -->
-  <!-- end of copyright -->
 
   <!-- Scripts -->
   <script src="js/funciones.js"></script>
@@ -563,7 +533,6 @@
   <script src="js/validator.min.js"></script>
   <!-- Validator.js - Bootstrap plugin that validates forms -->
   <script src="js/scripts.js"></script>
-  <!-- Custom scripts -->
 </body>
 
 </html>

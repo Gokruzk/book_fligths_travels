@@ -28,6 +28,7 @@ CREATE TABLE Usuario(
     apellido VARCHAR(20),
     fecha_nacimiento DATE,
     correo VARCHAR(50),
+    psw VARCHAR(10),
     telefono CHAR(10),
     ID_CARGO int,
     FOREIGN KEY (ID_CARGO) REFERENCES Cargo(ID)
@@ -82,3 +83,9 @@ INSERT INTO viaje(`id_viaje`, `lugar_origen`, `lugar_destino`, `fecha`, `hora`, 
 INSERT INTO cargo(ID, Descripcion) VALUES
     (1, 'Admin'),
     (2, 'User')
+
+INSERT INTO usuario(cedula, nombre, apellido, fecha_nacimiento, correo, psw, telefono, ID_CARGO) VALUES
+    ('0850106188','Nigell','Jama','2002-01-06','nigelljama@gmail.com','nigell123','0992297549',2)
+
+INSERT INTO usuario(cedula, nombre, apellido, fecha_nacimiento, correo, psw, telefono, ID_CARGO) VALUES
+    ('9999999999','Admin','Sistema','2002-01-06','admin@gmail.com','admin123','0999999999',1)
