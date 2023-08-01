@@ -35,7 +35,7 @@
     <?php
     include_once('menu.html');
     ?>
-    
+
     <div class="content">
         <div class="title">
             <h2>Destinos</h2>
@@ -50,16 +50,22 @@
                         <?php echo $viaj['lugar_destino'] ?>
                     </h5>
                     <p class="card-text">
-                        <?php echo $viaj['id_viaje'] ?>
+                        <?php echo "Fecha de salida: ";
+                        echo $viaj['fecha'] ?>
                     </p>
-                    <a href="../Vista/viaje.php?id_viaje= <?php echo $viaj['id_viaje'] ?>"><button class="btnAdmin">Reservar</button></a>
+                    <p class="card-text">
+                        <?php echo "Precio: $";
+                        echo $viaj['precio'] ?>
+                    </p>
+                    <a href="../Vista/viaje.php?id_viaje= <?php echo $viaj['id_viaje'] ?>"><button
+                            class="btnAdmin">Reservar</button></a>
                 </div>
             </div>
             <?php
         }
         ?>
     </div>
-    
+
     <?php
     include_once('footer.html');
     ?>
