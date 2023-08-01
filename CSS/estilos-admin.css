@@ -5,7 +5,7 @@ html {
 
 h1 {
     text-align: center;
-
+    color: #111;
 }
 
 .contenedor-inputs {
@@ -34,7 +34,7 @@ h1 {
     top: 0.5rem;
     margin: 0 0 0 7px;
     padding: 0 3px;
-    background: #e8e8e8;
+    background: white;
     width: fit-content;
 }
 
@@ -43,7 +43,7 @@ h1 {
     font-size: 0.75rem;
     border: 2px #818CF8 solid;
     border-radius: 5px;
-    background: #e8e8e8;
+    background: white;
 }
 
 .coolinput input.input:focus {
@@ -90,7 +90,7 @@ h1 {
 }
 
 .boton-b:hover {
-    color: #111;
+    color: white;
 }
 
 
@@ -122,6 +122,6 @@ tr {
     width: 30px;
 }
 
-img {
+.EditarEliminar {
     width: 20px;
 }
