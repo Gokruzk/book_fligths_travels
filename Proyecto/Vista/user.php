@@ -40,7 +40,7 @@
 
     <div class="content">
         <div class="title">
-            <h2>
+            <h2> Bienvenido 
                 <?php echo $est['nombre'];
                 echo " ";
                 echo $est['apellido']; ?>
