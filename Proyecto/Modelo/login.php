@@ -7,8 +7,8 @@ $res = mysqli_query($conexion, $sql);
 $us = $res->fetch_assoc();
 
 if ($us['ID_CARGO'] == 1) {
-    include('../Vista/admin.php');
+    include("../Vista/admin.php");
 } else if ($us['ID_CARGO'] == 2) {
-    include('../Vista/viajes_list.php');
+    header("location:../Vista/user.php?value=$user");
 }
 ?>
