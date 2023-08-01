@@ -40,7 +40,7 @@ while ($mostrar = mysqli_fetch_array($resultado)) {
             </div>
 
             <div style="margin: 50px;"></div>
-            
+
             <div class="coolinput">
                 <label for="input" class="text">Placa del bus</label>
                 <input required type="text" title="Siga el patrón de placa, si tiene 3 dígitos anteponga el 0"

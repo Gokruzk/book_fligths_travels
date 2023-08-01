@@ -12,7 +12,7 @@
     } else if (isset($_GET['edit']) == 1452) {
         echo "<script>alert('No se pudo realizar la actualización del viaje debido a que intentó cambiar la placa del bus a una que no existe en los registros de buses');</script>";
 
-    } else {
+    } else if (isset($_GET['edit'])) {
 
         echo "<script>alert('No se pudo realizar la actualización del viaje, intente de nuevo');</script>";
 
