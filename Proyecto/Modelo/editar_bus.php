@@ -43,7 +43,7 @@ while ($mostrar = mysqli_fetch_array($resultado)) {
 
             <div class="coolinput">
                 <label for="input" class="text">Placa del bus</label>
-                <input required type="text" title="Siga el patrón de placa, si tiene 3 dígitos anteponga el 0"
+                <input readonly required type="text" title="Siga el patrón de placa, si tiene 3 dígitos anteponga el 0"
                     pattern="^([A-Z]{3})-[0-9]{4}$" placeholder="AAA-0000" value=<?php echo $mostrar['placa'] ?>
                     name="placa" class="input">
             </div>
