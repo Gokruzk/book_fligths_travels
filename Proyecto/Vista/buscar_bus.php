@@ -107,6 +107,7 @@
             ?>
         </table>
     </center>
+    <script src="../../JS/jquery-3.7.0.min.js"></script>
     <script src="../../JS/event-bus.js"></script>
 </body>
 
