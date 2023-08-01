@@ -57,6 +57,8 @@
                 <a href="../Vista/viajes_list.php?ced=<?php echo $est['cedula']; ?>"><button
                         class=" btnAdmin">Reservar</button></a>
             </div>
+        </div>
+        <div class="card" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title">
                     Viajes reservados
