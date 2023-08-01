@@ -7,7 +7,6 @@ $sql = "SELECT v.id_viaje, v.lugar_origen, v.lugar_destino, v.fecha, v.hora, v.p
     on v.placa = b.placa WHERE id_viaje = $id";
 $res = mysqli_query($conexion, $sql);
 $viaje = $res->fetch_assoc();
-
 ?>
 <fieldset>
     <?php echo "Partida: ";

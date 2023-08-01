@@ -7,6 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservar viaje</title>
+    <link rel="icon" href="../../images/favicon.png" />
 </head>
 
 <body>
@@ -17,6 +18,7 @@
     <?php
     // Capturar el ID del viaje desde el parámetro en la URL
     $id_viaje = $_GET['id_viaje'] ?? '';
+    $us = $_GET['ced'] ?? '';
 
     // Verificar si se recibió el ID del viaje en la URL
     if (empty($id_viaje)) {
@@ -31,7 +33,7 @@
         <?php include("../Modelo/mostrar_viaje_reserva.php"); ?>
 
         <label for="cedula">Número de cédula del cliente:</label>
-        <input type="text" id="cedula" name="cedula" required>
+        <input readonly type="text" id="cedula" name="cedula" value="<?php echo $us ?>">
         <br>
         <label for="fecha_reserva">Fecha de reserva:</label>
         <input type="date" id="fecha_reserva" name="fecha_reserva" required>

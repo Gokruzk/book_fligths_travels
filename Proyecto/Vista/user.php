@@ -32,8 +32,8 @@
     <?php
     include_once('menu.html');
     include('../Config/conexion.php');
-    $user = $_GET['value'];
-    $sql = "SELECT * FROM Usuario WHERE correo = '$user'";
+    $us = $_GET['value'];
+    $sql = "SELECT * FROM Usuario WHERE correo = '$us'";
     $res = mysqli_query($conexion, $sql);
     $est = $res->fetch_assoc();
     ?>
@@ -41,9 +41,38 @@
     <div class="content">
         <div class="title">
             <h2>
-                <?php echo $est['nombre']; echo " "; echo $est['apellido']; ?>
+                <?php echo $est['nombre'];
+                echo " ";
+                echo $est['apellido']; ?>
             </h2>
-        </div>  
+        </div>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">
+                    Reservar viajes
+                </h5>
+                <p class="card-text">
+                    Destinos disponibles
+                </p>
+                <a href="../Vista/viajes_list.php?ced=<?php echo $est['cedula']; ?>"><button
+                        class=" btnAdmin">Reservar</button></a>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">
+                    Viajes reservados
+                </h5>
+                <p class="card-text">
+                    Lista de viajes
+                </p>
+                <a href="../Vista/reservas.php?ced=<?php echo $est['cedula']; ?>"><button
+                        class=" btnAdmin">Ver</button></a>
+            </div>
+        </div>
+        <div style="width:100%">
+            <a href="../../index.html">
+                <button class="btnAdmin">Cerrar Sesión</button>
+            </a>
+        </div>
     </div>
 
     <?php
