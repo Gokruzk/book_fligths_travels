@@ -17,16 +17,29 @@ precio='$precio',
 placa='$placa'  
 where id_viaje='$id'";
 
-$estado = mysqli_query($conexion, $sql);
+try {
+    $estado = mysqli_query($conexion, $sql);
 
-if ($estado) {
-    // Redirigir de vuelta a la página con el botón de enviar
-    $return_url = isset($_POST['return_url']) ? $_POST['return_url'] : '../Vista/editar_viaje.php';
-    header("Location: " . $return_url . "?edit=true");
-    exit();
-} else {
-    // Redirigir de vuelta a la página con el botón de enviar
-    $return_url = isset($_POST['return_url']) ? $_POST['return_url'] : '../Vista/editar_viaje.php';
-    header("Location: " . $return_url . "?edit=false");
-    exit();
+} catch (Exception $e) {
+    // Handle the exception or error here
+    echo "Error: " . $e->getMessage() . " (Error code: " . $e->getCode() . ")";
+
+    if ($e->getCode() == 1452) {
+        // Redirigir de vuelta a la página con el botón de enviar
+        $return_url = isset($_POST['return_url']) ? $_POST['return_url'] : '../Vista/editar_viaje.php';
+        header("Location: " . $return_url . "?edit=1452");
+        exit();
+    }
+} finally {
+    if ($estado) {
+        // Redirigir de vuelta a la página con el botón de enviar
+        $return_url = isset($_POST['return_url']) ? $_POST['return_url'] : '../Vista/editar_viaje.php';
+        header("Location: " . $return_url . "?edit=true");
+        exit();
+    } else {
+        // Redirigir de vuelta a la página con el botón de enviar
+        $return_url = isset($_POST['return_url']) ? $_POST['return_url'] : '../Vista/editar_viaje.php';
+        header("Location: " . $return_url . "?edit=false");
+        exit();
+    }
 }

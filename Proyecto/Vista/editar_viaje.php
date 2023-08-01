@@ -9,7 +9,10 @@
     <?php
     if (isset($_GET['edit']) && $_GET['edit'] === 'true') {
         echo "<script>alert('Se editó el viaje correctamente');</script>";
-    } else if (isset($_GET['edit'])) {
+    } else if (isset($_GET['edit']) == 1452) {
+        echo "<script>alert('No se pudo realizar la actualización del viaje debido a que intentó cambiar la placa del bus a una que no existe en los registros de buses');</script>";
+
+    } else {
 
         echo "<script>alert('No se pudo realizar la actualización del viaje, intente de nuevo');</script>";
 
