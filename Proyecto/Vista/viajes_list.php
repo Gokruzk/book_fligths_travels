@@ -1,5 +1,10 @@
 <?php
+include('../Config/conexion.php');
 $us = $_GET['ced'];
+$sql = "SELECT correo FROM Usuario WHERE cedula = $us";
+$res = mysqli_query($conexion, $sql);
+$est = $res->fetch_assoc();
+$correo = $est['correo'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,7 +43,7 @@ $us = $_GET['ced'];
     ?>
 
     <br>
-    <a href="../Controlador/handler.php?value=2">
+    <a href="../Vista/user.php?value=<?php echo $correo ?>">
         <button class="btnBack">
             <svg height="16" width="16" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1024 1024">
                 <path

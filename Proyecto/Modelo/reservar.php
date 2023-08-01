@@ -22,7 +22,7 @@ $sql = "INSERT INTO Reserva (fecha_reserva, cantidad_adul, cantidad_ni, cedula, 
 
 $regresar = mysqli_query($conexion, $sql);
 if ($regresar) {
-    header("location: ../Vista/viajes_list.php");
+    header("location: ../Vista/viajes_list.php?ced=$cedula");
     ?>
     <script>alert("Reservado")</script>
     <?php
