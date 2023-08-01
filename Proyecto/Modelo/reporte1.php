@@ -24,11 +24,11 @@ $pdf->Ln();
 
 while($mostrar=mysqli_fetch_array($resultado))
 {
-    $pdf->Cell(45, 10, $mostrar ['cedula'], 1, 0, 'C');
-    $pdf->Cell(45, 10, $mostrar ['nombre'], 1, 0, 'C');
-    $pdf->Cell(45, 10, $mostrar ['apellido'], 1, 0, 'C');
+    $pdf->Cell(35, 10, $mostrar ['cedula'], 1, 0, 'C');
+    $pdf->Cell(40, 10, $mostrar ['nombre'], 1, 0, 'C');
+    $pdf->Cell(40, 10, $mostrar ['apellido'], 1, 0, 'C');
     $pdf->Cell(45, 10, $mostrar ['correo'], 1, 0, 'C');
-    $pdf->Cell(45, 10, $mostrar['telefono'], 1, 0, 'C');
+    $pdf->Cell(30, 10, $mostrar['telefono'], 1, 0, 'C');
     $pdf->Ln();
 }
 
