@@ -43,7 +43,7 @@
             <h2>
                 <?php echo $est['nombre']; echo " "; echo $est['apellido']; ?>
             </h2>
-        </div>
+        </div>  
     </div>
 
     <?php
