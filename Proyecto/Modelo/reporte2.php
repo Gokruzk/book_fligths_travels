@@ -16,6 +16,7 @@ $pdf->AliasNbPages();
 $pdf->AddPage();
 $pdf->Ln();
 $pdf->SetFont('Arial','I',8);
+$pdf->Cell(30, 10, '', 0, 0, 'C');
 $pdf->Cell(40, 10, 'NOMBRE', 1, 0, 'C');
 $pdf->Cell(40, 10, 'APELLIDO', 1, 0, 'C');
 $pdf->Cell(55, 10, 'CANTIDAD DE VIAJES RESERVADOS', 1, 0, 'C');
@@ -23,6 +24,7 @@ $pdf->Ln();
 
 while($mostrar=mysqli_fetch_array($resultado))
 {
+    $pdf->Cell(30, 10, '', 0, 0, 'C');
     $pdf->Cell(40, 10, $mostrar ['nombre'], 1, 0, 'C');
     $pdf->Cell(40, 10, $mostrar ['apellido'], 1, 0, 'C');
     $pdf->Cell(55, 10, $mostrar ['reserva'], 1, 0, 'C');
