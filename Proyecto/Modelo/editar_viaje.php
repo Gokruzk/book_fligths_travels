@@ -21,6 +21,9 @@ $sql = "SELECT *
     <a href="../../index.html">Inicio</a>
     <a href="../Controlador/handler.php?value=1">Regresar</a>
     <h1>Editar datos de un viaje</h1>
+
+
+
     <form action="../Modelo/actualizar_viaje.php" method="POST">
 
 </body>
@@ -42,16 +45,16 @@ while ($mostrar = mysqli_fetch_array($resultado)) {
 
             <div class="coolinput">
                 <label for="input" class="text">Lugar de origen:</label>
-                <input required type="text" value=<?php echo $mostrar['lugar_origen'] ?> placeholder="Origen" name="lugar_origen"
-                    class="input"></input>
+                <input required type="text" value=<?php echo $mostrar['lugar_origen'] ?> placeholder="Origen"
+                    name="lugar_origen" class="input"></input>
             </div>
 
             <div style="margin: 50px;"></div>
 
             <div class="coolinput">
                 <label for="input" class="text">Lugar de destino</label>
-                <input required type="text" value=<?php echo $mostrar['lugar_destino'] ?> placeholder="Destino" class="input"
-                    name="lugar_destino"></input>
+                <input required type="text" value=<?php echo $mostrar['lugar_destino'] ?> placeholder="Destino"
+                    class="input" name="lugar_destino"></input>
             </div>
 
             <div style="margin: 50px;"></div>
@@ -68,7 +71,8 @@ while ($mostrar = mysqli_fetch_array($resultado)) {
 
             <div class="coolinput">
                 <label for="input" class="text">Fecha del viaje</label>
-                <input required type="date" value=<?php echo $mostrar['fecha'] ?> name="fecha_viaje" class="input"></input>
+                <input id="fecha" required type="date" value=<?php echo $mostrar['fecha'] ?> name="fecha_viaje"
+                    class="input"></input>
             </div>
 
             <div style="margin: 50px;"></div>
@@ -90,6 +94,7 @@ while ($mostrar = mysqli_fetch_array($resultado)) {
         <div class="boton"><button class="boton-b" type="submit">Editar</button></div>
     </div>
     </form>
+    <script src="../../JS/fecha.js"></script>
     <?php
 }
 ?>

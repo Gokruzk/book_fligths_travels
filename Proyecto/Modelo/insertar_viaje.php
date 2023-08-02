@@ -29,16 +29,26 @@ if ($resultado != null) {
         $filas = 10;
         $columnas = 4;
 
+        $sql = "INSERT INTO asientos(id_viaje, lugar) VALUES";
+
+        echo $sql;
+
         for ($i = 1; $i <= $filas; $i++) {
             for ($j = 65; $j < 65 + $columnas; $j++) {
                 $letra = chr($j); // Convertir el código ASCII a letra
                 $estructura[] = $letra . $i;
 
-                $sql = "INSERT INTO asientos(id_viaje, lugar) 
-                        VALUES ('$idViaje', '$letra$i')";
-                $resultado = mysqli_query($conexion, $sql);
+                $sql .= "('$idViaje', '$letra$i')";
+                if ($i == $filas && $j == 68) {
+                    $sql .= ';';
+                } else {
+                    $sql .= ',';
+                }
+
             }
         }
+
+        mysqli_query($conexion, $sql);
 
 
         $return_url = isset($_POST['return_url']) ? $_POST['return_url'] : '../Vista/agregar_viaje.php';
@@ -48,22 +58,8 @@ if ($resultado != null) {
     }
 }
 
-
-
-
-
-
-/* else {
-
-  $return_url = isset($_POST['return_url']) ? $_POST['return_url'] : '../Vista/agregar_viaje.php';
-  header("Location: " . $return_url . "?success=false");
-  exit();
-}
-} else {
-
 $return_url = isset($_POST['return_url']) ? $_POST['return_url'] : '../Vista/agregar_viaje.php';
 header("Location: " . $return_url . "?success=false");
 exit();
-} */
 
 ?>

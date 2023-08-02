@@ -91,7 +91,7 @@
             const total = (cantidadAdul * precio) + (cantidadNi * precio / 2);
 
             // Actualizar el label con el total
-            totalLabel.textContent = "Total: $" + total;
+            totalLabel.textContent = "Total: $" + total.toFixed(2);
         }
 
         // Agregar eventos de escucha a los inputs para llamar a la función calcularTotal cuando haya un cambio en los valores
