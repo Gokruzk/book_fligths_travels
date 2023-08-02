@@ -28,5 +28,7 @@ if ($value == 1) {
     require("../../index.html");
 } else if ($value == 13) {
     require("../Modelo/reporte1.php");
+}else if ($value == 14) {
+    require("../Modelo/reporte2.php");
 }
 ?>
