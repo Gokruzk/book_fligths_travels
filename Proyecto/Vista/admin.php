@@ -20,7 +20,7 @@
     <link href="../../CSS/magnific-popup.css" rel="stylesheet">
     <link href="../../CSS/styles.css" rel="stylesheet">
     <link href="../../CSS/Estilos.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="../../CSS/estilos-admin.css">
 
     <!-- Favicon  -->
     <link rel="icon" href="../../images/favicon.png">
@@ -67,11 +67,13 @@
                 <button class="btnAdmin">Reportes</button>
             </a>
         </div>
-        <div style="width:100%">
-            <a href="../../index.html">
-                <button class="btnAdmin">Cerrar Sesión</button>
-            </a>
-        </div>
+        
+
+        
+
+
+
+
     </div>
     <?php
     include_once('footer.html');
