@@ -64,7 +64,7 @@
                 <button class="btnAdmin">Reporte 1</button>
             </a>
             <br> <br>
-            <a href="../Controlador/handler.php?value=6">
+            <a href="../Controlador/handler.php?value=14">
                 <button class="btnAdmin">Reporte 2</button>
             </a>
 
