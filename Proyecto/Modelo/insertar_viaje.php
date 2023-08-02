@@ -15,27 +15,55 @@ $resultado = mysqli_fetch_array($existe);
 
 
 if ($resultado != null) {
-    $sql = "INSERT INTO Viaje(lugar_origen, lugar_destino,fecha, hora, precio, placa) 
+    $sql = "INSERT INTO Viaje(lugar_origen, lugar_destino, fecha, hora, precio, placa) 
     VALUES ('$origen', '$destino', '$fecha', '$hora', '$precio', '$placa_bus')";
-
     $estado = mysqli_query($conexion, $sql);
-    echo "La placa es", $estado;
 
     if ($estado) {
-        // Redirigir de vuelta a la página con el botón de enviar
+        $sql = "SELECT id_viaje FROM viaje ORDER BY id_viaje DESC LIMIT 1;";
+        $resultado = mysqli_query($conexion, $sql);
+
+        $fila = mysqli_fetch_assoc($resultado);
+        $idViaje = $fila['id_viaje'];
+
+        $filas = 10;
+        $columnas = 4;
+
+        for ($i = 1; $i <= $filas; $i++) {
+            for ($j = 65; $j < 65 + $columnas; $j++) {
+                $letra = chr($j); // Convertir el código ASCII a letra
+                $estructura[] = $letra . $i;
+
+                $sql = "INSERT INTO asientos(id_viaje, lugar) 
+                        VALUES ('$idViaje', '$letra$i')";
+                $resultado = mysqli_query($conexion, $sql);
+            }
+        }
+
+
         $return_url = isset($_POST['return_url']) ? $_POST['return_url'] : '../Vista/agregar_viaje.php';
         header("Location: " . $return_url . "?success=true");
         exit();
-    } else {
-        // Redirigir de vuelta a la página con el botón de enviar
-        $return_url = isset($_POST['return_url']) ? $_POST['return_url'] : '../Vista/agregar_viaje.php';
-        header("Location: " . $return_url . "?success=false");
-        exit();
+
     }
-} else {
-    // Redirigir de vuelta a la página con el botón de enviar
-    $return_url = isset($_POST['return_url']) ? $_POST['return_url'] : '../Vista/agregar_viaje.php';
-    header("Location: " . $return_url . "?success=false");
-    exit();
 }
+
+
+
+
+
+
+/* else {
+
+  $return_url = isset($_POST['return_url']) ? $_POST['return_url'] : '../Vista/agregar_viaje.php';
+  header("Location: " . $return_url . "?success=false");
+  exit();
+}
+} else {
+
+$return_url = isset($_POST['return_url']) ? $_POST['return_url'] : '../Vista/agregar_viaje.php';
+header("Location: " . $return_url . "?success=false");
+exit();
+} */
+
 ?>

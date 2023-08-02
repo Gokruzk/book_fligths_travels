@@ -42,10 +42,10 @@
         <?php include("../Modelo/mostrar_viaje_reserva.php"); ?>
 
         <label for="cedula">Número de cédula del cliente:</label>
-        <input readonly type="text" id="cedula" name="cedula" value="<?php echo $us ?>">
+        <input style="border:  0;" readonly type="text" id="cedula" name="cedula" value="<?php echo $us ?>">
         <br>
         <label for="fecha_reserva">Fecha de reserva:</label>
-        <input type="date" id="fecha_reserva" name="fecha_reserva" required>
+        <input readonly style="border:  0;" type="date" id="fecha_reserva" name="fecha_reserva" required>
         <br>
         <label for="cantidad_adul">Cantidad de adultos:</label>
         <input type="number" id="cantidad_adul" name="cantidad_adul" min="1" required>
@@ -55,6 +55,22 @@
         <br>
         <input type="submit" value="Reservar">
     </form>
+
+    <script>
+        // Crear un objeto Date con la fecha actual
+        var fecha = new Date();
+
+        // Obtener los componentes de la fecha (año, mes y día)
+        var anio = fecha.getFullYear();
+        var mes = fecha.getMonth() + 1; // Los meses en JavaScript comienzan desde 0 (enero) hasta 11 (diciembre)
+        var dia = fecha.getDate();
+
+        // Formatear la fecha en el formato "yyyy-MM-dd"
+        var fechaActualTexto = anio + "-" + (mes < 10 ? "0" : "") + mes + "-" + (dia < 10 ? "0" : "") + dia;
+
+        // Asignar la fecha al campo de entrada
+        document.getElementById("fecha_reserva").value = fechaActualTexto;
+    </script>
 </body>
 
 </html>

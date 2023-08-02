@@ -27,6 +27,16 @@ $correo = $est['correo'];
 
     <!-- Favicon  -->
     <link rel="icon" href="../../images/favicon.png">
+
+    <?php
+    if (isset($_GET['estado']) && $_GET['estado'] === 'full') {
+        echo "<script>alert('No se cuentan con los asientos suficientes para su reserva');</script>";
+    } else if (isset($_GET['estado']) && $_GET['estado'] === 'ok') {
+        echo "<script>alert('Se ha realizado su reserva correctamente');</script>";
+    } else if (isset($_GET['estado']) && $_GET['estado'] === 'error') {
+        echo "<script>alert('Sucedió un error al hacer su reserva, intente de nuevo');</script>";
+    }
+    ?>
 </head>
 
 <body>
