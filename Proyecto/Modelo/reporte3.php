@@ -20,7 +20,6 @@ $pdf->Cell(15, 10, '', 0, 0, 'C');
 $pdf->Cell(50, 10, 'CLIENTE', 1, 0, 'C');
 $pdf->Cell(40, 10, 'FECHA', 1, 0, 'C');
 $pdf->Cell(40, 10, 'CANT. PERSONAS', 1, 0, 'C');
-
 $pdf->Cell(40, 10, 'PRECIO TOTAL', 1, 0, 'C');
 
 
