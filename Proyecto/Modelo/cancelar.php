@@ -5,12 +5,17 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST["cambios"]) && isset($
     $id = $_POST["name"];
 
     include("../Config/conexion.php");
+    $sql = "UPDATE asientos
+    set id_reserva=NULL 
+    where id_reserva = $id";
+    mysqli_query($conexion, $sql);
+
     $sql = "DELETE 
     FROM Reserva
     where id_reserva = $id";
 
     mysqli_query($conexion, $sql);
-    
+
 
     // Aquí puedes utilizar el valor del id y name como necesites en tu lógica de servidor.
 
