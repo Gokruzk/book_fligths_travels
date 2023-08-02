@@ -80,6 +80,8 @@
             <a href="../Controlador/handler.php?value=17">
                 <button class="btnAdmin">Reporte 5</button>
             </a>
+            <br>
+            <br>
 
         </center>
 
