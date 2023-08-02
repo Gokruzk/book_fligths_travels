@@ -3,7 +3,7 @@
 include("../Vista/plantilla2.php");
 
 include("../Config/conexion.php");
-$sql= "SELECT us.nombre, us.apellido, COUNT(re.id_reserva) as reserva from usuario as us inner join reserva as re WHERE us.id_cargo !=1  group by us.nombre, us.apellido";
+$sql= "SELECT us.nombre, us.apellido, COUNT(re.id_reserva) as reserva from usuario as us inner join reserva as re ON us.cedula=re.cedula WHERE us.id_cargo !=1  group by us.nombre, us.apellido";
 
 
 $resultado=mysqli_query($conexion, $sql);

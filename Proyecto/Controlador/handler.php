@@ -32,5 +32,7 @@ if ($value == 1) {
     require("../Modelo/reporte2.php");
 }else if ($value == 15) {
     require("../Modelo/reporte3.php");
+}else if ($value == 16) {
+    require("../Modelo/reporte4.php");
 }
 ?>
