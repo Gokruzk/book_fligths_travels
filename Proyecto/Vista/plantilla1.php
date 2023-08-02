@@ -15,6 +15,8 @@ function Header()
     $this->Cell(50,10,'ESCUELA SUPERIOR POLITECNICA DE CHIMBORAZO',2,0,'C');
     $this->Ln(10);
     $this->Cell(200,10,'TRANS CHIMBORAZO',2,0,'C');
+    $this->Ln(10);
+    $this->Cell(200,10,'LISTA DE CLIENTES',2,0,'C');
     // Salto de línea
     $this->Ln(20);
 }
