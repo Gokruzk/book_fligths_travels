@@ -28,13 +28,13 @@ if ($value == 1) {
     require("../../index.html");
 } else if ($value == 13) {
     require("../Modelo/reporte1.php");
-}else if ($value == 14) {
+} else if ($value == 14) {
     require("../Modelo/reporte2.php");
-}else if ($value == 15) {
+} else if ($value == 15) {
     require("../Modelo/reporte3.php");
-}else if ($value == 16) {
+} else if ($value == 16) {
     require("../Modelo/reporte4.php");
-}else if ($value == 17) {
+} else if ($value == 17) {
     require("../Modelo/reporte5.php");
 }
 ?>

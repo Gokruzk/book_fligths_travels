@@ -30,7 +30,7 @@
         </div>
     </div>
     <?php
-    include_once('menu.html');
+    include_once('menu_user.html');
     include('../Config/conexion.php');
     $us = $_GET['value'];
     $sql = "SELECT * FROM Usuario WHERE correo = '$us'";
