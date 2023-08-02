@@ -24,7 +24,7 @@
 
     ?>
     <a href="../../index.html">Inicio</a>
-    <a href="../Vista/user.php?value=<?php echo $correo ?>">
+    <a href="../Vista/viajes_list.php?ced=<?php echo $us ?>">
         <button class="btnBack">
             <svg height="16" width="16" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1024 1024">
                 <path
