@@ -14,6 +14,7 @@
     <?php
     // Capturar el ID del viaje desde el parámetro en la URL
     $id_viaje = $_GET['id_viaje'] ?? '';
+    $precio = $_GET['precio'] ?? '';
     $us = $_GET['ced'] ?? '';
 
     // Verificar si se recibió el ID del viaje en la URL
@@ -34,7 +35,7 @@
             <span>Regresar</span>
         </button>
     </a>
-    <h1>Descripción y reserva de viaje seleccionado</h1>
+    <h1>Descripción y reserva del viaje seleccionado</h1>
 
 
     <form action="../Modelo/reservar.php?id_viaje=<?php echo $id_viaje ?>" method="post">
@@ -48,10 +49,12 @@
         <input readonly style="border:  0;" type="date" id="fecha_reserva" name="fecha_reserva" required>
         <br>
         <label for="cantidad_adul">Cantidad de adultos:</label>
-        <input type="number" id="cantidad_adul" name="cantidad_adul" min="1" required>
+        <input type="number" id="cantidad_adul" name="cantidad_adul" value="1" min="1" required>
         <br>
         <label for="cantidad_ni">Cantidad de niños:</label>
-        <input type="number" id="cantidad_ni" name="cantidad_ni" min="0" required>
+        <input type="number" id="cantidad_ni" name="cantidad_ni" value="0" min="0" required>
+        <br>
+        <label id="total">Total: </label>
         <br>
         <input type="submit" value="Reservar">
     </form>
@@ -71,6 +74,34 @@
         // Asignar la fecha al campo de entrada
         document.getElementById("fecha_reserva").value = fechaActualTexto;
     </script>
+    <script>
+        // Obtener los elementos del DOM
+        const cantidadAdulInput = document.getElementById("cantidad_adul");
+        const cantidadNiInput = document.getElementById("cantidad_ni");
+        const totalLabel = document.getElementById("total");
+
+        // Función para calcular el total y actualizar el label
+        function calcularTotal() {
+            // Obtener los valores de los inputs
+            const cantidadAdul = parseInt(cantidadAdulInput.value) || 0; // Parsear a número o usar 0 si no se puede parsear
+            const cantidadNi = parseInt(cantidadNiInput.value) || 0; // Parsear a número o usar 0 si no se puede parsear
+
+            // Calcular el total
+            let precio = <?php echo $precio; ?>;
+            const total = (cantidadAdul * precio) + (cantidadNi * precio / 2);
+
+            // Actualizar el label con el total
+            totalLabel.textContent = "Total: $" + total;
+        }
+
+        // Agregar eventos de escucha a los inputs para llamar a la función calcularTotal cuando haya un cambio en los valores
+        cantidadAdulInput.addEventListener("input", calcularTotal);
+        cantidadNiInput.addEventListener("input", calcularTotal);
+
+        // Calcular el total inicial al cargar la página
+        calcularTotal();
+    </script>
+
 </body>
 
 </html>

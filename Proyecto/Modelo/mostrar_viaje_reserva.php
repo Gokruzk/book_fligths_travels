@@ -22,13 +22,13 @@ while ($mostrar = mysqli_fetch_array($resultado)) {
         <?php echo "Lugar de Destino:" ?>
         <?php echo $mostrar['lugar_destino'] ?>
         <br>
-        <?php echo "Fecha:" ?>
+        <?php echo "Fecha de salida:" ?>
         <?php echo $mostrar['fecha'] ?>
         <br>
-        <?php echo "Hora:" ?>
+        <?php echo "Hora de salida:" ?>
         <?php echo $mostrar['hora'] ?>
         <br>
-        <?php echo "Precio por persona:" ?>
+        <?php echo "Precio por persona: $" ?>
         <?php echo $mostrar['precio'] ?>
         <br>
     </fieldset>

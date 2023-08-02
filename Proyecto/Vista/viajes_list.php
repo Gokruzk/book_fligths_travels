@@ -85,7 +85,7 @@ $correo = $est['correo'];
                         <?php echo "Precio: $";
                         echo $viaj['precio'] ?>
                     </p>
-                    <a href="../Vista/viaje.php?ced=<?php echo $us; ?>&id_viaje=<?php echo $viaj['id_viaje']; ?>"><button
+                    <a href="../Vista/viaje.php?ced=<?php echo $us; ?>&id_viaje=<?php echo $viaj['id_viaje'];?>&precio=<?php echo $viaj['precio']; ?>"><button
                             class="btnAdmin">Reservar</button></a>
                 </div>
             </div>
