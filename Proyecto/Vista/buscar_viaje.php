@@ -76,47 +76,47 @@
 
                 <div style="margin-top: 30px;" class="contenedor-inputs">
                     <div id="id-id" class="coolinput">
-                        <label for="input" class="text">ID:</label>
+                        <label for="input" class="textLabel">ID:</label>
                         <input id="valor-id" required type="text" placeholder="ID" name="id" class="input"></input>
                     </div>
 
                     <div id="origen-id" class="coolinput" style="display: none;">
-                        <label for="input" class="text">Lugar de origen:</label>
+                        <label for="input" class="textLabel">Lugar de origen:</label>
                         <input id="valor-origen" type="text" placeholder="Origen" name="lugar_origen"
                             class="input"></input>
                     </div>
 
                     <div id="conductor-id" class="coolinput" style="display: none;">
-                        <label for="input" class="text">Nombre del conductor:</label>
+                        <label for="input" class="textLabel">Nombre del conductor:</label>
                         <input id="valor-conductor" type="text" placeholder="Conductor" name="conductor"
                             class="input"></input>
                     </div>
 
                     <div id="destino-id" class="coolinput" style="display: none;">
-                        <label for="input" class="text">Lugar de destino</label>
+                        <label for="input" class="textLabel">Lugar de destino</label>
                         <input id="valor-destino" type="text" placeholder="Destino" class="input"
                             name="lugar_destino"></input>
                     </div>
 
                     <div id="placa-id" class="coolinput" style="display: none;">
-                        <label for="input" class="text">Placa del bus asignado</label>
+                        <label for="input" class="textLabel">Placa del bus asignado</label>
                         <input id="valor-placa" type="text"
                             title="Siga el patrón de placa, si tiene 3 dígitos anteponga el 0"
                             pattern="^([A-Z]{3})-[0-9]{4}$" placeholder="Placa" name="placa_bus" class="input"></input>
                     </div>
 
                     <div id="fecha-id" class="coolinput" style="display: none;">
-                        <label for="input" class="text">Fecha del viaje</label>
+                        <label for="input" class="textLabel">Fecha del viaje</label>
                         <input id="valor-fecha" type="date" name="fecha_viaje" class="input"></input>
                     </div>
 
                     <div id="hora-id" class="coolinput" style="display: none;">
-                        <label for="input" class="text">Hora de salida</label>
+                        <label for="input" class="textLabel">Hora de salida</label>
                         <input id="valor-hora" type="time" name="hora_salida" class="input"></input>
                     </div>
 
                     <div id="precio-id" class="coolinput" style="display: none;">
-                        <label for="input" class="text">Precio $</label>
+                        <label for="input" class="textLabel">Precio $</label>
                         <input id="valor-precio" type="number" min="1" step="0.01" class="input" placeholder="0.00"
                             name="precio_viaje" />
                     </div>

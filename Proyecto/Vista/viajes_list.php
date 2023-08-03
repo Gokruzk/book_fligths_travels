@@ -23,6 +23,7 @@ $correo = $est['correo'];
     <link href="../../CSS/magnific-popup.css" rel="stylesheet">
     <link href="../../CSS/styles.css" rel="stylesheet">
     <link href="../../CSS/Estilos.css" rel="stylesheet">
+    <link href="../../CSS/estilos-admin.css" rel="stylesheet">
 
 
     <!-- Favicon  -->

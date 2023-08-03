@@ -72,12 +72,12 @@
 
                 <div style="margin-top: 30px;" class="contenedor-inputs">
                     <div id="conductor-id" class="coolinput" style="display: none;">
-                        <label for="input" class="text">Conductor:</label>
+                        <label for="input" class="textLabel">Conductor:</label>
                         <input id="valor-conductor" type="text" placeholder="Nombre" name="conductor" class="input">
                     </div>
 
                     <div id="placa-id" class="coolinput">
-                        <label for="input" class="text">Placa del bus</label>
+                        <label for="input" class="textLabel">Placa del bus</label>
                         <input required id="valor-placa" type="text"
                             title="Siga el patrón de placa, si tiene 3 dígitos anteponga el 0"
                             pattern="^([A-Z]{3})-[0-9]{4}$" placeholder="AAA-0000" name="placa" class="input">
