@@ -9,8 +9,6 @@ INNER JOIN usuario U
 ON R.cedula = U.cedula
 INNER JOIN viaje V
 ON R.id_viaje = V.id_viaje
-INNER JOIN asientos A
-ON A.id_reserva = R.id_reserva
 WHERE R.id_reserva = '$id_reserva'";
 $resultado = mysqli_query($conexion, $sql);
 
@@ -44,7 +42,7 @@ $pdf->Cell(0, 10, 'Nombre: ' . $mostrar['nombre'] . ' ' . $mostrar['apellido'], 
 $pdf->Cell(0, 10, 'Cédula: ' . $mostrar['cedula'], 0, 1);
 $pdf->Cell(0, 10, 'Correo: ' . $mostrar['correo'], 0, 1);
 $pdf->Cell(0, 10, 'Teléfono: ' .$mostrar['telefono'], 0, 1);
-$pdf->Cell(0, 10, 'Asientos: ' .$asientos, 0, 1);
+$pdf->MultiCell(0, 10, 'Asientos: ' .$asientos, 0, 1);
 $pdf->Ln(10);
 
 // Cabecera de la tabla de productos/servicios
