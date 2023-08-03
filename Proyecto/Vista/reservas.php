@@ -15,6 +15,7 @@
     <link href="../../CSS/styles.css" rel="stylesheet">
     <link href="../../CSS/Estilos.css" rel="stylesheet">
     <link href="../../CSS/estilos-admin.css" rel="stylesheet">
+    <link href="../../CSS/estilos-user.css" rel="stylesheet">
 
     <!-- Favicon  -->
     <link rel="icon" href="../../images/favicon.png">
@@ -71,7 +72,7 @@
                     <a href="../Modelo/reporte6.php?value=<?php echo $viaj['id_reserva'] ?>">
                         <button class="btnAdmin" style="margin-bottom: 10px;">Comprobante</button>
                     </a>
-                    <button i class="btnCancelar btnAdmin" type="button" name="<?php echo $viaj['id_reserva'] ?>">
+                    <button class="btnCancel" type="button" name="<?php echo $viaj['id_reserva'] ?>">
                         Cancelar
                     </button>
                     <!-- Modal -->
@@ -80,11 +81,11 @@
         <?php
         }
         ?>
-        <div style="width:100%">
+        <!-- <div style="width:100%">
             <a href="../../index.html">
                 <button class="btnAdmin">Cerrar Sesión</button>
             </a>
-        </div>
+        </div> -->
     </div>
 
 

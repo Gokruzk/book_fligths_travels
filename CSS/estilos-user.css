@@ -261,3 +261,33 @@ tr {
   .BtnCerrarSesion:active {
     transform: translate(2px ,2px);
   }
+
+  /* boton cancel */
+.btnCancel {
+  background-color: #d62020;
+  padding: 14px 40px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 2px dashed #d62020;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: 0.4s;
+}
+
+.btnCancel span:last-child {
+  display: none;
+}
+
+.btnCancel:hover {
+  transition: 0.4s;
+  border: 2px dashed #d62020;
+  background-color: #fff;
+  color: #d62020;
+}
+
+.btnCancel:active {
+  background-color: #d62020;
+}
