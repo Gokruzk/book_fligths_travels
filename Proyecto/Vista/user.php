@@ -19,6 +19,8 @@
 
     <!-- Favicon  -->
     <link rel="icon" href="../../images/favicon.png">
+
+
 </head>
 
 <body>
@@ -41,7 +43,7 @@
 
     <div class="content">
         <div class="title">
-            <h2> Bienvenido 
+            <h2> Bienvenido
                 <?php echo $est['nombre'];
                 echo " ";
                 echo $est['apellido']; ?>
@@ -77,7 +79,7 @@
             </a>
         </div> -->
     </div>
-
+    <br>
     <?php
     include_once('footer.html');
     ?>

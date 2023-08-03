@@ -1757,6 +1757,23 @@ input[type="checkbox"] {
   text-align: center;
 }
 
+.copyrightAparte {
+  background-color: #113448;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.copyrightAparte p,
+.copyrightAparte a {
+  color: #dfe5ec;
+  text-decoration: none;
+}
+
 .copyright p,
 .copyright a {
   color: #dfe5ec;
@@ -2467,8 +2484,10 @@ a:hover.back-to-top {
   align-items: center;
   justify-content: center;
   color: #fff;
-  height: 90vh;
+  height: auto;
 }
+
+
 
 .title {
   width: 100%;

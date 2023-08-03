@@ -24,6 +24,8 @@
 
     <!-- Favicon  -->
     <link rel="icon" href="../../images/favicon.png">
+
+    
 </head>
 
 <body>
@@ -75,6 +77,7 @@
 
 
     </div>
+    <br>
     <?php
     include_once('footer.html');
     ?>

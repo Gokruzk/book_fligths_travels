@@ -99,7 +99,7 @@ $correo = $est['correo'];
             </a>
         </div> -->
     </div>
-
+        <br>
     <?php
     include_once('footer.html');
     ?>
