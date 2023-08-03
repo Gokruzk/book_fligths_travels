@@ -13,7 +13,7 @@
     }
     ?>
 
-    <link rel="stylesheet" href="../../CSS/estilos-admin.css">
+
 
     <title>Agregar</title>
 
@@ -21,12 +21,14 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600&display=swap&subset=latin-ext"
         rel="stylesheet">
+
     <link href="../../CSS/bootstrap.css" rel="stylesheet">
     <link href="../../CSS/fontawesome-all.css" rel="stylesheet">
     <link href="../../CSS/swiper.css" rel="stylesheet">
     <link href="../../CSS/magnific-popup.css" rel="stylesheet">
     <link href="../../CSS/styles.css" rel="stylesheet">
     <link href="../../CSS/Estilos.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../CSS/estilos-admin.css">
 
 
     <!-- Favicon  -->
@@ -69,12 +71,12 @@
 
             <div class="contenedor-inputs">
                 <div class="coolinput">
-                    <label for="input" class="text">Conductor:</label>
+                    <label for="input" class="textLabel">Conductor:</label>
                     <input required type="text" placeholder="Nombre" name="conductor" class="input">
                 </div>
                 <div style="margin: 50px;"></div>
                 <div class="coolinput">
-                    <label for="input" class="text">Placa del bus</label>
+                    <label for="input" class="textLabel">Placa del bus</label>
                     <input required type="text" title="Siga el patrón de placa, si tiene 3 dígitos anteponga el 0"
                         pattern="^([A-Z]{3})-[0-9]{4}$" placeholder="AAA-0000" name="placa" class="input">
                 </div>
@@ -99,7 +101,6 @@
     <script src="../../JS/isotope.pkgd.min.js"></script> <!-- Isotope for filter -->
     <script src="../../JS/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
     <script src="../../JS/scripts.js"></script> <!-- Custom scripts -->
-    <script src="../../JS/funciones.js"></script>
 </body>
 
 </html>
