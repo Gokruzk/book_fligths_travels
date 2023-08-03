@@ -26,12 +26,12 @@ h1 {
     max-width: 240px;
 }
 
-.coolinput label.text {
+.coolinput label.textLabel {
     font-size: 0.75rem;
     color: #113448;
     font-weight: 700;
     position: relative;
-    top: 0.5rem;
+    top: 0.8rem;
     margin: 0 0 0 7px;
     padding: 0 3px;
     background: white;
