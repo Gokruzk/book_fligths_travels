@@ -15,6 +15,7 @@
     <link href="../../CSS/magnific-popup.css" rel="stylesheet">
     <link href="../../CSS/styles.css" rel="stylesheet">
     <link href="../../CSS/Estilos.css" rel="stylesheet">
+    <link href="../../CSS/estilos-user.css" rel="stylesheet">
 
     <!-- Favicon  -->
     <link rel="icon" href="../../images/favicon.png">
@@ -30,7 +31,7 @@
         </div>
     </div>
     <?php
-    include_once('menu_user.html');
+    include_once('menu.html');
     include('../Config/conexion.php');
     $us = $_GET['value'];
     $sql = "SELECT * FROM Usuario WHERE correo = '$us'";
@@ -70,11 +71,11 @@
                         class=" btnAdmin">Ver</button></a>
             </div>
         </div>
-        <div style="width:100%">
+        <!-- <div style="width:100%">
             <a href="../../index.html">
                 <button class="btnAdmin">Cerrar Sesión</button>
             </a>
-        </div>
+        </div> -->
     </div>
 
     <?php

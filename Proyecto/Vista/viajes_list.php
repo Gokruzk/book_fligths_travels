@@ -93,11 +93,11 @@ $correo = $est['correo'];
             <?php
         }
         ?>
-        <div style="width:100%">
+        <!-- <div style="width:100%">
             <a href="../../index.html">
                 <button class="btnAdmin">Cerrar Sesión</button>
             </a>
-        </div>
+        </div> -->
     </div>
 
     <?php
