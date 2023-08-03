@@ -27,8 +27,8 @@ $(document).ready(function () {
         }
     }
 
-    // Llamar la función para mostrar el primer alert al hacer clic en cualquier botón con clase "btnGuardar"
-    $(".btnGuardar").on("click", function () {
+    // Llamar la función para mostrar el primer alert al hacer clic en cualquier botón con clase "btnCancelar"
+    $(".btnCancelar").on("click", function () {
         var name = $(this).attr("name"); // Obtener el valor del atributo "name" del botón
         console.log("El name de este es: ", name);
         mostrarAlert1(name);

@@ -91,6 +91,7 @@
     <?php
     include_once('footer.html');
     ?>
+    <script src="../../JS/eliminar-viaje.js"></script>
     <script src="../../JS/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
     <script src="../../JS/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
     <script src="../../JS/bootstrap.min.js"></script> <!-- Bootstrap framework -->

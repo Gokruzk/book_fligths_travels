@@ -14,14 +14,6 @@
     } else if (isset($_GET['edit'])) {
         echo "<script>alert('No se pudo realizar la actualización del bus, intente de nuevo');</script>";
     }
-
-    if (isset($_GET['del']) && $_GET['del'] === 'true') {
-        echo "<script>alert('Se eliminó correctamente el bus');</script>";
-    } else if (isset($_GET['del']) == 1451) {
-        echo "<script>alert('No se pudo realizar la eliminación del bus, debido a que existen viajes asociados al bus, elimine o modifique primero los datos de aquellos viajes');</script>";
-    } else if (isset($_GET['del'])) {
-        echo "<script>alert('No se pudo eliminar el bus, intente de nuevo');</script>";
-    }
     ?>
     <link rel="stylesheet" href="../../CSS/estilos-admin.css">
 
@@ -42,7 +34,7 @@
 
     <!-- Favicon  -->
     <link rel="icon" href="../../images/favicon.png">
-    
+
 </head>
 
 <body>
@@ -73,7 +65,7 @@
         <h1>Datos de buses</h1>
 
         <table>
-            <th>Placa</th> 
+            <th>Placa</th>
             <th>Conductor</th>
             <?php include("../Modelo/mostrar_eliminar-editar_bus.php"); ?>
         </table>
@@ -82,6 +74,7 @@
     <?php
     include_once('footer.html');
     ?>
+    <script src="../../JS/eliminar-bus.js"></script>
     <script src="../../JS/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
     <script src="../../JS/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
     <script src="../../JS/bootstrap.min.js"></script> <!-- Bootstrap framework -->

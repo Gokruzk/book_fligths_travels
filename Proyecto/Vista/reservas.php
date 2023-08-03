@@ -61,7 +61,7 @@
                         <?php echo "Fecha Salida: ";
                         echo $viaj['fecha'] ?>
                     </p>
-                    <button i class="btnGuardar btnAdmin" type="button" name="<?php echo $viaj['id_reserva'] ?>">
+                    <button i class="btnCancelar btnAdmin" type="button" name="<?php echo $viaj['id_reserva'] ?>">
                         Cancelar
                     </button>
                     <!-- Modal -->
