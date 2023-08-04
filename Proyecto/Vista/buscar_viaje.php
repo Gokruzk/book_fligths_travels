@@ -61,7 +61,7 @@
                 <div class="contenedor-inputs">
                     <label for="" style="font-size: larger; padding-right: 20px">Buscar por:</label>
 
-                    <select id="select-viaje" class="form-select" style="width: auto; font-size: larger;">
+                    <select id="select-viaje" class="form-select" style="width: 260px; font-size: larger;">
                         <option value="0">ID</option>
                         <option value="1">Origen</option>
                         <option value="2">Destino</option>
