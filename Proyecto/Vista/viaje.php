@@ -117,7 +117,8 @@
             <input type="number" id="cantidad_ni" name="cantidad_ni" value="0" min="0" required>
              -->
             <br>
-            <label id="total">Total: </label>
+            <h5 class="info1">Total: </h5>
+            <h6 id="total"></h6>
             <br>
             <button class="btnAdmin" type="submit">Reservar</button>
 
@@ -156,7 +157,7 @@
             const total = (cantidadAdul * precio) + (cantidadNi * precio / 2);
 
             // Actualizar el label con el total
-            totalLabel.textContent = "Total: $" + total.toFixed(2);
+            totalLabel.textContent = "$" + total.toFixed(2);
         }
 
         // Agregar eventos de escucha a los inputs para llamar a la función calcularTotal cuando haya un cambio en los valores
