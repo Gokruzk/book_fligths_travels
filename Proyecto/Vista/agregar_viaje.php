@@ -12,6 +12,12 @@ if (isset($_GET['success']) && $_GET['success'] === 'true') {
   echo "<script>alert('Se agregó el nuevo viaje correctamente');</script>";
 } else if (isset($_GET['success']) && $_GET['success'] === 'false') {
   echo "<script>alert('No se pudo añadir el nuevo viaje, intente de nuevo');</script>";
+} else if (isset($_GET['success']) && $_GET['success'] === 'noexplaca') {
+  echo "<script>alert('No se pudo añadir el nuevo viaje debido a que no existe un bus con la placa ingresada');</script>";
+} else if (isset($_GET['success']) && $_GET['success'] === 'exviaje') {
+  echo "<script>alert('No se pudo añadir el nuevo viaje debido a que ya existe un viaje con el bus ingresado el mismo día, en la misma hora');</script>";
+} else if (isset($_GET['success']) && $_GET['success'] === 'extiempo') {
+  echo "<script>alert('No se pudo añadir el nuevo viaje debido a que no se puede registrar un viaje con el mismo bus en un intervalo de menos de 4 horas');</script>";
 }
 ?>
 
