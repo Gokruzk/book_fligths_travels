@@ -71,6 +71,7 @@
     }
 
     ?>
+    <!-- <a href="../../index.html">Inicio</a> -->
     <a href="../Vista/viajes_list.php?ced=<?php echo $us ?>">
         <button class="btnBack">
             <svg height="16" width="16" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1024 1024">
@@ -86,24 +87,28 @@
 
     <form action="../Modelo/reservar.php?id_viaje=<?php echo $id_viaje ?>" method="post">
         <center>
-
-            <?php include("../Modelo/mostrar_viaje_reserva.php"); ?>
-
-            <label for="cedula">Número de cédula del cliente:</label>
-            <input style="border:  0;" readonly type="text" id="cedula" name="cedula" value="<?php echo $us ?>">
-            <br>
-            <label for="fecha_reserva">Fecha de reserva:</label>
-            <input readonly style="border:  0;" type="date" id="fecha_reserva" name="fecha_reserva" required>
-            
-            <br>
-            <!-- <label for="cantidad_adul">Cantidad de adultos:</label>
+            <div class="paraMostrar">
+                <?php include("../Modelo/mostrar_viaje_reserva.php"); ?>
+                <h5 class="info1">Número de cédula del cliente:</h5>
+                <!-- <label for="cedula">Número de cédula del cliente:</label> -->
+                <!-- <input style="border:  0;" readonly type="text" id="cedula" name="cedula" value="<?php echo $us ?>"> -->
+                <h6 class="info2"><?php echo $us ?></h6>
+                
+                <h5 class="info1">Fecha de reserva:</h5>
+                <!-- <label for="fecha_reserva">Fecha de reserva:</label> -->
+                <input readonly  style="border:  0;text-align: center; width: 120px;" id="fecha_reserva" name="fecha_reserva" required>
+                
+                <!-- <label for="cantidad_adul">Cantidad de adultos:</label>
             <input type="number" id="cantidad_adul" name="cantidad_adul" value="1" min="1" required>
             <br> -->
+
+            </div>
 
             <div class="coolinput">
                 <label for="input" class="textLabel">Cantidad de adultos:</label>
                 <input type="number" id="cantidad_adul" name="cantidad_adul" value="1" min="1" required class="input">
             </div>
+            <br>
             <div class="coolinput">
                 <label for="input" class="textLabel">Cantidad de niños:</label>
                 <input type="number" id="cantidad_ni" name="cantidad_ni" value="0" min="0" required class="input">
@@ -111,12 +116,13 @@
             <!-- <label for="cantidad_ni">Cantidad de niños:</label>
             <input type="number" id="cantidad_ni" name="cantidad_ni" value="0" min="0" required>
              -->
-             <br>
+            <br>
             <label id="total">Total: </label>
+            <br>
             <button class="btnAdmin" type="submit">Reservar</button>
-        </form>
 
-    </div>
+        </center>
+    </form>
 
     <script>
         // Crear un objeto Date con la fecha actual
