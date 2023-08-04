@@ -16,7 +16,7 @@
   <link href="./CSS/fontawesome-all.css" rel="stylesheet" />
   <link href="./CSS/swiper.css" rel="stylesheet" />
   <link href="./CSS/magnific-popup.css" rel="stylesheet" />
-  <link href="./CSS/styles.css" rel="stylesheet" />
+  <link href="./CSS/styles.css?v3" rel="stylesheet" />
   <link href="./CSS/Estilos.css" rel="stylesheet" />
 
   <!-- Favicon  -->
@@ -91,8 +91,48 @@
             <input required type="password" name="psw" id="password">
             <button class="sign">Iniciar Sesión</button>
         </form>
-        <p class="signup"><a rel="noopener noreferrer" href="#" class="">Registrarse</a>
+        <p class="signup"><a rel="noopener noreferrer" href="#miModalRegistro" class="">Registrarse</a>
         </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modCont">
+    <div class="modal" id="miModalRegistro">
+      <div class="form-container-registro">
+        <p class="titleL">Registro</p>
+        <form class="formRegistro">
+          <div class="input-group input-registro">
+            <label for="cedula">Cédula</label>
+            <input required type="text" name="cedula" id="cedula" maxlength="10">
+          </div>
+          <div class="input-group input-registro">
+            <label for="nombre">Nombre</label>
+            <input required type="text" name="nombre" id="nombre" maxlength="20">
+          </div>
+          <div class="input-group input-registro">
+            <label for="apellido">Apellido</label>
+            <input required type="text" name="apellido" id="apellido" maxlength="20">
+          </div>
+          <div class="input-group input-registro">
+            <label for="fechaNacimiento">Fecha de nacimiento</label>
+            <input required type="date" name="fechaNacimiento" id="fechaNacimiento">
+          </div>
+          <div class="input-group input-registro">
+            <label for="telefono">Teléfono</label>
+            <input required type="text" name="telefono" id="telefono" maxlength="10">
+          </div>
+          <input type="hidden" name="cargo" id="cargo" value="2">
+          <div class="input-group input-registro">
+            <label for="correo">Correo</label>
+            <input required type="text" name="user" id="correo" maxlength="50">
+          </div>
+          <div class="input-group input-registro">
+            <label for="contra">Contraseña</label>
+            <input required type="password" name="psw" id="contra" maxlength="10">
+          </div>
+          <button class="sign" id="registro">Registrar</button>
+        </form>
       </div>
     </div>
   </div>
@@ -473,7 +513,8 @@
   <!-- end of copyright -->
 
   <!-- Scripts -->
-  <script src="js/funciones.js"></script>
+  <script src="JS/validarDatos.js?v2"></script>
+  <script src="js/funciones.js?v3"></script>
   <script src="js/jquery.min.js"></script>
   <!-- jQuery for Bootstrap's JavaScript plugins -->
   <script src="js/popper.min.js"></script>

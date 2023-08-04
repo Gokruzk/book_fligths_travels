@@ -23,3 +23,26 @@ modal.addEventListener('click', () => {
         modal.style.display = 'none';
     }, 300); // Aquí, 300 es el tiempo de duración de la animación en milisegundos (0.3 segundos).
 });
+
+const registrarLink = document.querySelector('a[href="#miModalRegistro"]');
+const modalRegistro = document.getElementById('miModalRegistro');
+const modalFormRegistro = document.querySelector('.formRegistro');
+
+registrarLink.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    modal.classList.remove('mostrar');
+    modalRegistro.classList.add('mostrar');
+    modalRegistro.style.display = 'flex';
+    modalFormRegistro.addEventListener('click', (event) => {
+        event.stopPropagation();
+    });
+});
+
+modalRegistro.addEventListener('click', () => {
+    modalRegistro.classList.remove('mostrar');
+    
+    setTimeout(() => {
+        modalRegistro.style.display = 'none';
+    }, 300);
+});
