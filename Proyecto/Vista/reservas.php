@@ -72,7 +72,7 @@
                     <a href="../Modelo/reporte6.php?value=<?php echo $viaj['id_reserva'] ?>">
                         <button class="btnAdmin" style="margin-bottom: 10px;">Comprobante</button>
                     </a>
-                    <button class="btnCancel" type="button" name="<?php echo $viaj['id_reserva'] ?>">
+                    <button class="btnCancel btnCancelar" type="button" name="<?php echo $viaj['id_reserva'] ?>">
                         Cancelar
                     </button>
                     <!-- Modal -->
