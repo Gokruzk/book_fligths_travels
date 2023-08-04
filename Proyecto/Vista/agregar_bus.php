@@ -10,6 +10,8 @@
         echo "<script>alert('Se agregó el bus correctamente');</script>";
     } else if (isset($_GET['success']) && $_GET['success'] === 'false') {
         echo "<script>alert('No se pudo añadir el nuevo bus, intente de nuevo');</script>";
+    }else if (isset($_GET['success']) && $_GET['success'] === 'duplicado') {
+        echo "<script>alert('Ya existe un bus con la placa ingresada');</script>";
     }
     ?>
 
