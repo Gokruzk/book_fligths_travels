@@ -32,7 +32,7 @@ $pdf->AddPage();
 $pdf->Ln();
 
 $pdf->SetFont('Arial', 'B', 12);
-$pdf->Cell(71, 5, 'Comprobante N ' . $id_reserva, 0, 0);
+$pdf->Cell(71, 5, 'Comprobante Nº ' . $id_reserva, 0, 0);
 
 $pdf->SetFont('Arial', 'I', 10);
 $pdf->Ln(10);
