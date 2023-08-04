@@ -31,8 +31,9 @@
             padding: 10px 20px 30px;
             width: 500px;
             border-radius: 29px;
-            
+
         }
+
         .info1 {
             color: #56b441;
         }
@@ -91,13 +92,15 @@
                 <?php include("../Modelo/mostrar_viaje_reserva.php"); ?>
                 <h5 class="info1">Número de cédula del cliente:</h5>
                 <!-- <label for="cedula">Número de cédula del cliente:</label> -->
-                <!-- <input style="border:  0;" readonly type="text" id="cedula" name="cedula" value="<?php echo $us ?>"> -->
-                <h6 class="info2"><?php echo $us ?></h6>
-                
+                <input class="info2" style="border:  0;text-align: center; width: 120px;" readonly id="cedula"
+                    name="cedula" value="<?php echo $us ?>">
+
+
                 <h5 class="info1">Fecha de reserva:</h5>
                 <!-- <label for="fecha_reserva">Fecha de reserva:</label> -->
-                <input readonly  style="border:  0;text-align: center; width: 120px;" id="fecha_reserva" name="fecha_reserva" required>
-                
+                <input readonly style="border:  0;text-align: center; width: 120px;" id="fecha_reserva"
+                    name="fecha_reserva" required>
+
                 <!-- <label for="cantidad_adul">Cantidad de adultos:</label>
             <input type="number" id="cantidad_adul" name="cantidad_adul" value="1" min="1" required>
             <br> -->
@@ -117,8 +120,8 @@
             <input type="number" id="cantidad_ni" name="cantidad_ni" value="0" min="0" required>
              -->
             <br>
-            <h5 class="info1">Total: </h5>
-            <h6 id="total"></h6>
+            <h5 class="info1">Total:</h5>
+            <h6 class="info2" id="total"></h6>
             <br>
             <button class="btnAdmin" type="submit">Reservar</button>
 
