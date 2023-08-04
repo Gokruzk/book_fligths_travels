@@ -3,7 +3,7 @@
 include("../Vista/plantilla1.php");
 
 include("../Config/conexion.php");
-$sql= "SELECT * FROM usuario";
+$sql= "SELECT * FROM usuario WHERE id_cargo != 1";
 
 $resultado=mysqli_query($conexion, $sql);
 

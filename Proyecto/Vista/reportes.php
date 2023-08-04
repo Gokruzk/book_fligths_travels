@@ -29,8 +29,8 @@
 </head>
 
 <body>
-        <!-- Preloader -->
-        <div class="spinner-wrapper">
+    <!-- Preloader -->
+    <div class="spinner-wrapper">
         <div class="spinner">
             <div class="bounce1"></div>
             <div class="bounce2"></div>
@@ -57,33 +57,38 @@
     ?>
     <br>
     <center>
-        <h2>REPORTES</h2>
+        <!-- <h2>REPORTES</h2> -->
     </center>
-    <div class="container card ">
+    <div class="container card">
         <center>
             <br>
+            <h4>REPORTE DE CLIENTES</h4>
             <a href="../Controlador/handler.php?value=13">
-                <button class="btnAdmin">Reporte 1</button>
+                <button class="btnAdmin">VER</button>
             </a>
             <br> <br>
+            <h4>REPORTE DE CLIENTES Y EL NÚMERO DE RESERVAS</h4>
             <a href="../Controlador/handler.php?value=14">
-                <button class="btnAdmin">Reporte 2</button>
+                <button class="btnAdmin">VER</button>
+            </a>
+            <br> <br>
+            <h4>REPORTE DE VIAJES</h4>
+            <a href="../Controlador/handler.php?value=17">
+                <button class="btnAdmin">VER</button>
             </a>
 
             <br> <br>
+            <h4>REPORTE DE CANTIDAD DE RESERVAS DE UN CLIENTE POR VIAJE</h4>
             <a href="../Controlador/handler.php?value=15">
-                <button class="btnAdmin">Reporte 3</button>
+                <button class="btnAdmin">VER</button>
             </a>
             <br> <br>
+            <h4>REPORTE DE VIAJES CON EL NÚMERO DE RESERVAS</h4>
             <a href="../Controlador/handler.php?value=16">
-                <button class="btnAdmin">Reporte 4</button>
+                <button class="btnAdmin">VER</button>
             </a>
+
             <br> <br>
-            <a href="../Controlador/handler.php?value=17">
-                <button class="btnAdmin">Reporte 5</button>
-            </a>
-            <br>
-            <br>
 
         </center>
 

@@ -77,9 +77,12 @@
                             <?php echo "Fecha Salida: ";
                             echo $viaj['fecha'] ?>
                         </p>
-                        <a href="../Modelo/reporte6.php?value=<?php echo $viaj['id_reserva'] ?>">
-                            <button class="btnAdmin" style="margin-bottom: 10px;">Comprobante</button>
+                        <a style="cursor: pointer; " href="../Modelo/reporte6.php?value=<?php echo $viaj['id_reserva'] ?>"
+                            class="btnAdmin">
+                            <label style="cursor: pointer;" for="">Comprobante</label>
+                            <img class="descargar" src="../../images/descarga.png" alt="">
                         </a>
+
                         <button class="btnCancel btnCancelar" type="button" name="<?php echo $viaj['id_reserva'] ?>">
                             Cancelar
                         </button>
