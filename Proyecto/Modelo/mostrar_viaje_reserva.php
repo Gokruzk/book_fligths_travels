@@ -16,21 +16,41 @@ while ($mostrar = mysqli_fetch_array($resultado)) {
     ?>
     <fieldset>
         <br>
-        <?php echo "Lugar de Partida:" ?>
-        <?php echo $mostrar['lugar_origen'] ?>
-        <br>
-        <?php echo "Lugar de Destino:" ?>
-        <?php echo $mostrar['lugar_destino'] ?>
-        <br>
-        <?php echo "Fecha de salida:" ?>
-        <?php echo $mostrar['fecha'] ?>
-        <br>
-        <?php echo "Hora de salida:" ?>
-        <?php echo $mostrar['hora'] ?>
-        <br>
-        <?php echo "Precio por persona: $" ?>
-        <?php echo $mostrar['precio'] ?>
-        <br>
+        <h5 class="info1">
+            <?php echo "Lugar de Partida:" ?>
+            </h4>
+            <h6 class="info2">
+                <?php echo $mostrar['lugar_origen'] ?>
+            </h6>
+
+            <h5 class="info1">
+                <?php echo "Lugar de Destino:" ?>
+            </h5>
+            <h6 class="info2">
+                <?php echo $mostrar['lugar_destino'] ?>
+            </h6>
+
+            <h5 class="info1">
+                <?php echo "Fecha de salida:" ?>
+            </h5>
+            <h6 class="info2">
+                <?php echo $mostrar['fecha'] ?>
+            </h6>
+            
+            <h5 class="info1">
+                <?php echo "Hora de salida:" ?>
+            </h5>
+            <h6 class="info2">
+                <?php echo $mostrar['hora'] ?>
+            </h6>
+
+            <h5 class="info1">
+                <?php echo "Precio por persona: " ?>
+            </h5>
+
+            <h6 class="info2">
+            <?php  echo $mostrar['precio']?>
+            </h6>
     </fieldset>
     <?php
 }
