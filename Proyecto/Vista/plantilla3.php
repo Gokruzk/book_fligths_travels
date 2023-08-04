@@ -15,7 +15,7 @@ function Header()
     
     $this->Cell(40,10,'TRANS CHIMBORAZO',2,0,'C');
     $this->Ln(10);
-    $this->Cell(200,10,'LISTA DE VIAJES',2,0,'C');
+    $this->Cell(200,10,'CANTIDAD DE RESERVAS DE UN CLIENTE POR DESTINO',2,0,'C');
     // Salto de línea
     $this->Ln(20);
     
