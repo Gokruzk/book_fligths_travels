@@ -27,7 +27,7 @@ while ($mostrar = mysqli_fetch_array($resultado)) {
     if ($fechaComparar < $fechaActual) {
         ?>
         <tr>
-            <td class="datos datosAnterior">
+            <td class="id-viaje datosAnterior">
                 <?php echo $mostrar['id_viaje'] ?>
             </td>
             <td class="datos datosAnterior">
@@ -64,7 +64,7 @@ while ($mostrar = mysqli_fetch_array($resultado)) {
     } else {
         ?>
         <tr>
-            <td class="datos">
+            <td class="id-viaje">
                 <?php echo $mostrar['id_viaje'] ?>
             </td>
             <td class="datos">

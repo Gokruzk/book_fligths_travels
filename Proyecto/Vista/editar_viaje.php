@@ -74,7 +74,6 @@
         <h1>Datos de viajes</h1>
 
         <table>
-
             <th>ID</th>
             <th>Origen</th>
             <th>Destino</th>
