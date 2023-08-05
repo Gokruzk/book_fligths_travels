@@ -101,7 +101,6 @@ while ($mostrar = mysqli_fetch_array($resultado)) {
             </div>
         </div>
         <div class="contenedor-inputs">
-            <div style="margin: 50px;"></div>
 
             <div class="coolinput">
                 <label for="input" class="textLabel">Fecha del viaje</label>

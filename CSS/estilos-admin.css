@@ -111,10 +111,19 @@ tr {
   height: 40px;
 }
 
+.fechaAnterior{
+  background-color: red;
+}
+
 .datos {
   border: 2px solid black;
   padding-left: 5px;
   padding-right: 30px;
+}
+
+.datosAnterior {
+  background-color: rgba(188, 14, 17, 0.783);
+  color: white;
 }
 
 .icono {
