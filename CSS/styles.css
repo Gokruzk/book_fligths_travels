@@ -3021,3 +3021,16 @@ a:hover.back-to-top {
   color: rgba(156, 163, 175, 1);
 }
 
+.ayudas{
+  padding: 25px 0 60px 0;
+}
+
+.ayudas img{
+  border: 1px solid black;
+  width: 30%;
+}
+
+.ayudas p{
+  padding-top: 30px;
+}
+
