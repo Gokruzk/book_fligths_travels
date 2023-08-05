@@ -7,7 +7,7 @@ $apellido = $_POST['apellido'];
 $fechaNacimiento = $_POST['fechaNacimiento'];
 $telefono = $_POST['telefono'];
 $correo = $_POST['correo'];
-$contra = $_POST['contra'];
+$contra = sha1($_POST['contra']);
 $cargo = $_POST['cargo'];
 
 $consulta = "SELECT * FROM usuario WHERE cedula = '$cedula'";
@@ -25,3 +25,4 @@ if (mysqli_num_rows($resultado) > 0) {
         echo "error";
     }
 }
+?>

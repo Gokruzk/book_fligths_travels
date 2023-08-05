@@ -24,7 +24,6 @@ while ($mostrarAsientos = mysqli_fetch_array($resultado1)) {
 }
 $asientos = rtrim($asientos, ', ');
 
-//crear objeto 
 $pdf = new PDF();
 $pdf->AliasNbPages();
 
@@ -45,7 +44,6 @@ $pdf->Cell(0, 10, 'Teléfono: ' .$mostrar['telefono'], 0, 1);
 $pdf->MultiCell(0, 10, 'Asientos: ' .$asientos, 0, 1);
 $pdf->Ln(10);
 
-// Cabecera de la tabla de productos/servicios
 $pdf->SetFont('Arial', 'B', 12);
 $pdf->Cell(45, 10, 'PLACA DEL BUS', 1, 0, 'C');
 $pdf->Cell(45, 10, 'LUGAR ORIGEN', 1, 0, 'C');
@@ -54,7 +52,6 @@ $pdf->Cell(30, 10, 'FECHA', 1, 0, 'C');
 $pdf->Cell(25, 10, 'HORA', 1, 0, 'C');
 $pdf->Ln();
 
-// Contenido de la tabla de productos/servicios (asumiendo que los datos están en la tabla reserva)
 $pdf->SetFont('Arial', '', 10);
 $pdf->Cell(45, 10, $mostrar['placa'], 1, 0, 'C');
 $pdf->Cell(45, 10, $mostrar['lugar_origen'], 1, 0, 'C');
@@ -63,16 +60,18 @@ $pdf->Cell(30, 10, $mostrar['fecha'], 1, 0, 'C');
 $pdf->Cell(25, 10, $mostrar['hora'], 1, 0, 'C');
 $pdf->Ln();
 
-// Total a pagar
 $pdf->Ln(10);
 $pdf->SetFont('Arial', 'B', 8);
 
-$precioAdul = $mostrar['precio'];
-$precioNi = number_format(($mostrar['precio'] / 2), 2, '.', '');
+$precioTotal = $mostrar['precio_total'];
 $cantidadAdul = $mostrar['cantidad_adul'];
 $cantidadNi = $mostrar['cantidad_ni'];
-$precioToAdul = $cantidadAdul * $precioAdul;
-$precioToNi = $cantidadNi * $precioNi;
+
+$precioAdul = ($precioTotal / ($cantidadAdul + ($cantidadNi * 0.5)));
+$precioNi = $precioAdul * 0.5;
+
+$precioToAdul = $precioAdul * $cantidadAdul;
+$precioToNi = $precioNi * $cantidadNi;
 
 if($cantidadAdul > 1) {
     $pdf->Cell(0, 10, 'Precio por ' .$cantidadAdul .' adultos: $' .$precioToAdul, 0, 1, 'R');
@@ -87,7 +86,5 @@ $pdf->SetFont('Arial', 'B', 12);
 $pdf->Cell(0, 10, 'Total a pagar: $' . $mostrar['precio_total'], 0, 1, 'R');
 $pdf->SetTextColor(0, 0, 0);
 
-// Datos del cliente (asumiendo que los datos del cliente están en la tabla reserva)
-// Mostrar el PDF en el navegador y descargarlo como "factura.pdf"
 $pdf->Output('I', 'comprobante.pdf');
 ?>

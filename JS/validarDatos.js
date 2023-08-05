@@ -82,29 +82,15 @@ document.getElementById("registro").addEventListener("click", function (event) {
                 .then(data => {
                     console.log(data);
                     if (data === "exitoso") {
-                        alert("Registro exitoso.");
-                        const enviarSolicitudDespuesDeEspera = () => {
-                            const formData = new FormData();
-                            formData.append("user", correo);
-                            formData.append("psw", contra);
-                        
-                            fetch("Proyecto/Modelo/login.php", {
-                                method: "POST",
-                                body: formData
-                            })
-                            .then(response => response.text())
-                            .then(data => {
-                                console.log(data);
-                            })
-                            .catch(error => {
-                                console.error(error);
-                            });
-                        };
-
-                        setTimeout(enviarSolicitudDespuesDeEspera, 5000);
+                        window.location.href = "Proyecto/Vista/user.php?value=" + correo;
 
                     } else if (data === "ya registrada") {
                         alert("Ya se encuentra registrado en el sistema.");
+                        const modal = document.getElementById('miModal');
+                        const modalRegistro = document.getElementById('miModalRegistro');
+
+                        modalRegistro.classList.remove('mostrar');
+                        modal.classList.add('mostrar');
                     } else if (data === "error") {
                         alert("Error, por favor intento nuevamente más tarde.");
                     }
