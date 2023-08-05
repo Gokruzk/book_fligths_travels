@@ -15,7 +15,7 @@ $(document).ready(function () {
                         alert("Se ha eliminado correctamente su reserva");
                         location.reload();
                     } else {
-                        alert("No se ha modificado su reserva");
+                        alert("No se ha logrado cancelar su reserva, intente de nuevo");
                     }
                 },
                 error: function () {
@@ -23,7 +23,7 @@ $(document).ready(function () {
                 }
             });
         } else {
-            alert("No se ha modificado su reserva");
+            alert("Su reserva no se ha cancelado");
         }
     }
 
