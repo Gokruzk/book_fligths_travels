@@ -57,67 +57,93 @@
             </h2>
         </div>
         <?php
+        $fechaActual = new DateTime(); // Esto crea un objeto DateTime con la fecha y hora actuales
+        $zonaHoraria = new DateTimeZone('America/New_York');
+        $fechaActual->setTimezone($zonaHoraria);
+        $fechaActual = $fechaActual->format('Y-m-d H:i:s');
+
         if (mysqli_num_rows($res) == 0) {
             ?>
             <p>No hay viajes reservados</p>
             <?php
         } else {
             while ($viaj = $res->fetch_assoc()) {
-                ?>
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            <?php echo $viaj['lugar_destino'] ?>
-                        </h5>
-                        <p class="card-text">
-                            <?php echo "Fecha de reserva: ";
-                            echo $viaj['fecha_reserva'] ?>
-                        </p>
-                        <p class="card-text">
-                            <?php echo "Fecha Salida: ";
-                            echo $viaj['fecha'] ?>
-                        </p>
-                        <a style="cursor: pointer; " href="../Modelo/reporte6.php?value=<?php echo $viaj['id_reserva'] ?>"
-                            class="btnAdmin">
-                            <label style="cursor: pointer;" for="">Comprobante</label>
-                            <img class="descargar" src="../../images/descarga.png" alt="">
-                        </a>
+                $fechaComparar = new DateTime($viaj['fecha']);
+                $fechaComparar = $fechaComparar->format('Y-m-d H:i:s');
+                $bool = false;
 
-                        <button class="btnCancel btnCancelar" type="button" name="<?php echo $viaj['id_reserva'] ?>">
-                            Cancelar
-                        </button>
-                        <!-- Modal -->
+                if ($fechaComparar < $fechaActual) {
+                    ?>
+                    <div class="card" style="width: 18rem; background-color: rgba(222, 26, 26, 0.3);">
+                        <?php
+                } else {
+                    ?>
+                        <div class="card" style="width: 18rem; background-color: rgba(123, 201, 80, 0.3);">
+                            <?php
+                            $bool = true;
+                }
+                ?>
+
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <?php echo $viaj['lugar_destino'] ?>
+                            </h5>
+                            <p class="card-text">
+                                <?php echo "Fecha de reserva: ";
+                                echo $viaj['fecha_reserva'] ?>
+                            </p>
+                            <p class="card-text">
+                                <?php echo "Fecha Salida: ";
+                                echo $viaj['fecha'] ?>
+                            </p>
+                            <a style="cursor: pointer; " href="../Modelo/reporte6.php?value=<?php echo $viaj['id_reserva'] ?>"
+                                class="btnAdmin">
+                                <label style="cursor: pointer;" for="">Comprobante</label>
+                                <img class="descargar" src="../../images/descarga.png" alt="">
+                            </a>
+                            <?php if ($bool) {
+                                ?>
+                                <button class="btnCancel btnCancelar" type="button" name="<?php echo $viaj['id_reserva'] ?>">
+                                    Cancelar
+                                </button>
+                                <?php
+                            } ?>
+
+
+
+                            <!-- Modal -->
+                        </div>
                     </div>
-                </div>
-                <?php
+                    <?php
             }
         }
         ?>
-        <!-- <div style="width:100%">
+            <!-- <div style="width:100%">
             <a href="../../index.html">
                 <button class="btnAdmin">Cerrar Sesión</button>
             </a>
         </div> -->
-    </div>
+        </div>
 
-    <br>
-    <?php
-    include_once('footer.html');
-    ?>
+        <br>
+        <?php
+        include_once('footer.html');
+        ?>
 
-    <script src="../../JS/cancelar-reserva.js"></script>
-    <script src="../../JS/jquery-3.7.0.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
-    <script src="../../JS/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
+        <script src="../../JS/cancelar-reserva.js"></script>
+        <script src="../../JS/jquery-3.7.0.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+        <script src="../../JS/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
 
-    <script src="../../JS/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+        <script src="../../JS/bootstrap.min.js"></script> <!-- Bootstrap framework -->
 
-    <script src="../../JS/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
-    <script src="../../JS/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
-    <script src="../../JS/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
-    <script src="../../JS/morphext.min.js"></script> <!-- Morphtext rotating text in the header -->
-    <script src="../../JS/isotope.pkgd.min.js"></script> <!-- Isotope for filter -->
-    <script src="../../JS/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
-    <script src="../../JS/scripts.js"></script> <!-- Custom scripts -->
+        <script src="../../JS/jquery.easing.min.js"></script>
+        <!-- jQuery Easing for smooth scrolling between anchors -->
+        <script src="../../JS/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
+        <script src="../../JS/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
+        <script src="../../JS/morphext.min.js"></script> <!-- Morphtext rotating text in the header -->
+        <script src="../../JS/isotope.pkgd.min.js"></script> <!-- Isotope for filter -->
+        <script src="../../JS/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
+        <script src="../../JS/scripts.js"></script> <!-- Custom scripts -->
 </body>
 
 </html>

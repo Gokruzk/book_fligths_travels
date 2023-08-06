@@ -9,9 +9,11 @@ $resultado = mysqli_query($conexion, $sql);
 
 // Obtener la fecha actual
 $fechaActual = new DateTime(); // Esto crea un objeto DateTime con la fecha y hora actuales
-$fecha = $fechaActual->format('Y-m-d H:i:s');
+$zonaHoraria = new DateTimeZone('America/New_York');
+$fechaActual->setTimezone($zonaHoraria);
+$fechaActual = $fechaActual->format('Y-m-d H:i:s');
 
-echo "<script>console.log('La fecha actual es $fecha')</script>";
+echo "<script>console.log('La fecha actual es $fechaActual')</script>";
 
 // Convertir la fecha almacenada en la variable en un objeto DateTime
 
@@ -21,8 +23,8 @@ while ($mostrar = mysqli_fetch_array($resultado)) {
         (int)substr($mostrar['hora'], 0, 2),
         (int)substr($mostrar['hora'], 3, 2)
     );
-    $fecha = $fechaComparar->format('Y-m-d H:i:s');
-    echo "<script>console.log('La fecha comparar es $fecha')</script>";
+    $fechaComparar = $fechaComparar->format('Y-m-d H:i:s');
+    echo "<script>console.log('La fecha comparar es $fechaComparar < $fechaActual  ')</script>";
     // Comparar las fechas
     if ($fechaComparar < $fechaActual) {
         ?>

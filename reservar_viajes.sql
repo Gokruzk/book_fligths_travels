@@ -278,7 +278,7 @@ INSERT INTO `viaje` (`id_viaje`, `lugar_origen`, `lugar_destino`, `fecha`, `hora
 --
 -- Disparadores `viaje`
 --
-DELIMITER $$
+/* DELIMITER $$
 CREATE TRIGGER `actualizar_precio_total` AFTER UPDATE ON `viaje` FOR EACH ROW BEGIN
     UPDATE reserva R
     SET precio_total = (NEW.precio * R.cantidad_adul) + (NEW.precio * R.cantidad_ni / 2)
@@ -286,7 +286,7 @@ CREATE TRIGGER `actualizar_precio_total` AFTER UPDATE ON `viaje` FOR EACH ROW BE
 END
 $$
 DELIMITER ;
-
+ */
 --
 -- Índices para tablas volcadas
 --
