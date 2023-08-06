@@ -2473,71 +2473,6 @@ a:hover.back-to-top {
   /* end of navigation */
 }
 
-/* end of min-width width 1200px */
-
-.content {
-  padding-top: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  text-align: center;
-  gap: 5px;
-  text-decoration: none;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  height: auto;
-}
-
-.content2 {
-  margin: 20px 0 80px 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: black;
-}
-
-.content2 form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.content2 .info {
-  display: inline-block;
-  flex-wrap: wrap;
-  text-align: center;
-  width: 100%;
-}
-
-.info div {
-  width: 100%;
-}
-
-.info #cedula{
-  width: 25%;
-}
-
-.info #fecha_reserva{
- 
-  width: 25%;
-}
-
-.title {
-  width: 100%;
-}
-
-.card {
-  transition: 0.3s;
-}
-
-.card:hover {
-  scale: 0.9;
-}
-
 /* Navigation */
 .navbar-customMenu {
   box-shadow: none;
@@ -3020,9 +2955,78 @@ a:hover.back-to-top {
   line-height: 1rem;
   color: rgba(156, 163, 175, 1);
 }
+/* fin estilos modal */
+
+.content {
+  padding: 20px 0 100px 0;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  gap: 5px;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+}
+
+.tab-bus{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.content2 {
+  margin: 20px 0 80px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: black;
+}
+
+.content2 form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.content2 .info {
+  display: inline-block;
+  flex-wrap: wrap;
+  text-align: center;
+  width: 100%;
+}
+
+.info div {
+  width: 100%;
+}
+
+.info #cedula{
+  width: 25%;
+}
+
+.info #fecha_reserva{
+ 
+  width: 25%;
+}
+
+.title {
+  width: 100%;
+}
+
+.card {
+  transition: 0.3s;
+}
+
+.card:hover {
+  scale: 0.9;
+}
 
 .ayudas{
-  padding: 25px 0 60px 0;
+  padding-top: 25px;
 }
 
 .ayudas img{
@@ -3031,6 +3035,13 @@ a:hover.back-to-top {
 }
 
 .ayudas p{
-  padding-top: 30px;
+  padding-top: 20px;
 }
 
+.ucards{
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  width: 100%;
+  padding-top: 20px;
+}

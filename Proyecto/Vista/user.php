@@ -49,40 +49,42 @@
                 echo $est['apellido']; ?>
             </h2>
         </div>
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">
-                    Reservar viajes
-                </h5>
-                <p class="card-text">
-                    Destinos disponibles
-                </p>
-                <a href="../Vista/viajes_list.php?ced=<?php echo $est['cedula']; ?>"><button
-                        class=" btnAdmin">Reservar</button></a>
+        <div class="ucards">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        Reservar viajes
+                    </h5>
+                    <p class="card-text">
+                        Destinos disponibles
+                    </p>
+                    <a href="../Vista/viajes_list.php?ced=<?php echo $est['cedula']; ?>"><button
+                            class=" btnAdmin">Reservar</button></a>
+                </div>
             </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">
-                    Viajes reservados
-                </h5>
-                <p class="card-text">
-                    Lista de viajes
-                </p>
-                <a href="../Vista/reservas.php?ced=<?php echo $est['cedula']; ?>"><button
-                        class=" btnAdmin">Ver</button></a>
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        Viajes reservados
+                    </h5>
+                    <p class="card-text">
+                        Lista de viajes
+                    </p>
+                    <a href="../Vista/reservas.php?ced=<?php echo $est['cedula']; ?>"><button
+                            class=" btnAdmin">Ver</button></a>
+                </div>
             </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <div class="card-body">
-                <h5 class="card-title">
-                    Ayuda
-                </h5>
-                <p class="card-text">
-                    Soporte
-                </p>
-                <a href="../Vista/soporte.php?email=<?php echo $us; ?>"><button
-                        class=" btnAdmin">Ver</button></a>
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        Ayuda
+                    </h5>
+                    <p class="card-text">
+                        Soporte
+                    </p>
+                    <a href="../Vista/soporte.php?email=<?php echo $us; ?>"><button
+                            class=" btnAdmin">Ver</button></a>
+                </div>
             </div>
         </div>
     </div>

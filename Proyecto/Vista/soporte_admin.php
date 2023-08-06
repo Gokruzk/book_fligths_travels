@@ -1,33 +1,25 @@
-<?php
-include("../Config/conexion.php");
-$placa = $_REQUEST['placa'];
-$sql = "SELECT *
- FROM Transporte 
- where placa = '$placa'";
-?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../CSS/estilos-admin.css">
-    <title>Document</title>
+    <title>Ayuda</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap&subset=latin-ext"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600&display=swap&subset=latin-ext"
         rel="stylesheet">
-
     <link href="../../CSS/bootstrap.css" rel="stylesheet">
     <link href="../../CSS/fontawesome-all.css" rel="stylesheet">
     <link href="../../CSS/swiper.css" rel="stylesheet">
     <link href="../../CSS/magnific-popup.css" rel="stylesheet">
     <link href="../../CSS/styles.css" rel="stylesheet">
     <link href="../../CSS/Estilos.css" rel="stylesheet">
-    <link rel="stylesheet" href="../../CSS/estilos-admin.css">
-        <!-- Favicon  -->
-        <link rel="icon" href="../../images/favicon.png">
+    <link href="../../CSS/estilos-admin.css" rel="stylesheet">
+
+    <!-- Favicon  -->
+    <link rel="icon" href="../../images/favicon.png">
+
 </head>
 
 <body>
@@ -40,10 +32,10 @@ $sql = "SELECT *
         </div>
     </div>
     <?php
-    include_once('./../Vista/menu.html');
+    include_once('menu.html');
     ?>
-    <br>
-    <a href="../Controlador/handler.php?value=10">
+
+    <a href="../Vista/admin.php">
         <button class="btnBack">
             <svg height="16" width="16" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1024 1024">
                 <path
@@ -54,43 +46,57 @@ $sql = "SELECT *
         </button>
     </a>
 
-
-    <h1>Editar datos de un bus</h1>
-
-    <form action="../Modelo/actualizar_bus.php" method="POST">
-</body>
-
-</html>
-<?php
-$resultado = mysqli_query($conexion, $sql);
-while ($mostrar = mysqli_fetch_array($resultado)) {
-    ?>
-    <div class="contenedor">
-
-        <div class="contenedor-inputs">
-            <div class="coolinput">
-                <label for="input" class="textLabel">Conductor:</label>
-                <input required type="text" value=<?php echo $mostrar['nombre_responsable'] ?> placeholder="Nombre"
-                    name="conductor" class="input">
-            </div>
-
-            <div style="margin: 50px;"></div>
-
-            <div class="coolinput">
-                <label for="input" class="textLabel">Placa del bus</label>
-                <input readonly required type="text" title="Siga el patrón de placa, si tiene 3 dígitos anteponga el 0"
-                    pattern="^([A-Z]{3})-[0-9]{4}$" placeholder="AAA-0000" value=<?php echo $mostrar['placa'] ?>
-                    name="placa" class="input">
-            </div>
+    <div class="content">
+        <div class="title">
+            <h2>Ayuda</h2>
         </div>
-
-        <div class="boton"><button class="boton-b" type="submit">Editar</button></div>
-
+        <div class="ayudas">
+            <h4>Agregar un Bus</h4>
+            <p>Ingrese a la opción Agregar Buses</p>
+            <img src="../../images/admin1.png" alt="Reserva">
+            <p>Llenar los campos y agregar</p>
+            <img src="../../images/admin2.png" alt="Seleccionar reserva">
+        </div>
+        <div class="ayudas">
+            <h4>Agregar un Viaje</h4>
+            <p>Ingrese a la opción Agregar Viaje</p>
+            <img src="../../images/admin1.png" alt="Reserva">
+            <p>Llenar los campos y agregar</p>
+            <img src="../../images/admin3.png" alt="Seleccionar reserva">
+        </div>
+        <div class="ayudas">
+            <h4>Modificar/Eliminar Buses</h4>
+            <p>Ingrese a la opción de Buses</p>
+            <img src="../../images/admin1.png" alt="Reserva">
+            <p>Seleccionar el bus a editar/modificar</p>
+            <img src="../../images/admin4.png" alt="Seleccionar reserva">
+            <img src="../../images/admin5.png" alt="Seleccionar reserva">
+        </div>
+        <div class="ayudas">
+            <h4>Modificar/Eliminar Viajes</h4>
+            <p>Ingrese a la opción de Viajes</p>
+            <img src="../../images/admin1.png" alt="Reserva">
+            <p>Seleccionar el viaje a editar/modificar</p>
+            <img src="../../images/admin6.png" alt="Seleccionar reserva">
+            <img src="../../images/admin7.png" alt="Seleccionar reserva">
+        </div>
+        <div class="ayudas">
+            <h4>Buscar Buses</h4>
+            <p>Ingrese a la opción de Buscar Buses</p>
+            <img src="../../images/admin1.png" alt="Reserva">
+            <p>Seleccionar cómo buscar (Placa del bus o Conductor) y buscar</p>
+            <img src="../../images/admin8.png" alt="Seleccionar reserva">
+        </div>
+        <div class="ayudas">
+            <h4>Buscar Viajes</h4>
+            <p>Ingrese a la opción de Buscar Viajes</p>
+            <img src="../../images/admin1.png" alt="Reserva">
+            <p>Seleccionar cómo buscar (ID, Origen, Destino, Fecha de Viaje, Hora de salida, Precio, Placa del bus, Nombre del Conductor) y buscar</p>
+            <img src="../../images/admin9.png" alt="Seleccionar reserva">
+        </div>
     </div>
-    </form>
-
     <?php
-    include_once('./../Vista/footer.html');
+    include_once('footer.html');
     ?>
     <script src="../../JS/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
     <script src="../../JS/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
@@ -102,6 +108,7 @@ while ($mostrar = mysqli_fetch_array($resultado)) {
     <script src="../../JS/isotope.pkgd.min.js"></script> <!-- Isotope for filter -->
     <script src="../../JS/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
     <script src="../../JS/scripts.js"></script> <!-- Custom scripts -->
-    <?php
-}
-?>
+    <script src="../../JS/funciones.js"></script>
+</body>
+
+</html>

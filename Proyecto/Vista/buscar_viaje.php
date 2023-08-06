@@ -51,10 +51,10 @@
             <span>Regresar</span>
         </button>
     </a>
-
-    <center>
-        <h1>Buscar viajes</h1>
-
+    <div class="content">
+        <div class="title">
+            <h1>Buscar viajes</h1>
+        </div>
         <form action="<?php echo $_SERVER['PHP_SELF'], "?value=12"; ?>" method="post">
             <div class="contenedor">
 
@@ -126,7 +126,6 @@
             <div style="margin-top: 40px; margin-bottom: 40px;" class="boton"><button class="boton-b"
                     type="submit">Buscar</button></div>
         </form>
-
         <table id="tabla">
             <?php
             if (($_SERVER["REQUEST_METHOD"] == "POST")) {
@@ -143,44 +142,44 @@
 
                 if (strlen($id) > 0) {
                     $sql = "SELECT * FROM Viaje V
-                    INNER JOIN Transporte T
-                    on V.placa = T.placa
-                     WHERE id_viaje='$id'";
+                        INNER JOIN Transporte T
+                        on V.placa = T.placa
+                         WHERE id_viaje='$id'";
                 } else if (strlen($origen) > 0) {
                     $sql = "SELECT * FROM Viaje V
-                    INNER JOIN Transporte T
-                    on V.placa = T.placa
-                     WHERE lugar_origen='$origen'";
+                        INNER JOIN Transporte T
+                        on V.placa = T.placa
+                         WHERE lugar_origen='$origen'";
                 } else if (strlen($destino) > 0) {
                     $sql = "SELECT * FROM Viaje V
-                    INNER JOIN Transporte T
-                    on V.placa = T.placa
-                     WHERE lugar_destino='$destino'";
+                        INNER JOIN Transporte T
+                        on V.placa = T.placa
+                         WHERE lugar_destino='$destino'";
                 } else if (strlen($placa) > 0) {
                     $sql = "SELECT * FROM Viaje V
-                    INNER JOIN Transporte T
-                    on V.placa = T.placa
-                     WHERE placa='$placa'";
+                        INNER JOIN Transporte T
+                        on V.placa = T.placa
+                         WHERE placa='$placa'";
                 } else if (strlen($fecha) > 0) {
                     $sql = "SELECT * FROM Viaje V
-                    INNER JOIN Transporte T
-                    on V.placa = T.placa
-                     WHERE fecha='$fecha'";
+                        INNER JOIN Transporte T
+                        on V.placa = T.placa
+                         WHERE fecha='$fecha'";
                 } else if (strlen($hora) > 0) {
                     $sql = "SELECT * FROM Viaje V
-                    INNER JOIN Transporte T
-                    on V.placa = T.placa
-                     WHERE hora='$hora'";
+                        INNER JOIN Transporte T
+                        on V.placa = T.placa
+                         WHERE hora='$hora'";
                 } else if (strlen($precio) > 0) {
                     $sql = "SELECT * FROM Viaje V
-                    INNER JOIN Transporte T
-                    on V.placa = T.placa
-                     WHERE precio='$precio'";
+                        INNER JOIN Transporte T
+                        on V.placa = T.placa
+                         WHERE precio='$precio'";
                 } else if (strlen($conductor) > 0) {
                     $sql = "SELECT * FROM Viaje V
-                    INNER JOIN Transporte T
-                    on V.placa = T.placa
-                     WHERE T.nombre_responsable='$conductor'";
+                        INNER JOIN Transporte T
+                        on V.placa = T.placa
+                         WHERE T.nombre_responsable='$conductor'";
                 }
 
                 $resultado = mysqli_query($conexion, $sql);
@@ -198,49 +197,6 @@
                 <?php
 
                 $con = 0;
-                /* while ($mostrar = mysqli_fetch_array($resultado)) {
-                    ?>
-                    <tr>
-                        <td class="datos">
-                            <?php echo $mostrar['id_viaje'] ?>
-                        </td>
-                        <td class="datos">
-                            <?php echo $mostrar['lugar_origen'] ?>
-                        </td>
-                        <td class="datos">
-                            <?php echo $mostrar['lugar_destino'] ?>
-                        </td>
-                        <td class="datos">
-                            <?php echo $mostrar['fecha'] ?>
-                        </td>
-                        <td class="datos">
-                            <?php echo $mostrar['hora'] ?>
-                        </td>
-                        <td class="datos">
-                            <?php echo $mostrar['precio'] ?>
-                        </td>
-                        <td class="datos">
-                            <?php echo $mostrar['placa'] ?>
-                        </td>
-                        <td class="datos">
-                            <?php echo $mostrar['nombre_responsable'] ?>
-                        </td>
-
-                        <td class="icono">
-                            <a href="../Modelo/editar_viaje.php?id_viaje=<?php echo $mostrar['id_viaje'] ?>"><img
-                                    class="EditarEliminar" title="Editar bus" src="../../images/editar.png" alt="">
-                            </a>
-                        </td>
-                        <td class="icono">
-                            <a href="../Modelo/eliminar_viaje.php?id_viaje=<?php echo $mostrar['id_viaje'] ?>"><img
-                                    class="EditarEliminar" title="Eliminar bus" src="../../images/eliminar.png" alt="">
-                            </a>
-                        </td>
-
-                    </tr>
-                    <?php
-                    $con++;
-                } */
 
                 $fechaActual = new DateTime(); // Esto crea un objeto DateTime con la fecha y hora actuales
                 $fecha = $fechaActual->format('Y-m-d H:i:s');
@@ -336,21 +292,18 @@
                     }
                     $con++;
                 }
-
                 if ($con == 0) {
                     ?>
-                    <h1 id="estado" style="display: block;">No se encuentran coincidencias</h1>
+                    <h1 id="estado" style="display: block; width: 100%;">No se encuentran coincidencias</h1>
                     <script>document.getElementById("tabla").style.display = "none"</script>
                     <?php
                 }
             }
             ?>
         </table>
-    </center>
+    </div>
     <script src="../../JS/jquery-3.7.0.min.js"></script>
     <script src="../../JS/event-viaje.js"></script>
-
-    <br>
     <?php
     include_once('footer.html');
     ?>

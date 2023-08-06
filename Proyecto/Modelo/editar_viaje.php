@@ -27,6 +27,7 @@ $sql = "SELECT *
     <link href="../../CSS/styles.css" rel="stylesheet">
     <link href="../../CSS/Estilos.css" rel="stylesheet">
     <link rel="stylesheet" href="../../CSS/estilos-admin.css">
+    <link rel="icon" href="../../images/favicon.png">
 </head>
 
 <body>

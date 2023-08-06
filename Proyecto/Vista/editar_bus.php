@@ -31,7 +31,6 @@
     <link href="../../CSS/styles.css" rel="stylesheet">
     <link href="../../CSS/Estilos.css" rel="stylesheet">
 
-
     <!-- Favicon  -->
     <link rel="icon" href="../../images/favicon.png">
 
@@ -61,16 +60,16 @@
             <span>Regresar</span>
         </button>
     </a>
-    <center>
-        <h1>Datos de buses</h1>
-
+    <div class="content">
+        <div class="title">
+            <h1>Datos de buses</h1>
+        </div>
         <table>
             <th>Placa</th>
             <th>Conductor</th>
             <?php include("../Modelo/mostrar_eliminar-editar_bus.php"); ?>
         </table>
-    </center>
-    <br>
+    </div>
     <?php
     include_once('footer.html');
     ?>

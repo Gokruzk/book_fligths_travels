@@ -24,8 +24,6 @@
 
     <!-- Favicon  -->
     <link rel="icon" href="../../images/favicon.png">
-
-    
 </head>
 
 <body>
@@ -69,7 +67,12 @@
                 <button class="btnAdmin">Reportes</button>
             </a>
         </div>
-        
+        <div class="col-3 card" id="ParaSecciones">
+            <h3>Ayuda</h3>
+            <a href="../Vista/soporte_admin.php">
+                <button class="btnAdmin">Soporte</button>
+            </a>
+        </div>
 
         
 

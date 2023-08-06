@@ -53,10 +53,10 @@
         </button>
     </a>
 
-    <center>
-
-        <h1>Buscar buses</h1>
-
+    <div class="content">
+        <div class="title">
+            <h1>Buscar buses</h1>
+        </div>
         <form action="<?php echo $_SERVER['PHP_SELF'], "?value=11"; ?>" method="post">
             <div class="contenedor">
 
@@ -69,7 +69,6 @@
                     </select>
 
                 </div>
-
                 <div style="margin-top: 30px;" class="contenedor-inputs">
                     <div id="conductor-id" class="coolinput" style="display: none;">
                         <label for="input" class="textLabel">Conductor:</label>
@@ -84,67 +83,68 @@
                     </div>
                 </div>
             </div>
-
             <div style="margin-top: 40px; margin-bottom: 40px;" class="boton"><button class="boton-b"
                     type="submit">Buscar</button></div>
         </form>
-
-        <table id="tabla">
-            <?php
-            if (($_SERVER["REQUEST_METHOD"] == "POST")) {
-                include("../Config/conexion.php");
-
-                $conductor = $_POST['conductor'];
-                $placa = $_POST['placa'];
-
-                if (strlen($conductor) == 0) {
-                    $sql = "SELECT * FROM Transporte WHERE placa='$placa'";
-                } else if (strlen($placa) == 0) {
-                    $sql = "SELECT * FROM Transporte WHERE nombre_responsable='$conductor'";
-                }
-
-                $resultado = mysqli_query($conexion, $sql);
-                ?>
-
-                <th>Placa</th>
-                <th>Conductor</th>
-
+        <div class="tab-bus">
+            <table id="tabla">
                 <?php
+                if (($_SERVER["REQUEST_METHOD"] == "POST")) {
+                    include("../Config/conexion.php");
 
-                $con = 0;
-                while ($mostrar = mysqli_fetch_array($resultado)) {
+                    $conductor = $_POST['conductor'];
+                    $placa = $_POST['placa'];
+
+                    if (strlen($conductor) == 0) {
+                        $sql = "SELECT * FROM Transporte WHERE placa='$placa'";
+                    } else if (strlen($placa) == 0) {
+                        $sql = "SELECT * FROM Transporte WHERE nombre_responsable='$conductor'";
+                    }
+
+                    $resultado = mysqli_query($conexion, $sql);
                     ?>
-                    <tr>
-                        <td class="datos">
-                            <?php echo $mostrar['placa'] ?>
-                        </td>
-                        <td class="datos">
-                            <?php echo $mostrar['nombre_responsable'] ?>
-                        </td>
 
-                        <td class="icono"> <a href="../Modelo/editar_bus.php?placa=<?php echo $mostrar['placa'] ?>">
-                                <img class="EditarEliminar" title="Editar bus" src="../../images/editar.png" alt=""></a> </td>
+                    <th>Placa</th>
+                    <th>Conductor</th>
 
-                        <td class="icono">
-                            <a href="../Modelo/eliminar_bus.php?placa=<?php echo $mostrar['placa'] ?>">
-                                <img class="EditarEliminar" title="Eliminar bus" src="../../images/eliminar.png" alt=""></a>
-                        </td>
-
-                    </tr>
                     <?php
-                    $con++;
-                }
 
-                if ($con == 0) {
-                    ?>
-                    <h1 id="estado" style="display: block;">No se encuentran coincidencias</h1>
-                    <script>document.getElementById("tabla").style.display = "none"</script>
-                    <?php
+                    $con = 0;
+                    while ($mostrar = mysqli_fetch_array($resultado)) {
+                        ?>
+                        <tr>
+                            <td class="datos">
+                                <?php echo $mostrar['placa'] ?>
+                            </td>
+                            <td class="datos">
+                                <?php echo $mostrar['nombre_responsable'] ?>
+                            </td>
+
+                            <td class="icono"> <a href="../Modelo/editar_bus.php?placa=<?php echo $mostrar['placa'] ?>">
+                                    <img class="EditarEliminar" title="Editar bus" src="../../images/editar.png" alt=""></a>
+                            </td>
+
+                            <td class="icono">
+                                <a href="../Modelo/eliminar_bus.php?placa=<?php echo $mostrar['placa'] ?>">
+                                    <img class="EditarEliminar" title="Eliminar bus" src="../../images/eliminar.png" alt=""></a>
+                            </td>
+
+                        </tr>
+                        <?php
+                        $con++;
+                    }
+
+                    if ($con == 0) {
+                        ?>
+                        <h1 id="estado" style="display: block;">No se encuentran coincidencias</h1>
+                        <script>document.getElementById("tabla").style.display = "none"</script>
+                        <?php
+                    }
                 }
-            }
-            ?>
-        </table>
-    </center>
+                ?>
+            </table>
+        </div>
+    </div>
     <script src="../../JS/jquery-3.7.0.min.js"></script>
     <script src="../../JS/event-bus.js"></script>
 
