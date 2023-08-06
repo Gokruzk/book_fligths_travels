@@ -1,5 +1,5 @@
 CREATE DATABASE reservar_viajes;
-USER reservar_viajes;
+USE reservar_viajes;
 /* --------------------------------------------------------
 
 Estructura de tabla para la tabla `cargo`
@@ -7,7 +7,7 @@ Estructura de tabla para la tabla `cargo`
 */
 
 CREATE TABLE `cargo` (
-  `ID` int(11) NOT NULL,
+  `ID` int(11) NOT NULL PRIMARY KEY,
   `Descripcion` varchar(5) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -52,7 +52,7 @@ CREATE TABLE `usuario` (
   `correo` varchar(50) DEFAULT NULL,
   `psw` varchar(1000) DEFAULT NULL,
   `telefono` char(10) DEFAULT NULL,
-  `ID_CARGO` int(11) DEFAULT NULL,
+  `ID_CARGO` int(1) DEFAULT NULL,
   foreign key (ID_CARGO) references cargo(ID)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -108,7 +108,7 @@ CREATE TABLE `asientos` (
   `id_asiento` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `id_viaje` int(11) NOT NULL,
   `lugar` varchar(6) NOT NULL,
-  w`id_reserva` int(11) DEFAULT NULL,
+  `id_reserva` int(11) DEFAULT NULL,
   foreign key(id_viaje) references viaje(id_viaje),
   foreign key (id_reserva) references reserva(id_reserva)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
