@@ -222,7 +222,7 @@ CREATE TABLE `usuario` (
   `apellido` varchar(20) DEFAULT NULL,
   `fecha_nacimiento` date DEFAULT NULL,
   `correo` varchar(50) DEFAULT NULL,
-  `psw` varchar(10) DEFAULT NULL,
+  `psw` varchar(1000) DEFAULT NULL,
   `telefono` char(10) DEFAULT NULL,
   `ID_CARGO` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
