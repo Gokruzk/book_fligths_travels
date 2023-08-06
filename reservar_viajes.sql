@@ -1,16 +1,11 @@
---
--- Base de datos: `reservar_viajes`
---
-
 CREATE DATABASE reservar_viajes;
 USE reservar_viajes;
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 
--- --------------------------------------------------------
+/* --------------------------------------------------------
 
---
--- Estructura de tabla para la tabla `asientos`
---
+Estructura de tabla para la tabla `asientos` 
+
+*/
 
 CREATE TABLE `asientos` (
   `id_asiento` int(11) NOT NULL,
@@ -19,9 +14,7 @@ CREATE TABLE `asientos` (
   `id_reserva` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Volcado de datos para la tabla `asientos`
---
+/* Volcado de datos para la tabla `asientos` */
 
 INSERT INTO `asientos` (`id_asiento`, `id_viaje`, `lugar`, `id_reserva`) VALUES
 (81, 19, 'A1', NULL),
@@ -145,30 +138,28 @@ INSERT INTO `asientos` (`id_asiento`, `id_viaje`, `lugar`, `id_reserva`) VALUES
 (199, 21, 'C10', NULL),
 (200, 21, 'D10', NULL);
 
--- --------------------------------------------------------
+/* --------------------------------------------------------
 
---
--- Estructura de tabla para la tabla `cargo`
---
+Estructura de tabla para la tabla `cargo` 
+
+*/
 
 CREATE TABLE `cargo` (
   `ID` int(11) NOT NULL,
   `Descripcion` varchar(5) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Volcado de datos para la tabla `cargo`
---
+/* Volcado de datos para la tabla `cargo`] */
 
 INSERT INTO `cargo` (`ID`, `Descripcion`) VALUES
 (1, 'Admin'),
 (2, 'User');
 
--- --------------------------------------------------------
+/* --------------------------------------------------------
 
---
--- Estructura de tabla para la tabla `reserva`
---
+Estructura de tabla para la tabla `reserva` 
+
+*/
 
 CREATE TABLE `reserva` (
   `id_reserva` int(11) NOT NULL,
@@ -180,27 +171,18 @@ CREATE TABLE `reserva` (
   `id_viaje` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Volcado de datos para la tabla `reserva`
---
+/* --------------------------------------------------------
 
-INSERT INTO `reserva` (`id_reserva`, `fecha_reserva`, `cantidad_adul`, `cantidad_ni`, `cedula`, `precio_total`, `id_viaje`) VALUES
-(42, '2023-08-04', 1, 2, '0850106188', 90.00, 21);
+Estructura de tabla para la tabla `transporte` 
 
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `transporte`
---
+*/
 
 CREATE TABLE `transporte` (
   `placa` varchar(8) NOT NULL,
   `nombre_responsable` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Volcado de datos para la tabla `transporte`
---
+/* Volcado de datos para la tabla `transporte` */
 
 INSERT INTO `transporte` (`placa`, `nombre_responsable`) VALUES
 ('ASD-9034', 'Fernando'),
@@ -210,11 +192,11 @@ INSERT INTO `transporte` (`placa`, `nombre_responsable`) VALUES
 ('IOR-9043', 'Ricardo'),
 ('JKL-9034', 'Daniel');
 
--- --------------------------------------------------------
+/* --------------------------------------------------------
 
---
--- Estructura de tabla para la tabla `usuario`
---
+Estructura de tabla para la tabla `usuario` 
+
+*/
 
 CREATE TABLE `usuario` (
   `cedula` char(10) NOT NULL,
@@ -227,19 +209,11 @@ CREATE TABLE `usuario` (
   `ID_CARGO` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Volcado de datos para la tabla `usuario`
---
+/* --------------------------------------------------------
 
-INSERT INTO `usuario` (`cedula`, `nombre`, `apellido`, `fecha_nacimiento`, `correo`, `psw`, `telefono`, `ID_CARGO`) VALUES
-('0850106188', 'Nigell', 'Jama', '2002-01-06', 'nigelljama@gmail.com', 'nigell123', '0992297549', 2),
-('9999999999', 'Admin', 'Sistema', '2002-01-06', 'admin@gmail.com', 'admin123', '0999999999', 1);
+Estructura de tabla para la tabla `viaje`
 
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `viaje`
---
+*/
 
 CREATE TABLE `viaje` (
   `id_viaje` int(11) NOT NULL,
@@ -251,110 +225,93 @@ CREATE TABLE `viaje` (
   `placa` varchar(8) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Volcado de datos para la tabla `viaje`
---
+/* Volcado de datos para la tabla `viaje` */
 
 INSERT INTO `viaje` (`id_viaje`, `lugar_origen`, `lugar_destino`, `fecha`, `hora`, `precio`, `placa`) VALUES
 (19, 'Riobamba', 'Desierto de Palmira', '2023-09-09', '03:16:00', 13.00, 'ASD-9034'),
 (20, 'Riobamba', 'Chimborazo', '2023-08-02', '03:12:00', 12.67, 'DFA-0934'),
 (21, 'Riobamba', 'Carihuairazo', '2023-08-04', '10:15:00', 45.00, 'DFG-0905');
 
---
--- Índices para tablas volcadas
---
 
---
--- Indices de la tabla `asientos`
---
+/* Indices de la tabla `asientos` */
+
 ALTER TABLE `asientos`
   ADD PRIMARY KEY (`id_asiento`),
   ADD KEY `asiento_ibfk_1` (`id_viaje`),
   ADD KEY `asiento_ibfk_2` (`id_reserva`);
 
---
--- Indices de la tabla `cargo`
---
+
+/* Indices de la tabla `cargo` */
+
 ALTER TABLE `cargo`
   ADD PRIMARY KEY (`ID`);
 
---
--- Indices de la tabla `reserva`
---
+
+/* Indices de la tabla `reserva` */
+
 ALTER TABLE `reserva`
   ADD PRIMARY KEY (`id_reserva`),
   ADD KEY `cedula` (`cedula`),
   ADD KEY `id_viaje` (`id_viaje`);
 
---
--- Indices de la tabla `transporte`
---
+
+/* Indices de la tabla `transporte` */
+
 ALTER TABLE `transporte`
   ADD PRIMARY KEY (`placa`);
 
---
--- Indices de la tabla `usuario`
---
+
+/* Indices de la tabla `usuario` */
+
 ALTER TABLE `usuario`
   ADD PRIMARY KEY (`cedula`),
   ADD KEY `ID_CARGO` (`ID_CARGO`);
 
---
--- Indices de la tabla `viaje`
---
+/* Indices de la tabla `viaje` */
 ALTER TABLE `viaje`
   ADD PRIMARY KEY (`id_viaje`),
   ADD KEY `placa` (`placa`);
 
---
--- AUTO_INCREMENT de las tablas volcadas
---
+/* AUTO_INCREMENT de las tablas volcadas */
 
---
--- AUTO_INCREMENT de la tabla `asientos`
---
+/* AUTO_INCREMENT de la tabla `asientos` */
+
 ALTER TABLE `asientos`
   MODIFY `id_asiento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=201;
 
---
--- AUTO_INCREMENT de la tabla `reserva`
---
+/* AUTO_INCREMENT de la tabla `reserva` */
+
 ALTER TABLE `reserva`
   MODIFY `id_reserva` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
---
--- AUTO_INCREMENT de la tabla `viaje`
---
+/* AUTO_INCREMENT de la tabla `viaje` */
+
 ALTER TABLE `viaje`
   MODIFY `id_viaje` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
---
--- Restricciones para tablas volcadas
---
+/* Restricciones para tablas volcadas */
 
---
--- Filtros para la tabla `asientos`
---
+/* Filtros para la tabla `asientos` */
+
 ALTER TABLE `asientos`
   ADD CONSTRAINT `asiento_ibfk_1` FOREIGN KEY (`id_viaje`) REFERENCES `viaje` (`id_viaje`),
   ADD CONSTRAINT `asiento_ibfk_2` FOREIGN KEY (`id_reserva`) REFERENCES `reserva` (`id_reserva`);
 
---
--- Filtros para la tabla `reserva`
---
+
+/* Filtros para la tabla `reserva` */
+
 ALTER TABLE `reserva`
   ADD CONSTRAINT `reserva_ibfk_1` FOREIGN KEY (`cedula`) REFERENCES `usuario` (`cedula`),
   ADD CONSTRAINT `reserva_ibfk_2` FOREIGN KEY (`id_viaje`) REFERENCES `viaje` (`id_viaje`);
 
---
--- Filtros para la tabla `usuario`
---
+
+/* Filtros para la tabla `usuario` */
+
 ALTER TABLE `usuario`
   ADD CONSTRAINT `usuario_ibfk_1` FOREIGN KEY (`ID_CARGO`) REFERENCES `cargo` (`ID`);
 
---
--- Filtros para la tabla `viaje`
---
+
+/* Filtros para la tabla `viaje` */
+
 ALTER TABLE `viaje`
   ADD CONSTRAINT `viaje_ibfk_1` FOREIGN KEY (`placa`) REFERENCES `transporte` (`placa`);
-COMMIT;
