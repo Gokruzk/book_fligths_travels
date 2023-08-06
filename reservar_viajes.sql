@@ -1,25 +1,10 @@
--- phpMyAdmin SQL Dump
--- version 5.2.1
--- https://www.phpmyadmin.net/
---
--- Servidor: 127.0.0.1
--- Tiempo de generación: 04-08-2023 a las 17:37:40
--- Versión del servidor: 10.4.28-MariaDB
--- Versión de PHP: 8.2.4
-
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
 --
 -- Base de datos: `reservar_viajes`
 --
+
+CREATE DATABASE reservar_viajes;
+USE reservar_viajes;
 
 -- --------------------------------------------------------
 
@@ -276,18 +261,6 @@ INSERT INTO `viaje` (`id_viaje`, `lugar_origen`, `lugar_destino`, `fecha`, `hora
 (21, 'Riobamba', 'Carihuairazo', '2023-08-04', '10:15:00', 45.00, 'DFG-0905');
 
 --
--- Disparadores `viaje`
---
-/* DELIMITER $$
-CREATE TRIGGER `actualizar_precio_total` AFTER UPDATE ON `viaje` FOR EACH ROW BEGIN
-    UPDATE reserva R
-    SET precio_total = (NEW.precio * R.cantidad_adul) + (NEW.precio * R.cantidad_ni / 2)
-    WHERE R.id_viaje = NEW.id_viaje;
-END
-$$
-DELIMITER ;
- */
---
 -- Índices para tablas volcadas
 --
 
@@ -385,7 +358,3 @@ ALTER TABLE `usuario`
 ALTER TABLE `viaje`
   ADD CONSTRAINT `viaje_ibfk_1` FOREIGN KEY (`placa`) REFERENCES `transporte` (`placa`);
 COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
