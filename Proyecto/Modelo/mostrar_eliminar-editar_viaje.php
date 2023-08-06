@@ -18,15 +18,15 @@ echo "<script>console.log('La fecha actual es $fechaActual')</script>";
 // Convertir la fecha almacenada en la variable en un objeto DateTime
 
 while ($mostrar = mysqli_fetch_array($resultado)) {
-    $fechaComparar = new DateTime($mostrar['fecha']);
-    $fechaComparar->setTime(
-        (int)substr($mostrar['hora'], 0, 2),
-        (int)substr($mostrar['hora'], 3, 2)
+    $fechaViaje = new DateTime($mostrar['fecha']);
+    $fechaViaje->setTime(
+        (int) substr($mostrar['hora'], 0, 2),
+        (int) substr($mostrar['hora'], 3, 2)
     );
-    $fechaComparar = $fechaComparar->format('Y-m-d H:i:s');
-    echo "<script>console.log('La fecha comparar es $fechaComparar < $fechaActual  ')</script>";
+    $fechaViaje = $fechaViaje->format('Y-m-d H:i:s');
+    echo "<script>console.log('La fecha comparar es $fechaViaje < $fechaActual  ')</script>";
     // Comparar las fechas
-    if ($fechaComparar < $fechaActual) {
+    if ($fechaViaje < $fechaActual) {
         ?>
         <tr>
             <td class="id-viaje datosAnterior">

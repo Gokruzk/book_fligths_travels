@@ -68,11 +68,11 @@
             <?php
         } else {
             while ($viaj = $res->fetch_assoc()) {
-                $fechaComparar = new DateTime($viaj['fecha']);
-                $fechaComparar = $fechaComparar->format('Y-m-d H:i:s');
+                $fechaViaje = new DateTime($viaj['fecha']);
+                $fechaViaje = $fechaViaje->format('Y-m-d H:i:s');
                 $bool = false;
 
-                if ($fechaComparar < $fechaActual) {
+                if ($fechaViaje < $fechaActual) {
                     ?>
                     <div class="card" style="width: 18rem; background-color: rgba(222, 26, 26, 0.3);">
                         <?php
@@ -80,7 +80,7 @@
                     ?>
                         <div class="card" style="width: 18rem; background-color: rgba(123, 201, 80, 0.3);">
                             <?php
-                            $bool = true;
+                    $bool = true;
                 }
                 ?>
 
