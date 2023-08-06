@@ -74,18 +74,6 @@
                             class=" btnAdmin">Ver</button></a>
                 </div>
             </div>
-            <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title">
-                        Ayuda
-                    </h5>
-                    <p class="card-text">
-                        Soporte
-                    </p>
-                    <a href="../Vista/soporte.php?email=<?php echo $us; ?>"><button
-                            class=" btnAdmin">Ver</button></a>
-                </div>
-            </div>
         </div>
     </div>
     <br>

@@ -66,9 +66,11 @@
           <a class="nav-link page-scroll" href="#projects">DESTINOS</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link page-scroll" href="./Proyecto/Vista/soporte.php">AYUDA</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link page-scroll" href=".basic-2">ACERCA DE</a>
         </li>
-
         <li class="nav-item">
           <a class="nav-link page-scroll" href="#contact">CONTÁCTANOS</a>
         </li>
@@ -97,7 +99,7 @@
       </div>
     </div>
   </div>
-  
+
 
 
 
@@ -108,7 +110,7 @@
         <form class="formRegistro">
           <div class="input-group input-registro">
             <label for="cedula">Cédula</label>
-            <input required type="text" name="cedula" id="cedula" maxlength="10">
+            <input required type="text" name="cedula" id="cedula" minlength="10" maxlength="10">
           </div>
           <div class="input-group input-registro">
             <label for="nombre">Nombre</label>
@@ -124,7 +126,7 @@
           </div>
           <div class="input-group input-registro">
             <label for="telefono">Teléfono</label>
-            <input required type="text" name="telefono" id="telefono" maxlength="10">
+            <input required type="text" name="telefono" id="telefono" minlength="10" maxlength="10">
           </div>
           <input type="hidden" name="cargo" id="cargo" value="2">
           <div class="input-group input-registro">
@@ -133,7 +135,7 @@
           </div>
           <div class="input-group input-registro">
             <label for="contra">Contraseña</label>
-            <input required type="password" name="psw" id="contra" maxlength="10">
+            <input required type="password" name="psw" id="contra" minlength="10">
           </div>
           <button class="sign" id="registro">Registrar</button>
         </form>

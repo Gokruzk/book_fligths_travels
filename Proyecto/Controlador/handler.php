@@ -36,5 +36,7 @@ if ($value == 1) {
     require("../Modelo/reporte4.php");
 } else if ($value == 17) {
     require("../Modelo/reporte5.php");
+} else if ($value == 18) {
+    require("../Vista/soporte");
 }
 ?>

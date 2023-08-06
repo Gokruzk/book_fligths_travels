@@ -1,6 +1,3 @@
-<?php
-$use = $_GET['email'];
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,7 +36,7 @@ $use = $_GET['email'];
     ?>
 
     <br>
-    <a href="../Vista/user.php?value=<?php echo $use ?>">
+    <a href="../../index.html">
         <button class="btnBack">
             <svg height="16" width="16" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1024 1024">
                 <path
