@@ -11,13 +11,10 @@ $contra = $_POST['contra'];
 $cargo = $_POST['cargo'];
 
 $hashed_contra = password_hash($contra, PASSWORD_DEFAULT);
-
-$consulta = "SELECT * FROM usuario WHERE cedula = '$cedula'";
+$consulta = "SELECT * FROM usuario WHERE cedula = '$cedula' OR correo = '$correo'";
 $resultado = mysqli_query($conexion, $consulta);
 
-$correoConsul = $resultado->fetch_assoc();
-
-if ((mysqli_num_rows($resultado) > 0) || ($correoConsul['correo'] == $correo)) {
+if (mysqli_num_rows($resultado) > 0) {
     echo "ya registrada";
 } else {
     $sql = "INSERT INTO usuario (cedula, nombre, apellido, fecha_nacimiento, correo, psw, telefono, ID_CARGO) VALUES('$cedula', '$nombre', '$apellido', '$fechaNacimiento', '$correo', '$hashed_contra', '$telefono', '$cargo')";
