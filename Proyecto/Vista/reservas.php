@@ -74,7 +74,7 @@
 
                 if ($fechaViaje < $fechaActual) {
                     ?>
-                    <div class="card" style="width: 18rem; background-color: rgba(222, 26, 26, 0.3);">
+                    <div class="card" style="width: 18rem; background-color: rgba(187, 10, 33, 0.3);">
                         <?php
                 } else {
                     ?>
