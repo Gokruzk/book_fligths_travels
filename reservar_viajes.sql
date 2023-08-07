@@ -1,10 +1,15 @@
 CREATE DATABASE reservar_viajes;
 USE reservar_viajes;
+/* --------------------------------------------------------
+
+Estructura de tabla para la tabla `cargo`
+
+*/
 
 CREATE TABLE `cargo` (
-  	`ID` int(11) PRIMARY KEY,
-  	`Descripcion` varchar(5) DEFAULT NULL
-);
+  `ID` int(11) NOT NULL PRIMARY KEY,
+  `Descripcion` varchar(5) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 INSERT INTO `cargo` (`ID`, `Descripcion`)
 VALUES (1, 'Admin'),(2, 'User');
@@ -19,16 +24,22 @@ VALUES ('ASD-9034', 'Fernando'), ('DFA-0934', 'LORE'), ('DFG-0905', 'Ariel'),
 	   ('FDJ-9034', 'Alejandro'), ('IOR-9043', 'Ricardo'), ('JKL-9034', 'Daniel');
 
 CREATE TABLE `usuario` (
-  	`cedula` char(10) NOT NULL PRIMARY KEY,
-  	`nombre` varchar(20) DEFAULT NULL,
-  	`apellido` varchar(20) DEFAULT NULL,
-  	`fecha_nacimiento` date DEFAULT NULL,
-  	`correo` varchar(50) DEFAULT NULL,
-  	`psw` varchar(1000) DEFAULT NULL,
-  	`telefono` char(10) DEFAULT NULL,
-  	`ID_CARGO` int(11) DEFAULT NULL,
-    FOREIGN KEY (ID_CARGO) REFERENCES cargo(ID)
-);
+  `cedula` char(10) NOT NULL PRIMARY KEY,
+  `nombre` varchar(20) DEFAULT NULL,
+  `apellido` varchar(20) DEFAULT NULL,
+  `fecha_nacimiento` date DEFAULT NULL,
+  `correo` varchar(50) DEFAULT NULL,
+  `psw` varchar(1000) DEFAULT NULL,
+  `telefono` char(10) DEFAULT NULL,
+  `ID_CARGO` int(1) DEFAULT NULL,
+  foreign key (ID_CARGO) references cargo(ID)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+/* --------------------------------------------------------
+
+Estructura de tabla para la tabla `viaje`
+
+*/
 
 CREATE TABLE `viaje` (
   	`id_viaje` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -59,13 +70,13 @@ CREATE TABLE `reserva` (
 );
 
 CREATE TABLE `asientos` (
-  	`id_asiento` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-  	`id_viaje` int(11) NOT NULL,
-  	`lugar` varchar(6) NOT NULL,
-  	`id_reserva` int(11) DEFAULT NULL,
-  	FOREIGN KEY (id_viaje) REFERENCES viaje(id_viaje),
-  	FOREIGN KEY (id_reserva) REFERENCES reserva(id_reserva)
-);
+  `id_asiento` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  `id_viaje` int(11) NOT NULL,
+  `lugar` varchar(6) NOT NULL,
+  `id_reserva` int(11) DEFAULT NULL,
+  foreign key(id_viaje) references viaje(id_viaje),
+  foreign key (id_reserva) references reserva(id_reserva)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 INSERT INTO `asientos` (`id_viaje`, `lugar`, `id_reserva`)VALUES
 (1, 'A1', NULL),
