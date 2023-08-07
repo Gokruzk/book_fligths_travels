@@ -1,121 +1,73 @@
 CREATE DATABASE reservar_viajes;
-USER reservar_viajes;
-/* --------------------------------------------------------
-
-Estructura de tabla para la tabla `cargo`
-
-*/
+USE reservar_viajes;
 
 CREATE TABLE `cargo` (
-  `ID` int(11) NOT NULL,
-  `Descripcion` varchar(5) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  	`ID` int(11) PRIMARY KEY,
+  	`Descripcion` varchar(5) DEFAULT NULL
+);
 
-/* Volcado de datos para la tabla `cargo`] */
-
-INSERT INTO `cargo` (`ID`, `Descripcion`) VALUES
-(1, 'Admin'),
-(2, 'User');
-
-/* --------------------------------------------------------
-
-Estructura de tabla para la tabla `transporte`
-
-*/
+INSERT INTO `cargo` (`ID`, `Descripcion`)
+VALUES (1, 'Admin'),(2, 'User');
 
 CREATE TABLE `transporte` (
-  `placa` varchar(8) NOT NULL PRIMARY KEY,
-  `nombre_responsable` varchar(20) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  	`placa` varchar(8) PRIMARY KEY,
+  	`nombre_responsable` varchar(20) DEFAULT NULL
+);
 
-/* Volcado de datos para la tabla `transporte` */
-
-INSERT INTO `transporte` (`placa`, `nombre_responsable`) VALUES
-('ASD-9034', 'Fernando'),
-('DFA-0934', 'LORE'),
-('DFG-0905', 'Ariel'),
-('FDJ-9034', 'Alejandro'),
-('IOR-9043', 'Ricardo'),
-('JKL-9034', 'Daniel');
-
-/* --------------------------------------------------------
-
-Estructura de tabla para la tabla `usuario`
-
-*/
+INSERT INTO `transporte` (`placa`, `nombre_responsable`)
+VALUES ('ASD-9034', 'Fernando'), ('DFA-0934', 'LORE'), ('DFG-0905', 'Ariel'),
+	   ('FDJ-9034', 'Alejandro'), ('IOR-9043', 'Ricardo'), ('JKL-9034', 'Daniel');
 
 CREATE TABLE `usuario` (
-  `cedula` char(10) NOT NULL PRIMARY KEY,
-  `nombre` varchar(20) DEFAULT NULL,
-  `apellido` varchar(20) DEFAULT NULL,
-  `fecha_nacimiento` date DEFAULT NULL,
-  `correo` varchar(50) DEFAULT NULL,
-  `psw` varchar(1000) DEFAULT NULL,
-  `telefono` char(10) DEFAULT NULL,
-  `ID_CARGO` int(11) DEFAULT NULL,
-  foreign key (ID_CARGO) references cargo(ID)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
-/* --------------------------------------------------------
-
-Estructura de tabla para la tabla `viaje`
-
-*/
+  	`cedula` char(10) NOT NULL PRIMARY KEY,
+  	`nombre` varchar(20) DEFAULT NULL,
+  	`apellido` varchar(20) DEFAULT NULL,
+  	`fecha_nacimiento` date DEFAULT NULL,
+  	`correo` varchar(50) DEFAULT NULL,
+  	`psw` varchar(1000) DEFAULT NULL,
+  	`telefono` char(10) DEFAULT NULL,
+  	`ID_CARGO` int(11) DEFAULT NULL,
+    FOREIGN KEY (ID_CARGO) REFERENCES cargo(ID)
+);
 
 CREATE TABLE `viaje` (
-  `id_viaje` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-  `lugar_origen` varchar(20) DEFAULT NULL,
-  `lugar_destino` varchar(20) DEFAULT NULL,
-  `fecha` date DEFAULT NULL,
-  `hora` time DEFAULT NULL,
-  `precio` decimal(10,2) DEFAULT NULL,
-  `placa` varchar(8) DEFAULT NULL,
-  foreign key (placa) references transporte(placa)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  	`id_viaje` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  	`lugar_origen` varchar(20) DEFAULT NULL,
+  	`lugar_destino` varchar(20) DEFAULT NULL,
+  	`fecha` date DEFAULT NULL,
+  	`hora` time DEFAULT NULL,
+ 	`precio` decimal(10,2) DEFAULT NULL,
+  	`placa` varchar(8) DEFAULT NULL,
+    FOREIGN KEY (placa) REFERENCES transporte(placa)
+);
 
-/* Volcado de datos para la tabla `viaje` */
-
-INSERT INTO `viaje` (`lugar_origen`, `lugar_destino`, `fecha`, `hora`, `precio`, `placa`) VALUES
-('Riobamba', 'Desierto de Palmira', '2023-09-09', '03:16:00', 13.00, 'ASD-9034'),
-('Riobamba', 'Chimborazo', '2023-08-02', '03:12:00', 12.67, 'DFA-0934'),
-('Riobamba', 'Carihuairazo', '2023-08-04', '10:15:00', 45.00, 'DFG-0905');
-
-/* --------------------------------------------------------
-
-Estructura de tabla para la tabla `reserva`
-
-*/
-
+INSERT INTO `viaje` (`lugar_origen`, `lugar_destino`, `fecha`, `hora`, `precio`, `placa`)
+VALUES ('Riobamba', 'Desierto de Palmira', '2023-09-09', '03:16:00', 13.00, 'ASD-9034'),
+       ('Riobamba', 'Chimborazo', '2023-08-02', '03:12:00', 12.67, 'DFA-0934'),
+       ('Riobamba', 'Carihuairazo', '2023-08-04', '10:15:00', 45.00, 'DFG-0905');
+       
 CREATE TABLE `reserva` (
-  `id_reserva` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-  `fecha_reserva` date DEFAULT NULL,
-  `cantidad_adul` int(11) DEFAULT NULL,
-  `cantidad_ni` int(11) DEFAULT NULL,
-  `cedula` char(10) DEFAULT NULL,
-  `precio_total` decimal(10,2) DEFAULT NULL,
-  `id_viaje` int(11) DEFAULT NULL,
-  foreign key (id_viaje) references viaje(id_viaje),
-  foreign key (cedula) references usuario(cedula)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
-/* --------------------------------------------------------
-
-Estructura de tabla para la tabla `asientos`
-
-*/
+  	`id_reserva` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  	`fecha_reserva` date DEFAULT NULL,
+  	`cantidad_adul` int(11) DEFAULT NULL,
+  	`cantidad_ni` int(11) DEFAULT NULL,
+  	`cedula` char(10) DEFAULT NULL,
+  	`precio_total` decimal(10,2) DEFAULT NULL,
+  	`id_viaje` int(11) DEFAULT NULL,
+  	FOREIGN KEY (id_viaje) REFERENCES viaje(id_viaje),
+  	FOREIGN KEY (cedula) REFERENCES usuario(cedula)
+);
 
 CREATE TABLE `asientos` (
-  `id_asiento` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-  `id_viaje` int(11) NOT NULL,
-  `lugar` varchar(6) NOT NULL,
-  w`id_reserva` int(11) DEFAULT NULL,
-  foreign key(id_viaje) references viaje(id_viaje),
-  foreign key (id_reserva) references reserva(id_reserva)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  	`id_asiento` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  	`id_viaje` int(11) NOT NULL,
+  	`lugar` varchar(6) NOT NULL,
+  	`id_reserva` int(11) DEFAULT NULL,
+  	FOREIGN KEY (id_viaje) REFERENCES viaje(id_viaje),
+  	FOREIGN KEY (id_reserva) REFERENCES reserva(id_reserva)
+);
 
-/* Volcado de datos para la tabla `asientos` */
-
-INSERT INTO `asientos` (`id_viaje`, `lugar`, `id_reserva`) VALUES
+INSERT INTO `asientos` (`id_viaje`, `lugar`, `id_reserva`)VALUES
 (1, 'A1', NULL),
 (1, 'B1', NULL),
 (1, 'C1', NULL),

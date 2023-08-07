@@ -6,59 +6,83 @@ document.addEventListener("DOMContentLoaded", function () {
     fechaNacimientoInput.setAttribute("max", maxFecha);
 });
 
-const casilla1 = document.getElementById("cedula");
-const casilla2 = document.getElementById("nombre");
-const casilla3 = document.getElementById("apellido");
-const casilla4 = document.getElementById("telefono");
-const casilla5 = document.getElementById("correo");
 let validacion;
+const casilla = document.querySelectorAll('.input-registro');
 
 function validarCampos() {
     if (document.getElementById("cedula").value === "") {
         alert("Por favor ingrese el número de cédula.");
+        casilla[0].classList.add('activo-error');
         validacion = false;
-        casilla1.focus();
     } else if (!validarCedula(document.getElementById("cedula").value)) {
         alert("Número de cédula inválido.");
+        casilla[0].classList.add('activo-error');
         validacion = false;
-        casilla1.focus();
     }
 
     if(document.getElementById("nombre").value === "") {
         alert("Por favor ingrese el nombre.");
+        casilla[1].classList.add('activo-error');
         validacion = false;
     }else if (!/^[a-zA-ZáéíóúÁÉÍÓÚñÑ']+$/u.test(document.getElementById("nombre").value)) {
         alert("El nombre no debe contener espacios, número o caracteres especiales.");
+        casilla[1].classList.add('activo-error');
         validacion = false;
     }
 
     if(document.getElementById("apellido").value === "") {
         alert("Por favor ingrese el apellido.");
+        casilla[2].classList.add('activo-error');
         validacion = false;
     }else if (!/^[a-zA-ZáéíóúÁÉÍÓÚñÑ']+$/u.test(document.getElementById("apellido").value)) {
         alert("El apellido no debe contener espacios, número o caracteres especiales.");
+        casilla[2].classList.add('activo-error');
+        validacion = false;
+    }
+
+    if(document.getElementById("fechaNacimiento").value === "") {
+        alert("Por favor seleccione una fecha de nacimiento.");
+        casilla[3].classList.add('activo-error');
         validacion = false;
     }
 
     if(document.getElementById("telefono").value === "") {
         alert("Por favor ingrese el número de telefono.");
+        casilla[4].classList.add('activo-error');
         validacion = false;
     }else if (!/^\d{10}$/.test(document.getElementById("telefono").value)) {
         alert("El número de telefono debe estar conformado por números y contener 10 dígitos.");
+        casilla[4].classList.add('activo-error');
         validacion = false;
     }
 
     if(document.getElementById("correo").value === "") {
         alert("Por favor ingrese el correo.");
+        casilla[5].classList.add('activo-error');
         validacion = false;
     }else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(document.getElementById("correo").value)) {
         alert("Por favor ingrese correctamente el correo, Ejem: kevinT@gmail.com ");
+        casilla[5].classList.add('activo-error');
+        validacion = false;
+    }
+
+    if(document.getElementById("contra").value === "") {
+        alert("Por favor ingrese una contraseña.");
+        casilla[6].classList.add('activo-error');
         validacion = false;
     }
 }
 
 document.getElementById("registro").addEventListener("click", function (event) {
     event.preventDefault();
+
+    casilla[0].classList.remove('activo-error');
+    casilla[1].classList.remove('activo-error');
+    casilla[2].classList.remove('activo-error');
+    casilla[3].classList.remove('activo-error');
+    casilla[4].classList.remove('activo-error');
+    casilla[5].classList.remove('activo-error');
+    casilla[6].classList.remove('activo-error');
 
     validacion = true;
     validarCampos();

@@ -2920,6 +2920,14 @@ a:hover.back-to-top {
   color: rgb(0, 0, 0);
 }
 
+.activo-error label {
+  color: #bb2929;
+}
+
+.activo-error input {
+  border: 1px solid #bb2929;
+}
+
 .input-group input:focus {
   border-color: rgba(167, 139, 250);
 }
